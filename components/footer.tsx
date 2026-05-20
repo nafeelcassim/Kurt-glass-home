@@ -2,7 +2,6 @@
 
 import Link from "next/link"
 import Image from "next/image"
-import { Instagram } from "lucide-react"
 import { fonts } from "@/lib/fonts"
 
 const footerLinks = {
@@ -64,18 +63,7 @@ export function Footer() {
               Glas trifft Design. Hochwertige Glaslösungen aus Zuchwil, Schweiz. 
               Inhabergeführt mit über 50 Jahren Erfahrung.
             </p>
-            <div className="flex gap-4">
-              <Link
-                href="https://instagram.com/kurthglas"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-10 h-10 border border-neutral-300 flex items-center justify-center text-neutral-500 hover:text-neutral-900 hover:border-neutral-900 transition-colors duration-300"
-                aria-label="Instagram"
-              >
-                <Instagram className="w-4 h-4" />
-              </Link>
-            </div>
-            <p className={`${fonts.xs} text-neutral-500 mt-4`}>@kurthglas</p>
+        
           </div>
 
           {/* Produkte */}
