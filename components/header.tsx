@@ -66,8 +66,8 @@ export function Header() {
               key={link.href}
               href={link.href}
               className={`${fonts.sm} uppercase  transition-colors duration-300 animated-underline ${isScrolled
-                  ? "text-muted-foreground hover:text-foreground"
-                  : "text-white/80 hover:text-white"
+                  ? "text-muted-foreground hover:text-foreground font-bold"
+                  : "text-white/80 hover:text-white font-bold"
                 }`}
             >
               {link.label}
