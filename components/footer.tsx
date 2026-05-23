@@ -41,6 +41,7 @@ export function Footer() {
                   width={120}
                   height={40}
                   className="h-8 w-auto"
+                  priority
                 />
                 <div className="flex items-center gap-3 flex-wrap">
                   <span className={`${fonts['3xl']} font-bold  text-neutral-900`}>
