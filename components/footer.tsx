@@ -43,7 +43,7 @@ export function Footer() {
                   className="h-8 w-auto"
                 />
                 <div className="flex items-center gap-3 flex-wrap">
-                  <span className={`${fonts['3xl']}  text-neutral-900`}>
+                  <span className={`${fonts['3xl']} font-bold  text-neutral-900`}>
                     KURTH
                   </span>
                   <Image
@@ -55,11 +55,11 @@ export function Footer() {
                   />
                 </div>
               </div>
-              <span className={`block ${fonts.xs} uppercase text-neutral-500 mt-1`}>
+              <span className={`block ${fonts.xs} font-bold uppercase text-neutral-500 mt-1`}>
                 Glas und Spiegel AG
               </span>
             </Link>
-            <p className={`text-neutral-600 ${fonts.sm} mb-6 max-w-sm`}>
+            <p className={`text-neutral-600 ${fonts.sm} font-semibold mb-6 max-w-sm`}>
               Glas trifft Design. Hochwertige Glaslösungen aus Zuchwil, Schweiz. 
               Inhabergeführt mit über 50 Jahren Erfahrung.
             </p>
@@ -68,7 +68,7 @@ export function Footer() {
 
           {/* Produkte */}
           <div>
-            <h4 className={`${fonts.sm} uppercase  text-neutral-900 mb-6`}>
+            <h4 className={`${fonts.sm} uppercase font-bold text-neutral-900 mb-6`}>
               Produkte
             </h4>
             <ul className="space-y-3">
@@ -87,7 +87,7 @@ export function Footer() {
 
           {/* Services */}
           <div>
-            <h4 className={`${fonts.sm} uppercase text-neutral-900 mb-6`}>
+            <h4 className={`${fonts.sm} uppercase text-neutral-900 mb-6 font-bold`}>
               Services
             </h4>
             <ul className="space-y-3">
@@ -106,7 +106,7 @@ export function Footer() {
 
           {/* Kontakt */}
           <div>
-            <h4 className={`${fonts.sm} uppercase  text-neutral-900 mb-6`}>
+            <h4 className={`${fonts.sm} uppercase  text-neutral-900 mb-6 font-bold`}>
               Kontakt
             </h4>
             <ul className="space-y-3">

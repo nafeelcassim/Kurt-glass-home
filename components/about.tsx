@@ -83,23 +83,23 @@ export function About() {
               className={`${fontHeading.lg} mb-8 leading-[1.1]`}
             >
               <span className="line block overflow-hidden">
-                <span className="inline-block">glas</span>
+                <span className="inline-block font-bold">glas</span>
               </span>
               <span className="line block overflow-hidden">
-                <span className="inline-block">hautnah</span>
+                <span className="inline-block font-bold">hautnah</span>
               </span>
               <span className="line block overflow-hidden">
-                <span className="inline-block">erlebenr</span>
+                <span className="inline-block font-bold">erlebenr</span>
               </span>
             </h2>
 
             <div ref={textRef} className="space-y-6">
-              <p className={`${fonts.lg} text-muted-foreground`}>
+              <p className={`${fonts.lg} font-bold text-muted-foreground`}>
                 Glas - ein zeitloses und faszinierendes Element, das in der 
                 Innenausstattung unverzichtbar geworden ist. Es symbolisiert 
                 Design und Klarheit und verkörpert einen ganz eigenen Lifestyle.
               </p>
-              <p className={`${fonts.lg} text-muted-foreground`}>
+              <p className={`${fonts.lg} font-bold text-muted-foreground`}>
                 Bei KURTH Glas und Spiegel AG verschmilzt Handwerkskunst mit 
                 einem tiefen Verständnis für Ästhetik und schafft somit eine 
                 einzigartige Synthese aus Form und Funktion. Eine hochinnovative 

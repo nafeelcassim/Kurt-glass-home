@@ -71,10 +71,10 @@ export function Showrooms() {
       <div className="container mx-auto px-6">
         {/* Title */}
         <div ref={titleRef} className="text-center mb-16">
-          <p className={`${fonts.sm} uppercase text-muted-foreground mb-4`}>
+          <p className={`${fonts.sm} font-bold uppercase text-muted-foreground mb-4`}>
             Besuchen Sie uns
           </p>
-          <h2 className={`${fontHeading.md} text-foreground`}>
+          <h2 className={`${fontHeading.md} font-bold text-foreground`}>
             Unser <span className="text-foreground">Standort</span>
           </h2>
         </div>
@@ -100,28 +100,28 @@ export function Showrooms() {
 
               {/* Content */}
               <div className="p-8 md:p-12 flex flex-col justify-center">
-                <h3 className={`${fonts['2xl']} text-foreground mb-1`}>
+                <h3 className={`${fonts['2xl']} font-bold text-foreground mb-1`}>
                   {showroom.name}
                 </h3>
                 <p className={`text-primary ${fonts.lg} mb-8`}>{showroom.location}</p>
 
                 <div className="space-y-4 mb-8">
-                  <div className={`flex items-center gap-4 ${fonts.sm} text-muted-foreground`}>
+                  <div className={`flex items-center gap-4 ${fonts.sm} font-semibold text-muted-foreground`}>
                     <MapPin className="w-5 h-5 flex-shrink-0" />
                     <span>{showroom.address}</span>
                   </div>
-                  <div className={`flex items-center gap-4 ${fonts.sm} text-muted-foreground`}>
+                  <div className={`flex items-center gap-4 ${fonts.sm} font-semibold  text-muted-foreground`}>
                     <Phone className="w-5 h-5 flex-shrink-0" />
                     <span>{showroom.phone}</span>
                   </div>
-                  <div className={`flex items-center gap-4 ${fonts.sm} text-muted-foreground`}>
+                  <div className={`flex items-center gap-4 ${fonts.sm} font-semibold  text-muted-foreground`}>
                     <Mail className="w-5 h-5 flex-shrink-0" />
                     <span>{showroom.email}</span>
                   </div>
                 </div>
 
-                <button className={`inline-flex items-center gap-3 bg-primary text-primary-foreground px-6 py-4 ${fonts.sm} uppercase  hover:bg-foreground transition-colors duration-300 w-fit`}>
-                  <Navigation className="w-4 h-4" />
+                <button className={`inline-flex items-center gap-3 bg-primary text-primary-foreground px-6 py-4 ${fonts.sm} font-bold uppercase  hover:bg-foreground hover:text-black transition-colors duration-300 w-fit`}>
+                  <Navigation className="w-4 h-4 font" />
                   Route planen
                 </button>
               </div>

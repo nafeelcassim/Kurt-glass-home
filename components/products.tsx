@@ -151,13 +151,13 @@ export function Products() {
             <p className={`${fonts.sm} uppercase text-muted-foreground mb-4`}>
               Unsere Produkte
             </p>
-            <h2 className={`${fontHeading.md} text-foreground`}>
+            <h2 className={`${fontHeading.md} font-bold text-foreground`}>
               Glas trifft <span className="text-foreground">Design</span>
             </h2>
           </div>
           <a
             href="#"
-            className={`inline-flex items-center gap-3 ${fonts.sm} uppercase text-primary hover:text-foreground transition-colors duration-300 group animated-underline`}
+            className={`inline-flex items-center gap-3 ${fonts.sm} font-semibold uppercase text-primary hover:text-foreground transition-colors duration-300 group animated-underline`}
           >
             Alle Produkte
             <ArrowRight className="w-4 h-4 group-hover:translate-x-2 transition-transform duration-300" />
@@ -191,13 +191,13 @@ export function Products() {
                 
                 {/* Content on image */}
                 <div className="product-content absolute bottom-2 left-0 right-0 p-6">
-                  <span className={`${fonts.xs} uppercase text-white/70 mb-2 block`}>
+                  <span className={`${fonts.xs} font-bold uppercase text-white/70 mb-2 block`}>
                     {product.subtitle}
                   </span>
                   <h3 className={`${fontHeading.sm} text-white mb-2`}>
                     {product.name}
                   </h3>
-                  <p className={`${fonts.sm} text-white/70 line-clamp-2`}>
+                  <p className={`${fonts.xl} text-white/70 line-clamp-2`}>
                     {product.description}
                   </p>
                 </div>

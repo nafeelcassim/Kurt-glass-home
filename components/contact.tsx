@@ -48,24 +48,24 @@ export function Contact() {
 
       <div ref={contentRef} className="container mx-auto px-6 relative z-10">
         <div className="max-w-3xl mx-auto text-center">
-          <p className={`${fonts.sm} uppercase  text-muted-foreground mb-4`}>
+          <p className={`${fonts.sm} font-bold uppercase  text-muted-foreground mb-4`}>
             Kontaktieren Sie uns
           </p>
-          <h2 className={`${fontHeading.md} text-foreground mb-8`}>
+          <h2 className={`${fontHeading.md} font-bold text-foreground mb-8`}>
             Glas trifft <br />
             <span className="text-foreground">Design</span>
           </h2>
-          <p className={`${fonts.lg} text-muted-foreground mb-12 max-w-xl mx-auto`}>
+          <p className={`${fonts.lg} font-semibold text-muted-foreground mb-12 max-w-xl mx-auto`}>
             Entdecken Sie unsere Welt in Bewegung - von spannenden Montagen über 
             Einblicke in die Produktion bis hin zu praktischen Tipps und Glas-Tests.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className={`inline-flex items-center justify-center gap-4 bg-primary text-primary-foreground px-10 py-5 ${fonts.sm} uppercase hover:bg-foreground transition-colors duration-300 group`}>
+            <button className={`inline-flex items-center justify-center gap-4 bg-primary text-primary-foreground px-10 py-5 ${fonts.sm} font-bold uppercase hover:bg-foreground transition-colors duration-300 group hover:text-black`}>
               Kontakt aufnehmen
               <ArrowRight className="w-4 h-4 group-hover:translate-x-2 transition-transform duration-300" />
             </button>
-            <button className={`inline-flex items-center justify-center gap-4 border border-border text-foreground px-10 py-5 ${fonts.sm} uppercase hover:border-primary hover:text-primary transition-colors duration-300`}>
+            <button className={`inline-flex items-center justify-center gap-4 border border-border text-foreground px-10 py-5 ${fonts.sm} font-bold uppercase hover:border-primary hover:text-primary transition-colors duration-300`}>
               Videos ansehen
             </button>
           </div>

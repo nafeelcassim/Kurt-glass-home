@@ -84,7 +84,7 @@ export function Categories() {
         <div className="flex items-end justify-between">
           <h2
             ref={titleRef}
-            className={`${fontHeading.md} text-foreground`}
+            className={`${fontHeading.md} font-bold text-foreground`}
           >
             Unsere <br />
             <span className="text-foreground">Kategorien</span>
@@ -127,7 +127,7 @@ export function Categories() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
               <div className="absolute bottom-0 left-0 right-0 p-6">
-                <span className={`${fonts.xs} uppercase  text-white/70 mb-2 block`}>
+                <span className={`${fonts.xs} font-bold uppercase  text-white/70 mb-2 block`}>
                   {category.subtitle}
                 </span>
                 <h3 className={`${fonts['2xl']} text-white group-hover:text-accent transition-colors duration-300`}>
