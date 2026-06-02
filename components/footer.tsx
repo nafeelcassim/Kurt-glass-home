@@ -33,37 +33,46 @@ export function Footer() {
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-12 mb-12">
           {/* Logo & Description */}
           <div className="col-span-2 lg:col-span-2">
-            <Link href="/" className="inline-block mb-6">
-              <div className="flex items-center gap-4 flex-wrap">
-                <Image
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/logo-W72cJvxeS1BY9zkwZEVHeJ5empcchu.png"
-                  alt="Kurth Logo"
-                  width={120}
-                  height={40}
-                  className="h-8 w-auto"
-                  priority
-                />
-                <div className="flex items-center gap-3 flex-wrap">
-                  <span className={`${fonts['3xl']} font-bold  text-neutral-900`}>
-                    KURTH
-                  </span>
-                  <Image
-                    src="/wording.png"
-                    alt="glas trifft design."
-                    width={512}
-                    height={450}
-                    className="h-12 w-auto opacity-90"
-                  />
+            <div className="max-w-md">
+              <Link href="/" className="group block">
+                <div className="rounded-2xl  border-neutral-200 bg-white p-5  transition-shadow duration-300 group-hover:shadow-md">
+                  <div className="flex items-center justify-between gap-4">
+                    <div className="min-w-0">
+                      <span className={`${fonts['3xl']} font-bold text-neutral-900 leading-none`}>
+                        KURTH
+                      </span>
+                      <span className={`block ${fonts.xs} font-bold uppercase tracking-wide text-neutral-500 mt-2`}>
+                        Glas und Spiegel AG
+                      </span>
+                    </div>
+                    <Image
+                      src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/logo-W72cJvxeS1BY9zkwZEVHeJ5empcchu.png"
+                      alt="Kurth Logo"
+                      width={140}
+                      height={48}
+                      className="h-9 w-auto shrink-0"
+                      priority
+                    />
+                  </div>
+
+                  <div className="mt-4 h-px w-full bg-neutral-200" />
+
+                  <div className="mt-4">
+                    <Image
+                      src="/wording.png"
+                      alt="glas trifft design."
+                      width={512}
+                      height={450}
+                      className="h-11 w-auto opacity-90"
+                    />
+                    <p className={`mt-4 text-neutral-600 ${fonts.sm} font-semibold leading-relaxed`}>
+                      Glas trifft Design. Hochwertige Glaslösungen aus Zuchwil, Schweiz.
+                      Inhabergeführt mit über 50 Jahren Erfahrung.
+                    </p>
+                  </div>
                 </div>
-              </div>
-              <span className={`block ${fonts.xs} font-bold uppercase text-neutral-500 mt-1`}>
-                Glas und Spiegel AG
-              </span>
-            </Link>
-            <p className={`text-neutral-600 ${fonts.sm} font-semibold mb-6 max-w-sm`}>
-              Glas trifft Design. Hochwertige Glaslösungen aus Zuchwil, Schweiz. 
-              Inhabergeführt mit über 50 Jahren Erfahrung.
-            </p>
+              </Link>
+            </div>
         
           </div>
 

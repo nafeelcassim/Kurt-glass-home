@@ -71,11 +71,11 @@ export function Showrooms() {
       <div className="container mx-auto px-6">
         {/* Title */}
         <div ref={titleRef} className="text-center mb-16">
-          <p className={`${fonts.sm} font-bold uppercase text-muted-foreground mb-4`}>
+          <p className={`${fonts.sm} font-bold text-muted-foreground mb-4`}>
             Besuchen Sie uns
           </p>
           <h2 className={`${fontHeading.md} font-bold text-foreground`}>
-            Unser <span className="text-foreground">Standort</span>
+            unser <span className="text-foreground">standort</span>
           </h2>
         </div>
 

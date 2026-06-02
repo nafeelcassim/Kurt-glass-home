@@ -11,9 +11,9 @@ gsap.registerPlugin(ScrollTrigger)
 const products = [
   {
     id: "murale",
-    name: "Glasverkleidung",
+    name: "glasverkleidung",
     subtitle: "murale",
-    description: "Elegante Wandverkleidungen aus hochwertigem Glas für exklusive Innenräume",
+    description: "Elegante Wandverkleidungen aus hochwertigen Glas für Innenräume",
     image: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&q=80",
   },
   {
@@ -148,11 +148,11 @@ export function Products() {
         {/* Header */}
         <div ref={titleRef} className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
           <div>
-            <p className={`${fonts.sm} uppercase text-muted-foreground mb-4`}>
+            <p className={`${fonts.sm}  text-muted-foreground mb-4`}>
               Unsere Produkte
             </p>
             <h2 className={`${fontHeading.md} font-bold text-foreground`}>
-              Glas trifft <span className="text-foreground">Design</span>
+              glas trifft <span className="text-foreground">design</span>
             </h2>
           </div>
           <a
@@ -191,13 +191,13 @@ export function Products() {
                 
                 {/* Content on image */}
                 <div className="product-content absolute bottom-2 left-0 right-0 p-6">
-                  <span className={`${fonts.xs} font-bold uppercase text-white/70 mb-2 block`}>
+                  <span className={`${fonts.xs} font-bold  text-white/70 mb-2 block`}>
                     {product.subtitle}
                   </span>
                   <h3 className={`${fontHeading.sm} text-white mb-2`}>
                     {product.name}
                   </h3>
-                  <p className={`${fonts.xl} text-white/70 line-clamp-2`}>
+                  <p className={`${fonts.xl} leading-[1.2] font-light text-white/70 line-clamp-2`}>
                     {product.description}
                   </p>
                 </div>
@@ -224,7 +224,7 @@ export function Products() {
               className="group flex items-center justify-between p-6 border border-border hover:border-primary transition-colors duration-300"
             >
               <div>
-                <span className={`${fonts.xs} uppercase text-muted-foreground block mb-1`}>
+                <span className={`${fonts.xs}  text-muted-foreground block mb-1`}>
                   {item.subtitle}
                 </span>
                 <span className={`${fonts.xl} text-foreground group-hover:text-primary transition-colors duration-300`}>

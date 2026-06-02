@@ -9,7 +9,7 @@ import { fonts, fontHeading } from "@/lib/fonts"
 gsap.registerPlugin(ScrollTrigger)
 
 const categories = [
-  { name: "Glasverkleidung", subtitle: "murale", image: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&q=80" },
+  { name: "glasverkleidung", subtitle: "murale", image: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&q=80" },
   { name: "Schaltbares Glas", subtitle: "mutabilis", image: "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=800&q=80" },
   { name: "Glasbilder", subtitle: "by kurth", image: "https://images.unsplash.com/photo-1513506003901-1e6a229e2d15?w=800&q=80" },
   { name: "Spionspiegel", subtitle: "spectabilis", image: "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=800&q=80" },
@@ -86,8 +86,8 @@ export function Categories() {
             ref={titleRef}
             className={`${fontHeading.md} font-bold text-foreground`}
           >
-            Unsere <br />
-            <span className="text-foreground">Kategorien</span>
+            unsere  <br />
+            <span className="text-foreground">kategorien</span>
           </h2>
 
           <div className="hidden md:flex gap-2">
@@ -127,7 +127,7 @@ export function Categories() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
               <div className="absolute bottom-0 left-0 right-0 p-6">
-                <span className={`${fonts.xs} font-bold uppercase  text-white/70 mb-2 block`}>
+                <span className={`${fonts.xs} font-bold text-white/70 mb-2 block`}>
                   {category.subtitle}
                 </span>
                 <h3 className={`${fonts['2xl']} text-white group-hover:text-accent transition-colors duration-300`}>

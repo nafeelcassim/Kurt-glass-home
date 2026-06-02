@@ -32,11 +32,11 @@ export function Header() {
   }, [])
 
   const navLinks = [
-    { href: "#news", label: "News" },
-    { href: "#products", label: "Produkte" },
-    { href: "#about", label: "Über Uns" },
-    { href: "#showrooms", label: "Standort" },
-    { href: "#contact", label: "Kontakt" },
+    { href: "#news", label: "news" },
+    { href: "#products", label: "produkte" },
+    { href: "#about", label: "über uns" },
+    { href: "#showrooms", label: "standort" },
+    { href: "#contact", label: "kontakt" },
   ]
 
   return (
@@ -55,7 +55,7 @@ export function Header() {
             alt="Kurth Logo"
             width={120}
             height={40}
-            className="h-8 w-auto transition-all duration-300 invert brightness-0"
+            className="h-10 w-auto transition-all duration-300 invert brightness-0"
             priority
           />
         </Link>
@@ -66,7 +66,7 @@ export function Header() {
             <Link
               key={link.href}
               href={link.href}
-              className={`${fonts.sm} uppercase  transition-colors duration-300 animated-underline ${isScrolled
+              className={`${fonts.sm}  transition-colors duration-300 animated-underline ${isScrolled
                   ? "text-muted-foreground hover:text-foreground font-bold"
                   : "text-white/80 hover:text-white font-bold"
                 }`}

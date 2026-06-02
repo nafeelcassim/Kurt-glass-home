@@ -48,12 +48,12 @@ export function Contact() {
 
       <div ref={contentRef} className="container mx-auto px-6 relative z-10">
         <div className="max-w-3xl mx-auto text-center">
-          <p className={`${fonts.sm} font-bold uppercase  text-muted-foreground mb-4`}>
+          <p className={`${fonts.sm} font-bold   text-muted-foreground mb-4`}>
             Kontaktieren Sie uns
           </p>
-          <h2 className={`${fontHeading.md} font-bold text-foreground mb-8`}>
-            Glas trifft <br />
-            <span className="text-foreground">Design</span>
+          <h2 className={`${fontHeading.md} font-bold text-foregsround mb-8`}>
+            glas trifft <br />
+            <span className="text-foreground">design</span>
           </h2>
           <p className={`${fonts.lg} font-semibold text-muted-foreground mb-12 max-w-xl mx-auto`}>
             Entdecken Sie unsere Welt in Bewegung - von spannenden Montagen über 

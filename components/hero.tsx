@@ -23,7 +23,7 @@ export function Hero() {
 
       // Split title animation - letter by letter
       const titleChars = titleRef.current?.querySelectorAll(".char")
-      if (titleChars) {
+      if (titleChars && titleChars.length > 0) {
         gsap.set(titleChars, { y: 120, opacity: 0, rotateX: -90 })
         tl.to(titleChars, {
           y: 0,
@@ -33,6 +33,18 @@ export function Hero() {
           ease: "power4.out",
           stagger: 0.05,
         })
+      } else {
+        const logoEl = titleRef.current?.querySelector(".title-logo")
+        if (logoEl) {
+          gsap.set(logoEl, { y: 60, opacity: 0, scale: 0.95 })
+          tl.to(logoEl, {
+            y: 0,
+            opacity: 1,
+            scale: 1,
+            duration: 1,
+            ease: "power4.out",
+          })
+        }
       }
 
       // Tagline image fade in and scale up
@@ -129,12 +141,16 @@ export function Hero() {
       {/* Content */}
       <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4">
         <div ref={titleRef} className="flex flex-col items-center">
-          <span className={`${fontHeading.hero} font-bold text-white uppercase`}>
-            {renderChars("KURTH")}
-          </span>
-          <span className={`${fontHeading.hero} font-bold text-white uppercase mt-2 md:mt-4`}>
-            {renderChars("GLAS")}
-          </span>
+          <div className="title-logo">
+            <Image
+              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/logo-W72cJvxeS1BY9zkwZEVHeJ5empcchu.png"
+              alt="Kurth Logo"
+              width={520}
+              height={180}
+              className="w-44 sm:w-56 md:w-72 lg:w-80 h-auto invert"
+              priority
+            />
+          </div>
 
           {/* Tagline image */}
           <div ref={taglineRef} className="mt-6 md:mt-10">
