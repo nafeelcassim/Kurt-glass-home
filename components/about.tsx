@@ -1,13 +1,15 @@
 "use client"
 
-import { useEffect, useRef } from "react"
+import { useRef } from "react"
 import gsap from "gsap"
+import { useGSAP } from "@gsap/react"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import Link from "next/link"
 import { ArrowRight, Play } from "lucide-react"
 import { fonts, fontHeading } from "@/lib/fonts"
 
-gsap.registerPlugin(ScrollTrigger)
+// Register both plugins
+gsap.registerPlugin(useGSAP, ScrollTrigger)
 
 export function About() {
   const sectionRef = useRef<HTMLDivElement>(null)
@@ -15,62 +17,58 @@ export function About() {
   const textRef = useRef<HTMLDivElement>(null)
   const imageRef = useRef<HTMLDivElement>(null)
 
-  useEffect(() => {
-    const ctx = gsap.context(() => {
-      // Heading animation - split into lines
-      const headingLines = headingRef.current?.querySelectorAll(".line")
-      if (headingLines) {
-        gsap.fromTo(
-          headingLines,
-          { y: 100, opacity: 0 },
-          {
-            y: 0,
-            opacity: 1,
-            duration: 1.2,
-            stagger: 0.2,
-            ease: "power4.out",
-            scrollTrigger: {
-              trigger: headingRef.current,
-              start: "top 80%",
-            },
-          }
-        )
-      }
-
-      // Text fade in
+  useGSAP(() => {
+    // Heading animation - split into lines
+    const headingLines = headingRef.current?.querySelectorAll(".line")
+    if (headingLines) {
       gsap.fromTo(
-        textRef.current,
-        { y: 50, opacity: 0 },
+        headingLines,
+        { y: 100, opacity: 0 },
         {
           y: 0,
           opacity: 1,
-          duration: 1,
-          ease: "power3.out",
+          duration: 1.2,
+          stagger: 0.2,
+          ease: "power4.out",
           scrollTrigger: {
-            trigger: textRef.current,
-            start: "top 85%",
+            trigger: headingRef.current,
+            start: "top 80%",
           },
         }
       )
+    }
 
-      // Image reveal
-      gsap.fromTo(
-        imageRef.current,
-        { clipPath: "inset(100% 0 0 0)" },
-        {
-          clipPath: "inset(0% 0 0 0)",
-          duration: 1.5,
-          ease: "power4.inOut",
-          scrollTrigger: {
-            trigger: imageRef.current,
-            start: "top 75%",
-          },
-        }
-      )
-    }, sectionRef)
+    // Text fade in
+    gsap.fromTo(
+      textRef.current,
+      { y: 50, opacity: 0 },
+      {
+        y: 0,
+        opacity: 1,
+        duration: 1,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: textRef.current,
+          start: "top 85%",
+        },
+      }
+    )
 
-    return () => ctx.revert()
-  }, [])
+    // Image reveal
+    gsap.fromTo(
+      imageRef.current,
+      { clipPath: "inset(100% 0 0 0)" },
+      {
+        clipPath: "inset(0% 0 0 0)",
+        duration: 1.5,
+        ease: "power4.inOut",
+        scrollTrigger: {
+          trigger: imageRef.current,
+          start: "top 75%",
+        },
+      }
+    )
+  }, { scope: sectionRef })
 
   return (
     <section ref={sectionRef} id="about" className="py-24 md:py-32 bg-[#001800] relative overflow-hidden">
@@ -94,12 +92,12 @@ export function About() {
             </h2>
 
             <div ref={textRef} className="space-y-6">
-              <p className={`${fonts.lg}  text-muted-foreground`}>
+              <p className={`${fonts.lg} text-muted-foreground`}>
                 Glas - ein zeitloses und faszinierendes Element, das in der 
                 Innenausstattung unverzichtbar geworden ist. Es symbolisiert 
                 Design und Klarheit und verkörpert einen ganz eigenen Lifestyle.
               </p>
-              <p className={`${fonts.lg}  text-muted-foreground`}>
+              <p className={`${fonts.lg} text-muted-foreground`}>
                 Bei KURTH Glas und Spiegel AG verschmilzt Handwerkskunst mit 
                 einem tiefen Verständnis für Ästhetik und schafft somit eine 
                 einzigartige Synthese aus Form und Funktion. Eine hochinnovative 
@@ -109,14 +107,14 @@ export function About() {
               <div className="flex flex-col sm:flex-row gap-4 mt-8">
                 <Link
                   href="#"
-                  className={`inline-flex items-center gap-3 ${fonts.sm} uppercase  text-primary hover:text-foreground transition-colors duration-300 group animated-underline`}
+                  className={`inline-flex items-center gap-3 ${fonts.sm} uppercase text-primary hover:text-foreground transition-colors duration-300 group animated-underline`}
                 >
                   Unsere Geschichte
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-2 transition-transform duration-300" />
                 </Link>
                 <Link
                   href="#"
-                  className={`inline-flex items-center gap-3 ${fonts.sm} uppercase  text-muted-foreground hover:text-foreground transition-colors duration-300 group`}
+                  className={`inline-flex items-center gap-3 ${fonts.sm} uppercase text-muted-foreground hover:text-foreground transition-colors duration-300 group`}
                 >
                   <Play className="w-4 h-4" />
                   Videos ansehen

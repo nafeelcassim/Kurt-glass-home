@@ -1,12 +1,14 @@
 "use client"
 
-import { useEffect, useRef } from "react"
+import { useRef } from "react"
 import gsap from "gsap"
+import { useGSAP } from "@gsap/react"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { ChevronLeft, ChevronRight } from "lucide-react"
 import { fonts, fontHeading } from "@/lib/fonts"
 
-gsap.registerPlugin(ScrollTrigger)
+// Register both plugins
+gsap.registerPlugin(useGSAP, ScrollTrigger)
 
 const categories = [
   { name: "glasverkleidung", subtitle: "murale", image: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&q=80" },
@@ -24,49 +26,45 @@ export function Categories() {
   const carouselRef = useRef<HTMLDivElement>(null)
   const titleRef = useRef<HTMLHeadingElement>(null)
 
-  useEffect(() => {
-    const ctx = gsap.context(() => {
-      // Title animation
+  useGSAP(() => {
+    // Title animation
+    gsap.fromTo(
+      titleRef.current,
+      { y: 80, opacity: 0 },
+      {
+        y: 0,
+        opacity: 1,
+        duration: 1,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: sectionRef.current,
+          start: "top 80%",
+          end: "top 50%",
+        },
+      }
+    )
+
+    // Cards stagger animation
+    const cards = carouselRef.current?.querySelectorAll(".category-card")
+    if (cards) {
       gsap.fromTo(
-        titleRef.current,
-        { y: 80, opacity: 0 },
+        cards,
+        { y: 100, opacity: 0, scale: 0.95 },
         {
           y: 0,
           opacity: 1,
-          duration: 1,
+          scale: 1,
+          duration: 0.8,
+          stagger: 0.1,
           ease: "power3.out",
           scrollTrigger: {
-            trigger: sectionRef.current,
+            trigger: carouselRef.current,
             start: "top 80%",
-            end: "top 50%",
           },
         }
       )
-
-      // Cards stagger animation
-      const cards = carouselRef.current?.querySelectorAll(".category-card")
-      if (cards) {
-        gsap.fromTo(
-          cards,
-          { y: 100, opacity: 0, scale: 0.95 },
-          {
-            y: 0,
-            opacity: 1,
-            scale: 1,
-            duration: 0.8,
-            stagger: 0.1,
-            ease: "power3.out",
-            scrollTrigger: {
-              trigger: carouselRef.current,
-              start: "top 80%",
-            },
-          }
-        )
-      }
-    }, sectionRef)
-
-    return () => ctx.revert()
-  }, [])
+    }
+  }, { scope: sectionRef })
 
   const scroll = (direction: "left" | "right") => {
     if (carouselRef.current) {

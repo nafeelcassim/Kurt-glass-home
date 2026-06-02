@@ -4,25 +4,30 @@ import { useEffect, useRef, useState } from "react"
 import Link from "next/link"
 import Image from "next/image"
 import gsap from "gsap"
+import { useGSAP } from "@gsap/react"
 import { fonts } from "@/lib/fonts"
+
+// Register useGSAP
+gsap.registerPlugin(useGSAP)
 
 export function Header() {
   const headerRef = useRef<HTMLElement>(null)
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
-  useEffect(() => {
-    const header = headerRef.current
-    if (!header) return
+  // 1. Handle GSAP Animations
+  useGSAP(() => {
+    if (!headerRef.current) return
 
-    // Initial animation
     gsap.fromTo(
-      header,
+      headerRef.current,
       { y: -100, opacity: 0 },
       { y: 0, opacity: 1, duration: 1, ease: "power3.out", delay: 0.5 }
     )
+  }, { scope: headerRef })
 
-    // Scroll handler
+  // 2. Handle React State / Event Listeners
+  useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50)
     }
@@ -42,10 +47,11 @@ export function Header() {
   return (
     <header
       ref={headerRef}
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${isScrolled
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+        isScrolled
           ? "bg-background/95 backdrop-blur-md py-4 shadow-sm"
           : "bg-transparent py-6"
-        }`}
+      }`}
     >
       <div className="container mx-auto px-6 flex items-center justify-between">
         {/* Logo */}
@@ -66,10 +72,13 @@ export function Header() {
             <Link
               key={link.href}
               href={link.href}
-              className={`${fonts.sm}  transition-colors duration-300 animated-underline ${isScrolled
+              className={`${
+                fonts.sm
+              } transition-colors duration-300 animated-underline ${
+                isScrolled
                   ? "text-muted-foreground hover:text-foreground font-bold"
                   : "text-white/80 hover:text-white font-bold"
-                }`}
+              }`}
             >
               {link.label}
             </Link>
@@ -83,24 +92,28 @@ export function Header() {
           aria-label="Toggle menu"
         >
           <span
-            className={`w-6 h-0.5 transition-all duration-300 ${isScrolled ? "bg-foreground" : "bg-white"
-              } ${isMenuOpen ? "rotate-45 translate-y-2" : ""}`}
+            className={`w-6 h-0.5 transition-all duration-300 ${
+              isScrolled ? "bg-foreground" : "bg-white"
+            } ${isMenuOpen ? "rotate-45 translate-y-2" : ""}`}
           />
           <span
-            className={`w-6 h-0.5 transition-all duration-300 ${isScrolled ? "bg-foreground" : "bg-white"
-              } ${isMenuOpen ? "opacity-0" : ""}`}
+            className={`w-6 h-0.5 transition-all duration-300 ${
+              isScrolled ? "bg-foreground" : "bg-white"
+            } ${isMenuOpen ? "opacity-0" : ""}`}
           />
           <span
-            className={`w-6 h-0.5 transition-all duration-300 ${isScrolled ? "bg-foreground" : "bg-white"
-              } ${isMenuOpen ? "-rotate-45 -translate-y-2" : ""}`}
+            className={`w-6 h-0.5 transition-all duration-300 ${
+              isScrolled ? "bg-foreground" : "bg-white"
+            } ${isMenuOpen ? "-rotate-45 -translate-y-2" : ""}`}
           />
         </button>
       </div>
 
       {/* Mobile Menu */}
       <div
-        className={`md:hidden absolute top-full left-0 right-0 bg-background/98 backdrop-blur-md transition-all duration-500 overflow-hidden border-b border-border ${isMenuOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
-          }`}
+        className={`md:hidden absolute top-full left-0 right-0 bg-background/98 backdrop-blur-md transition-all duration-500 overflow-hidden border-b border-border ${
+          isMenuOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+        }`}
       >
         <nav className="flex flex-col items-center gap-6 py-8">
           {navLinks.map((link) => (

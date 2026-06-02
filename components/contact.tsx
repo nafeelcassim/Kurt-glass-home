@@ -1,37 +1,35 @@
 "use client"
 
-import { useEffect, useRef } from "react"
+import { useRef } from "react"
 import gsap from "gsap"
+import { useGSAP } from "@gsap/react"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { ArrowRight } from "lucide-react"
 import { fonts, fontHeading, FONT_SPACING } from "@/lib/fonts"
 
-gsap.registerPlugin(ScrollTrigger)
+// Register both plugins
+gsap.registerPlugin(useGSAP, ScrollTrigger)
 
 export function Contact() {
   const sectionRef = useRef<HTMLDivElement>(null)
   const contentRef = useRef<HTMLDivElement>(null)
 
-  useEffect(() => {
-    const ctx = gsap.context(() => {
-      gsap.fromTo(
-        contentRef.current,
-        { y: 60, opacity: 0 },
-        {
-          y: 0,
-          opacity: 1,
-          duration: 1,
-          ease: "power3.out",
-          scrollTrigger: {
-            trigger: sectionRef.current,
-            start: "top 75%",
-          },
-        }
-      )
-    }, sectionRef)
-
-    return () => ctx.revert()
-  }, [])
+  useGSAP(() => {
+    gsap.fromTo(
+      contentRef.current,
+      { y: 60, opacity: 0 },
+      {
+        y: 0,
+        opacity: 1,
+        duration: 1,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: sectionRef.current,
+          start: "top 75%",
+        },
+      }
+    )
+  }, { scope: sectionRef })
 
   return (
     <section
@@ -48,10 +46,10 @@ export function Contact() {
 
       <div ref={contentRef} className="container mx-auto px-6 relative z-10">
         <div className="max-w-3xl mx-auto text-center">
-          <p className={`${fonts.sm} font-bold   text-muted-foreground mb-4`}>
+          <p className={`${fonts.sm} font-bold text-muted-foreground mb-4`}>
             Kontaktieren Sie uns
           </p>
-          <h2 className={`${fontHeading.md} font-bold text-foregsround mb-8`}>
+          <h2 className={`${fontHeading.md} font-bold text-foreground mb-8`}>
             glas trifft <br />
             <span className="text-foreground">design</span>
           </h2>

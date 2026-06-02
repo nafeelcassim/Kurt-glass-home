@@ -1,12 +1,14 @@
 "use client"
 
-import { useEffect, useRef } from "react"
+import { useRef } from "react"
 import gsap from "gsap"
+import { useGSAP } from "@gsap/react"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { MapPin, Phone, Mail, Navigation } from "lucide-react"
 import { fonts, fontHeading } from "@/lib/fonts"
 
-gsap.registerPlugin(ScrollTrigger)
+// Register both plugins
+gsap.registerPlugin(useGSAP, ScrollTrigger)
 
 const showrooms = [
   {
@@ -24,47 +26,43 @@ export function Showrooms() {
   const titleRef = useRef<HTMLDivElement>(null)
   const cardsRef = useRef<HTMLDivElement>(null)
 
-  useEffect(() => {
-    const ctx = gsap.context(() => {
-      // Title animation
+  useGSAP(() => {
+    // Title animation
+    gsap.fromTo(
+      titleRef.current,
+      { y: 60, opacity: 0 },
+      {
+        y: 0,
+        opacity: 1,
+        duration: 1,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: titleRef.current,
+          start: "top 80%",
+        },
+      }
+    )
+
+    // Cards animation
+    const cards = cardsRef.current?.querySelectorAll(".showroom-card")
+    if (cards) {
       gsap.fromTo(
-        titleRef.current,
-        { y: 60, opacity: 0 },
+        cards,
+        { y: 80, opacity: 0 },
         {
           y: 0,
           opacity: 1,
           duration: 1,
+          stagger: 0.2,
           ease: "power3.out",
           scrollTrigger: {
-            trigger: titleRef.current,
-            start: "top 80%",
+            trigger: cardsRef.current,
+            start: "top 75%",
           },
         }
       )
-
-      // Cards animation
-      const cards = cardsRef.current?.querySelectorAll(".showroom-card")
-      if (cards) {
-        gsap.fromTo(
-          cards,
-          { y: 80, opacity: 0 },
-          {
-            y: 0,
-            opacity: 1,
-            duration: 1,
-            stagger: 0.2,
-            ease: "power3.out",
-            scrollTrigger: {
-              trigger: cardsRef.current,
-              start: "top 75%",
-            },
-          }
-        )
-      }
-    }, sectionRef)
-
-    return () => ctx.revert()
-  }, [])
+    }
+  }, { scope: sectionRef })
 
   return (
     <section ref={sectionRef} id="showrooms" className="py-24 md:py-32 bg-[#111111]">

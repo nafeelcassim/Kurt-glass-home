@@ -1,12 +1,14 @@
 "use client"
 
-import { useEffect, useRef } from "react"
+import { useRef } from "react"
 import gsap from "gsap"
+import { useGSAP } from "@gsap/react"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { ArrowRight, ArrowUpRight } from "lucide-react"
 import { fonts, fontHeading } from "@/lib/fonts"
 
-gsap.registerPlugin(ScrollTrigger)
+// Register both plugins
+gsap.registerPlugin(useGSAP, ScrollTrigger)
 
 const products = [
   {
@@ -58,89 +60,85 @@ export function Products() {
   const titleRef = useRef<HTMLDivElement>(null)
   const gridRef = useRef<HTMLDivElement>(null)
 
-  useEffect(() => {
-    const ctx = gsap.context(() => {
-      // Title animation
-      gsap.fromTo(
-        titleRef.current,
-        { y: 60, opacity: 0 },
-        {
-          y: 0,
-          opacity: 1,
-          duration: 1,
-          ease: "power3.out",
-          scrollTrigger: {
-            trigger: titleRef.current,
-            start: "top 85%",
-          },
-        }
-      )
-
-      // Products stagger animation
-      const productCards = gridRef.current?.querySelectorAll(".product-card")
-      if (productCards) {
-        productCards.forEach((card, index) => {
-          // Card entrance animation
-          gsap.fromTo(
-            card,
-            { 
-              y: 100, 
-              opacity: 0,
-              rotateX: 15
-            },
-            {
-              y: 0,
-              opacity: 1,
-              rotateX: 0,
-              duration: 1,
-              delay: index * 0.1,
-              ease: "power3.out",
-              scrollTrigger: {
-                trigger: card,
-                start: "top 90%",
-              },
-            }
-          )
-
-          // Image parallax on scroll
-          const image = card.querySelector(".product-image")
-          if (image) {
-            gsap.to(image, {
-              y: -30,
-              ease: "none",
-              scrollTrigger: {
-                trigger: card,
-                start: "top bottom",
-                end: "bottom top",
-                scrub: 1,
-              },
-            })
-          }
-
-          // Hover animations
-          const overlay = card.querySelector(".product-overlay")
-          const content = card.querySelector(".product-content")
-          const arrow = card.querySelector(".product-arrow")
-
-          card.addEventListener("mouseenter", () => {
-            gsap.to(overlay, { opacity: 1, duration: 0.4, ease: "power2.out" })
-            gsap.to(content, { y: -10, duration: 0.4, ease: "power2.out" })
-            gsap.to(arrow, { x: 5, y: -5, duration: 0.3, ease: "power2.out" })
-            gsap.to(image, { scale: 1.08, duration: 0.7, ease: "power2.out" })
-          })
-
-          card.addEventListener("mouseleave", () => {
-            gsap.to(overlay, { opacity: 0, duration: 0.4, ease: "power2.out" })
-            gsap.to(content, { y: 0, duration: 0.4, ease: "power2.out" })
-            gsap.to(arrow, { x: 0, y: 0, duration: 0.3, ease: "power2.out" })
-            gsap.to(image, { scale: 1.05, duration: 0.7, ease: "power2.out" })
-          })
-        })
+  useGSAP(() => {
+    // Title animation
+    gsap.fromTo(
+      titleRef.current,
+      { y: 60, opacity: 0 },
+      {
+        y: 0,
+        opacity: 1,
+        duration: 1,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: titleRef.current,
+          start: "top 85%",
+        },
       }
-    }, sectionRef)
+    )
 
-    return () => ctx.revert()
-  }, [])
+    // Products stagger animation
+    const productCards = gridRef.current?.querySelectorAll(".product-card")
+    if (productCards) {
+      productCards.forEach((card, index) => {
+        // Card entrance animation
+        gsap.fromTo(
+          card,
+          { 
+            y: 100, 
+            opacity: 0,
+            rotateX: 15
+          },
+          {
+            y: 0,
+            opacity: 1,
+            rotateX: 0,
+            duration: 1,
+            delay: index * 0.1,
+            ease: "power3.out",
+            scrollTrigger: {
+              trigger: card,
+              start: "top 90%",
+            },
+          }
+        )
+
+        // Image parallax on scroll
+        const image = card.querySelector(".product-image")
+        if (image) {
+          gsap.to(image, {
+            y: -30,
+            ease: "none",
+            scrollTrigger: {
+              trigger: card,
+              start: "top bottom",
+              end: "bottom top",
+              scrub: 1,
+            },
+          })
+        }
+
+        // Hover animations
+        const overlay = card.querySelector(".product-overlay")
+        const content = card.querySelector(".product-content")
+        const arrow = card.querySelector(".product-arrow")
+
+        card.addEventListener("mouseenter", () => {
+          gsap.to(overlay, { opacity: 1, duration: 0.4, ease: "power2.out" })
+          gsap.to(content, { y: -10, duration: 0.4, ease: "power2.out" })
+          gsap.to(arrow, { x: 5, y: -5, duration: 0.3, ease: "power2.out" })
+          gsap.to(image, { scale: 1.08, duration: 0.7, ease: "power2.out" })
+        })
+
+        card.addEventListener("mouseleave", () => {
+          gsap.to(overlay, { opacity: 0, duration: 0.4, ease: "power2.out" })
+          gsap.to(content, { y: 0, duration: 0.4, ease: "power2.out" })
+          gsap.to(arrow, { x: 0, y: 0, duration: 0.3, ease: "power2.out" })
+          gsap.to(image, { scale: 1.05, duration: 0.7, ease: "power2.out" })
+        })
+      })
+    }
+  }, { scope: sectionRef }) // Pass your container ref here to establish the context scope
 
   return (
     <section ref={sectionRef} id="products" className="py-24 md:py-32 bg-background">
@@ -148,7 +146,7 @@ export function Products() {
         {/* Header */}
         <div ref={titleRef} className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
           <div>
-            <p className={`${fonts.sm}  text-muted-foreground mb-4`}>
+            <p className={`${fonts.sm} text-muted-foreground mb-4`}>
               Unsere Produkte
             </p>
             <h2 className={`${fontHeading.md} font-bold text-foreground`}>
@@ -157,7 +155,7 @@ export function Products() {
           </div>
           <a
             href="#"
-            className={`inline-flex items-center gap-3 ${fonts.sm} font-semibold uppercase text-primary hover:text-foreground transition-colors duration-300 group animated-underline`}
+            className={`inline-flex items-center gap-3 ${fonts.sm} font-semibold  text-primary hover:text-foreground transition-colors duration-300 group animated-underline`}
           >
             Alle Produkte
             <ArrowRight className="w-4 h-4 group-hover:translate-x-2 transition-transform duration-300" />
@@ -191,7 +189,7 @@ export function Products() {
                 
                 {/* Content on image */}
                 <div className="product-content absolute bottom-2 left-0 right-0 p-6">
-                  <span className={`${fonts.xs} font-bold  text-white/70 mb-2 block`}>
+                  <span className={`${fonts.xs} font-bold text-white/70 mb-2 block`}>
                     {product.subtitle}
                   </span>
                   <h3 className={`${fontHeading.sm} text-white mb-2`}>
@@ -224,7 +222,7 @@ export function Products() {
               className="group flex items-center justify-between p-6 border border-border hover:border-primary transition-colors duration-300"
             >
               <div>
-                <span className={`${fonts.xs}  text-muted-foreground block mb-1`}>
+                <span className={`${fonts.xs} text-muted-foreground block mb-1`}>
                   {item.subtitle}
                 </span>
                 <span className={`${fonts.xl} text-foreground group-hover:text-primary transition-colors duration-300`}>
