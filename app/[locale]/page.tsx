@@ -7,8 +7,14 @@ import { Showrooms } from "@/components/showrooms"
 import { Contact } from "@/components/contact"
 import { Footer } from "@/components/footer"
 import { SmoothScroll } from "@/components/smooth-scroll"
+import { useTranslations } from "next-intl"
 
 export default function Home() {
+
+
+  const t = useTranslations('HomePage');
+  console.log(t('heroSection.title'));
+
   return (
     <SmoothScroll>
       <Header />

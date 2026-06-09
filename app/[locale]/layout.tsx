@@ -1,7 +1,10 @@
 import type { Metadata, Viewport } from 'next'
 import { League_Spartan } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
-import './globals.css'
+import { hasLocale, NextIntlClientProvider } from 'next-intl'
+import '../globals.css'
+import { routing } from '@/i18n/routing'
+import { notFound } from 'next/navigation'
 
 const leagueSpartan = League_Spartan({ 
   subsets: ['latin'],
@@ -21,15 +24,26 @@ export const viewport: Viewport = {
   initialScale: 1,
 }
 
-export default function RootLayout({
+
+
+export default async function RootLayout({
   children,
+  params,
 }: Readonly<{
   children: React.ReactNode
+  params: Promise<{ locale: string }>
 }>) {
+
+    // Ensure that the incoming `locale` is valid
+  const {locale} = await params;
+  if (!hasLocale(routing.locales, locale)) {
+    notFound();
+  }
+
   return (
-    <html lang="en" className={`${leagueSpartan.variable} bg-background`}>
+    <html lang={locale} className={`${leagueSpartan.variable} bg-background`}>
       <body className="bg-background text-foreground font-sans antialiased">
-        {children}
+          <NextIntlClientProvider>{children}</NextIntlClientProvider>
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>
     </html>

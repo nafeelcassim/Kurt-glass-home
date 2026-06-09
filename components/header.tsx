@@ -6,6 +6,7 @@ import Image from "next/image"
 import gsap from "gsap"
 import { useGSAP } from "@gsap/react"
 import { fonts } from "@/lib/fonts"
+import { LanguageSwitcher } from "@/components/language-switcher"
 
 // Register useGSAP
 gsap.registerPlugin(useGSAP)
@@ -83,6 +84,8 @@ export function Header() {
               {link.label}
             </Link>
           ))}
+
+          <LanguageSwitcher isScrolled={isScrolled} />
         </nav>
 
         {/* Mobile Menu Button */}
@@ -112,7 +115,7 @@ export function Header() {
       {/* Mobile Menu */}
       <div
         className={`md:hidden absolute top-full left-0 right-0 bg-background/98 backdrop-blur-md transition-all duration-500 overflow-hidden border-b border-border ${
-          isMenuOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+          isMenuOpen ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"
         }`}
       >
         <nav className="flex flex-col items-center gap-6 py-8">
@@ -126,6 +129,10 @@ export function Header() {
               {link.label}
             </Link>
           ))}
+
+          <div className="pt-4 border-t border-border w-full flex justify-center">
+            <LanguageSwitcher variant="buttons" />
+          </div>
         </nav>
       </div>
     </header>
