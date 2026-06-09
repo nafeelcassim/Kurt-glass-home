@@ -5,6 +5,7 @@ import Link from "next/link"
 import Image from "next/image"
 import gsap from "gsap"
 import { useGSAP } from "@gsap/react"
+import { useTranslations } from "next-intl"
 import { fonts } from "@/lib/fonts"
 import { LanguageSwitcher } from "@/components/language-switcher"
 
@@ -15,6 +16,7 @@ export function Header() {
   const headerRef = useRef<HTMLElement>(null)
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const t = useTranslations("Header")
 
   // 1. Handle GSAP Animations
   useGSAP(() => {
@@ -38,11 +40,11 @@ export function Header() {
   }, [])
 
   const navLinks = [
-    { href: "#news", label: "news" },
-    { href: "#products", label: "produkte" },
-    { href: "#about", label: "über uns" },
-    { href: "#showrooms", label: "standort" },
-    { href: "#contact", label: "kontakt" },
+    { href: "#news", label: t("nav.news") },
+    { href: "#products", label: t("nav.products") },
+    { href: "#about", label: t("nav.about") },
+    { href: "#showrooms", label: t("nav.showrooms") },
+    { href: "#contact", label: t("nav.contact") },
   ]
 
   return (

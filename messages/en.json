@@ -1,13 +1,162 @@
 {
-  "HomePage": {
-    "header": {
-        "logo": "Kurth Glas"
+  "Header": {
+    "nav": {
+      "news": "news",
+      "products": "products",
+      "about": "about us",
+      "showrooms": "location",
+      "contact": "contact"
+    }
+  },
+  "Hero": {
+    "scrollIndicator": "Discover"
+  },
+  "About": {
+    "heading": {
+      "line1": "glass",
+      "line2": "meets",
+      "line3": "design"
     },
-    "heroSection": {
-      "title": "Premium Glass Solutions",
-      "subtitle": "Innovation meets craftsmanship in every creation."
+    "description": {
+      "paragraph1": "Glass - a timeless and fascinating element that has become indispensable in interior design. It symbolizes design and clarity and embodies a unique lifestyle.",
+      "paragraph2": "At KURTH Glas und Spiegel AG, craftsmanship merges with a deep understanding of aesthetics, creating a unique synthesis of form and function. A highly innovative infrastructure in Zuchwil sets the owner-managed company apart."
+    },
+    "cta": {
+      "ourStory": "Our Story",
+      "watchVideos": "Watch Videos"
+    },
+    "stats": {
+      "years": "Years of Experience"
+    }
+  },
+  "Products": {
+    "header": {
+      "subtitle": "Our Products",
+      "title": "glass meets design"
+    },
+    "cta": {
+      "allProducts": "All Products"
+    },
+    "items": {
+      "murale": {
+        "name": "Glass Cladding",
+        "subtitle": "murale",
+        "description": "Elegant wall cladding made of high-quality glass for interiors"
+      },
+      "mutabilis": {
+        "name": "Switchable Glass",
+        "subtitle": "mutabilis",
+        "description": "Innovative technology for maximum privacy at the touch of a button"
+      },
+      "glasbilder": {
+        "name": "Glass Art",
+        "subtitle": "by kurth",
+        "description": "Artistic glass pictures as unique design elements"
+      },
+      "spectabilis": {
+        "name": "Two-Way Mirror",
+        "subtitle": "spectabilis",
+        "description": "High-quality two-way mirrors for special applications"
+      },
+      "arcus": {
+        "name": "Curved Glass",
+        "subtitle": "arcus",
+        "description": "Curved glass for architectural highlights"
+      },
+      "luxar": {
+        "name": "Anti-Reflective Glass",
+        "subtitle": "luxar",
+        "description": "Crystal clear view without disturbing reflections"
+      },
+      "murus": {
+        "name": "All-Glass System",
+        "subtitle": "murus"
+      },
+      "pavimentum": {
+        "name": "Glass Floor",
+        "subtitle": "pavimentum"
+      },
+      "speculum": {
+        "name": "Mirrors",
+        "subtitle": "speculum"
+      }
+    }
+  },
+  "Categories": {
+    "heading": {
+      "line1": "our",
+      "line2": "categories"
+    },
+    "navigation": {
+      "back": "Back",
+      "next": "Next"
+    },
+    "items": {
+      "glasverkleidung": "Glass Cladding",
+      "schaltbaresGlas": "Switchable Glass",
+      "glasbilder": "Glass Art",
+      "spionspiegel": "Two-Way Mirror",
+      "bogenglas": "Curved Glass",
+      "entspiegeltesGlas": "Anti-Reflective Glass",
+      "ganzglasSystem": "All-Glass System",
+      "spiegel": "Mirrors"
+    }
+  },
+  "Showrooms": {
+    "header": {
+      "subtitle": "Visit Us",
+      "title": "our location"
+    },
+    "contact": {
+      "address": "Address",
+      "phone": "Phone",
+      "email": "Email"
+    },
+    "cta": {
+      "planRoute": "Plan Route"
+    }
+  },
+  "Contact": {
+    "header": {
+      "subtitle": "Contact Us",
+      "title": "glass meets design"
+    },
+    "description": "Discover our world in motion - from exciting installations to insights into production to practical tips and glass tests.",
+    "cta": {
+      "getInTouch": "Get in Touch",
+      "watchVideos": "Watch Videos"
+    }
+  },
+  "Footer": {
+    "description": "Glass meets Design. High-quality glass solutions from Zuchwil, Switzerland. Owner-managed with over 50 years of experience.",
+    "links": {
+      "products": "Products",
+      "services": "Services",
+      "contact": "Contact"
+    },
+    "productLinks": {
+      "glasverkleidung": "Glass Cladding",
+      "schaltbaresGlas": "Switchable Glass",
+      "glasbilder": "Glass Art",
+      "spionspiegel": "Two-Way Mirror",
+      "bogenglas": "Curved Glass",
+      "entspiegeltesGlas": "Anti-Reflective Glass"
+    },
+    "serviceLinks": {
+      "ganzglasSystem": "All-Glass System",
+      "glasboden": "Glass Floor",
+      "spiegel": "Mirrors",
+      "beratung": "Consulting"
+    },
+    "contactLinks": {
+      "standort": "Location",
+      "kontakt": "Contact",
+      "karriere": "Careers"
+    },
+    "legal": {
+      "copyright": "© {year} KURTH Glas und Spiegel AG. All rights reserved.",
+      "privacy": "Privacy Policy",
+      "imprint": "Imprint"
     }
   }
 }
-
- 

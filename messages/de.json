@@ -1,13 +1,162 @@
 {
-  "HomePage": {
-    "header": {
-        "logo": "Kurth Glas"
+  "Header": {
+    "nav": {
+      "news": "news",
+      "products": "produkte",
+      "about": "über uns",
+      "showrooms": "standort",
+      "contact": "kontakt"
+    }
+  },
+  "Hero": {
+    "scrollIndicator": "Entdecken"
+  },
+  "About": {
+    "heading": {
+      "line1": "glas",
+      "line2": "trifft",
+      "line3": "design"
     },
-    "heroSection": {
-      "title": "Premium Glass Solutions de",
-      "subtitle": "Innovation meets craftsmanship in every creation."
+    "description": {
+      "paragraph1": "Glas - ein zeitloses und faszinierendes Element, das in der Innenausstattung unverzichtbar geworden ist. Es symbolisiert Design und Klarheit und verkörpert einen ganz eigenen Lifestyle.",
+      "paragraph2": "Bei KURTH Glas und Spiegel AG verschmilzt Handwerkskunst mit einem tiefen Verständnis für Ästhetik und schafft somit eine einzigartige Synthese aus Form und Funktion. Eine hochinnovative Infrastruktur in Zuchwil hebt das inhabergeführte Unternehmen ab."
+    },
+    "cta": {
+      "ourStory": "Unsere Geschichte",
+      "watchVideos": "Videos ansehen"
+    },
+    "stats": {
+      "years": "Jahre Erfahrung"
+    }
+  },
+  "Products": {
+    "header": {
+      "subtitle": "Unsere Produkte",
+      "title": "glas trifft design"
+    },
+    "cta": {
+      "allProducts": "Alle Produkte"
+    },
+    "items": {
+      "murale": {
+        "name": "glasverkleidung",
+        "subtitle": "murale",
+        "description": "Elegante Wandverkleidungen aus hochwertigen Glas für Innenräume"
+      },
+      "mutabilis": {
+        "name": "Schaltbares Glas",
+        "subtitle": "mutabilis",
+        "description": "Innovative Technologie für maximale Privatsphäre auf Knopfdruck"
+      },
+      "glasbilder": {
+        "name": "Glasbilder",
+        "subtitle": "by kurth",
+        "description": "Kunstvolle Glasbilder als einzigartige Designelemente"
+      },
+      "spectabilis": {
+        "name": "Spionspiegel",
+        "subtitle": "spectabilis",
+        "description": "Hochwertige Spionspiegel für besondere Anwendungen"
+      },
+      "arcus": {
+        "name": "Bogenglas",
+        "subtitle": "arcus",
+        "description": "Gebogenes Glas für architektonische Highlights"
+      },
+      "luxar": {
+        "name": "Entspiegeltes Glas",
+        "subtitle": "luxar",
+        "description": "Kristallklare Sicht ohne störende Reflexionen"
+      },
+      "murus": {
+        "name": "Ganzglas-System",
+        "subtitle": "murus"
+      },
+      "pavimentum": {
+        "name": "Glasboden",
+        "subtitle": "pavimentum"
+      },
+      "speculum": {
+        "name": "Spiegel",
+        "subtitle": "speculum"
+      }
+    }
+  },
+  "Categories": {
+    "heading": {
+      "line1": "unsere",
+      "line2": "kategorien"
+    },
+    "navigation": {
+      "back": "Zurück",
+      "next": "Weiter"
+    },
+    "items": {
+      "glasverkleidung": "glasverkleidung",
+      "schaltbaresGlas": "Schaltbares Glas",
+      "glasbilder": "Glasbilder",
+      "spionspiegel": "Spionspiegel",
+      "bogenglas": "Bogenglas",
+      "entspiegeltesGlas": "Entspiegeltes Glas",
+      "ganzglasSystem": "Ganzglas-System",
+      "spiegel": "Spiegel"
+    }
+  },
+  "Showrooms": {
+    "header": {
+      "subtitle": "Besuchen Sie uns",
+      "title": "unser standort"
+    },
+    "contact": {
+      "address": "Adresse",
+      "phone": "Telefon",
+      "email": "E-Mail"
+    },
+    "cta": {
+      "planRoute": "Route planen"
+    }
+  },
+  "Contact": {
+    "header": {
+      "subtitle": "Kontaktieren Sie uns",
+      "title": "glas trifft design"
+    },
+    "description": "Entdecken Sie unsere Welt in Bewegung - von spannenden Montagen über Einblicke in die Produktion bis hin zu praktischen Tipps und Glas-Tests.",
+    "cta": {
+      "getInTouch": "Kontakt aufnehmen",
+      "watchVideos": "Videos ansehen"
+    }
+  },
+  "Footer": {
+    "description": "Glas trifft Design. Hochwertige Glaslösungen aus Zuchwil, Schweiz. Inhabergeführt mit über 50 Jahren Erfahrung.",
+    "links": {
+      "products": "Produkte",
+      "services": "Services",
+      "contact": "Kontakt"
+    },
+    "productLinks": {
+      "glasverkleidung": "Glasverkleidung",
+      "schaltbaresGlas": "Schaltbares Glas",
+      "glasbilder": "Glasbilder",
+      "spionspiegel": "Spionspiegel",
+      "bogenglas": "Bogenglas",
+      "entspiegeltesGlas": "Entspiegeltes Glas"
+    },
+    "serviceLinks": {
+      "ganzglasSystem": "Ganzglas-System",
+      "glasboden": "Glasboden",
+      "spiegel": "Spiegel",
+      "beratung": "Beratung"
+    },
+    "contactLinks": {
+      "standort": "Standort",
+      "kontakt": "Kontakt",
+      "karriere": "Karriere"
+    },
+    "legal": {
+      "copyright": "© {year} KURTH Glas und Spiegel AG. Alle Rechte vorbehalten.",
+      "privacy": "Datenschutz",
+      "imprint": "Impressum"
     }
   }
 }
-
- 

@@ -5,23 +5,25 @@ import gsap from "gsap"
 import { useGSAP } from "@gsap/react"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { ChevronLeft, ChevronRight } from "lucide-react"
+import { useTranslations } from "next-intl"
 import { fonts, fontHeading } from "@/lib/fonts"
 
 // Register both plugins
 gsap.registerPlugin(useGSAP, ScrollTrigger)
 
-const categories = [
-  { name: "glasverkleidung", subtitle: "murale", image: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&q=80" },
-  { name: "Schaltbares Glas", subtitle: "mutabilis", image: "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=800&q=80" },
-  { name: "Glasbilder", subtitle: "by kurth", image: "https://images.unsplash.com/photo-1513506003901-1e6a229e2d15?w=800&q=80" },
-  { name: "Spionspiegel", subtitle: "spectabilis", image: "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=800&q=80" },
-  { name: "Bogenglas", subtitle: "arcus", image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80" },
-  { name: "Entspiegeltes Glas", subtitle: "luxar", image: "https://images.unsplash.com/photo-1600573472550-8090b5e0745e?w=800&q=80" },
-  { name: "Ganzglas-System", subtitle: "murus", image: "https://images.unsplash.com/photo-1600607687644-c7171b42498f?w=800&q=80" },
-  { name: "Spiegel", subtitle: "speculum", image: "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=800&q=80" },
+const categoryImages = [
+  { id: "glasverkleidung", subtitle: "murale", image: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&q=80" },
+  { id: "schaltbaresGlas", subtitle: "mutabilis", image: "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=800&q=80" },
+  { id: "glasbilder", subtitle: "by kurth", image: "https://images.unsplash.com/photo-1513506003901-1e6a229e2d15?w=800&q=80" },
+  { id: "spionspiegel", subtitle: "spectabilis", image: "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=800&q=80" },
+  { id: "bogenglas", subtitle: "arcus", image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80" },
+  { id: "entspiegeltesGlas", subtitle: "luxar", image: "https://images.unsplash.com/photo-1600573472550-8090b5e0745e?w=800&q=80" },
+  { id: "ganzglasSystem", subtitle: "murus", image: "https://images.unsplash.com/photo-1600607687644-c7171b42498f?w=800&q=80" },
+  { id: "spiegel", subtitle: "speculum", image: "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=800&q=80" },
 ]
 
 export function Categories() {
+  const t = useTranslations("Categories")
   const sectionRef = useRef<HTMLDivElement>(null)
   const carouselRef = useRef<HTMLDivElement>(null)
   const titleRef = useRef<HTMLHeadingElement>(null)
@@ -84,22 +86,22 @@ export function Categories() {
             ref={titleRef}
             className={`${fontHeading.md} font-bold text-foreground`}
           >
-            unsere  <br />
-            <span className="text-foreground">kategorien</span>
+            {t("heading.line1")}  <br />
+            <span className="text-foreground">{t("heading.line2")}</span>
           </h2>
 
           <div className="hidden md:flex gap-2">
             <button
               onClick={() => scroll("left")}
               className="p-3 border border-border hover:border-primary hover:text-primary transition-colors duration-300 bg-background"
-              aria-label="Zurück"
+              aria-label={t("navigation.back")}
             >
               <ChevronLeft className="w-5 h-5" />
             </button>
             <button
               onClick={() => scroll("right")}
               className="p-3 border border-border hover:border-primary hover:text-primary transition-colors duration-300 bg-background"
-              aria-label="Weiter"
+              aria-label={t("navigation.next")}
             >
               <ChevronRight className="w-5 h-5" />
             </button>
@@ -112,15 +114,15 @@ export function Categories() {
         ref={carouselRef}
         className="flex gap-6 px-6 overflow-x-auto horizontal-scroll pb-4"
       >
-        {categories.map((category, index) => (
+        {categoryImages.map((category) => (
           <div
-            key={category.name}
+            key={category.id}
             className="category-card flex-shrink-0 w-72 md:w-80 group cursor-pointer"
           >
             <div className="relative aspect-[3/4] overflow-hidden mb-4">
               <img
                 src={category.image}
-                alt={category.name}
+                alt={t(`items.${category.id}`)}
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
@@ -129,7 +131,7 @@ export function Categories() {
                   {category.subtitle}
                 </span>
                 <h3 className={`${fonts['2xl']} text-white group-hover:text-accent transition-colors duration-300`}>
-                  {category.name}
+                  {t(`items.${category.id}`)}
                 </h3>
               </div>
             </div>

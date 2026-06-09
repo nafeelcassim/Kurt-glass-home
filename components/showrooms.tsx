@@ -5,6 +5,7 @@ import gsap from "gsap"
 import { useGSAP } from "@gsap/react"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { MapPin, Phone, Mail, Navigation } from "lucide-react"
+import { useTranslations } from "next-intl"
 import { fonts, fontHeading } from "@/lib/fonts"
 
 // Register both plugins
@@ -22,6 +23,7 @@ const showrooms = [
 ]
 
 export function Showrooms() {
+  const t = useTranslations("Showrooms")
   const sectionRef = useRef<HTMLDivElement>(null)
   const titleRef = useRef<HTMLDivElement>(null)
   const cardsRef = useRef<HTMLDivElement>(null)
@@ -70,10 +72,10 @@ export function Showrooms() {
         {/* Title */}
         <div ref={titleRef} className="text-center mb-16">
           <p className={`${fonts.sm} font-bold text-muted-foreground mb-4`}>
-            Besuchen Sie uns
+            {t("header.subtitle")}
           </p>
           <h2 className={`${fontHeading.md} font-bold text-foreground`}>
-            unser <span className="text-foreground">standort</span>
+            {t("header.title")}
           </h2>
         </div>
 
@@ -120,7 +122,7 @@ export function Showrooms() {
 
                 <button className={`inline-flex items-center gap-3 bg-primary text-primary-foreground px-6 py-4 ${fonts.sm} font-bold uppercase  hover:bg-foreground hover:text-black transition-colors duration-300 w-fit`}>
                   <Navigation className="w-4 h-4 font" />
-                  Route planen
+                  {t("cta.planRoute")}
                 </button>
               </div>
             </div>
