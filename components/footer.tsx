@@ -23,7 +23,7 @@ export function Footer() {
                 <div className="rounded-2xl  border-neutral-200 bg-white p-5  transition-shadow duration-300 group-hover:shadow-md">
                   <div className="flex items-center justify-between gap-4">
                     <div className="min-w-0">
-                      <span className={`${fonts['3xl']} font-bold text-neutral-900 leading-none`}>
+                      <span className={`${fonts['3xl']} font-medium text-neutral-900 leading-none`}>
                         KURTH
                       </span>
                       <span className={`block ${fonts.xs} font-bold uppercase tracking-wide text-neutral-500 mt-2`}>
