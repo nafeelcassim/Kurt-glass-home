@@ -112,7 +112,7 @@ export function Products() {
         {/* Header */}
         <div ref={titleRef} className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
           <div>
-            <p className={`${fonts.sm} text-muted-foreground mb-4`}>
+            <p className={`${fonts.sm} uppercase  text-muted-foreground mb-3`}>
               {t("header.subtitle")}
             </p>
             <h2 className={`${fontHeading.md} font-bold text-foreground`}>
@@ -140,7 +140,7 @@ export function Products() {
               className="product-card group cursor-pointer relative overflow-hidden"
             >
               {/* Image Container */}
-              <div className="relative aspect-[4/5] overflow-hidden bg-secondary">
+              <div className="relative aspect-4/5 overflow-hidden bg-secondary">
                 <img
                   src={product.image}
                   alt={t(`items.${product.id}.name`)}
@@ -148,20 +148,20 @@ export function Products() {
                 />
                 
                 {/* Gradient overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+                <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/20 to-transparent" />
                 
                 {/* Hover overlay */}
                 <div className="product-overlay absolute inset-0 bg-primary/20 opacity-0 pointer-events-none" />
                 
                 {/* Content on image */}
                 <div className="product-content absolute bottom-2 left-0 right-0 p-6">
-                  <span className={`${fonts.xs} font-bold text-white/70 mb-2 block`}>
+                  <span className={`${fonts.lg} font-normal tracking-wide text-white/70 mb-2 block`}>
                     {t(`items.${product.id}.subtitle`)}
                   </span>
-                  <h3 className={`${fontHeading.sm} text-white mb-2`}>
+                  <h3 className={`${fontHeading.sm} tracking-normal text-white mb-2 font-bold`}>
                     {t(`items.${product.id}.name`)}
                   </h3>
-                  <p className={`${fonts.xl} leading-[1.2] font-light text-white/70 line-clamp-2`}>
+                  <p className={`${fonts.lg} text-white/70 tracking-wider line-clamp-2`}>
                     {t(`items.${product.id}.description`)}
                   </p>
                 </div>
@@ -184,10 +184,10 @@ export function Products() {
               className="group flex items-center justify-between p-6 border border-border hover:border-primary transition-colors duration-300"
             >
               <div>
-                <span className={`${fonts.xs} text-muted-foreground block mb-1`}>
+                <span className={`${fonts.xs} uppercase tracking-widest text-muted-foreground block mb-1`}>
                   {t(`items.${id}.subtitle`)}
                 </span>
-                <span className={`${fonts.xl} text-foreground group-hover:text-primary transition-colors duration-300`}>
+                <span className={`${fonts['2xl']} text-foreground group-hover:text-primary transition-colors duration-300`}>
                   {t(`items.${id}.name`)}
                 </span>
               </div>

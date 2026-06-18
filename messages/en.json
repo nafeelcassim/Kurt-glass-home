@@ -15,7 +15,7 @@
     "heading": {
       "line1": "glass",
       "line2": "meets",
-      "line3": "design"
+      "line3": "design."
     },
     "description": {
       "paragraph1": "Glass - a timeless and fascinating element that has become indispensable in interior design. It symbolizes design and clarity and embodies a unique lifestyle.",
@@ -32,7 +32,7 @@
   "Products": {
     "header": {
       "subtitle": "Our Products",
-      "title": "glass meets design"
+      "title": "products."
     },
     "cta": {
       "allProducts": "All Products"
@@ -85,7 +85,7 @@
   "Categories": {
     "heading": {
       "line1": "our",
-      "line2": "categories"
+      "line2": "categories."
     },
     "navigation": {
       "back": "Back",
@@ -105,7 +105,7 @@
   "Showrooms": {
     "header": {
       "subtitle": "Visit Us",
-      "title": "our location"
+      "title": "our location."
     },
     "contact": {
       "address": "Address",
@@ -119,7 +119,7 @@
   "Contact": {
     "header": {
       "subtitle": "Contact Us",
-      "title": "glass meets design"
+      "title": "get in touch."
     },
     "description": "Discover our world in motion - from exciting installations to insights into production to practical tips and glass tests.",
     "cta": {

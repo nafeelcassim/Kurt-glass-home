@@ -15,7 +15,7 @@
     "heading": {
       "line1": "le verre",
       "line2": "rencontre",
-      "line3": "le design"
+      "line3": "le design."
     },
     "description": {
       "paragraph1": "Le verre - un élément intemporel et fascinant devenu indispensable dans l'aménagement intérieur. Il symbolise le design et la clarté et incarne un style de vie unique.",
@@ -32,7 +32,7 @@
   "Products": {
     "header": {
       "subtitle": "Nos Produits",
-      "title": "le verre rencontre le design"
+      "title": "produits."
     },
     "cta": {
       "allProducts": "Tous les Produits"
@@ -85,7 +85,7 @@
   "Categories": {
     "heading": {
       "line1": "nos",
-      "line2": "catégories"
+      "line2": "catégories."
     },
     "navigation": {
       "back": "Retour",
@@ -105,7 +105,7 @@
   "Showrooms": {
     "header": {
       "subtitle": "Visitez-nous",
-      "title": "notre emplacement"
+      "title": "notre emplacement."
     },
     "contact": {
       "address": "Adresse",
@@ -119,7 +119,7 @@
   "Contact": {
     "header": {
       "subtitle": "Contactez-nous",
-      "title": "le verre rencontre le design"
+      "title": "prenez contact."
     },
     "description": "Découvrez notre monde en mouvement - des montages passionnants aux aperçus de la production en passant par des conseils pratiques et des tests de verre.",
     "cta": {

@@ -48,13 +48,13 @@ export function Contact() {
 
       <div ref={contentRef} className="container mx-auto px-6 relative z-10">
         <div className="max-w-3xl mx-auto text-center">
-          <p className={`${fonts.sm} font-bold text-muted-foreground mb-4`}>
+          <p className={`${fonts.sm} uppercase tracking-widest text-muted-foreground mb-3`}>
             {t("header.subtitle")}
           </p>
           <h2 className={`${fontHeading.md} font-bold text-foreground mb-8`}>
             {t("header.title")}
           </h2>
-          <p className={`${fonts.lg} font-semibold text-muted-foreground mb-12 max-w-xl mx-auto`}>
+          <p className={`${fonts.base} text-muted-foreground mb-12 max-w-xl mx-auto`}>
             {t("description")}
           </p>
 

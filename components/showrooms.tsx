@@ -71,7 +71,7 @@ export function Showrooms() {
       <div className="container mx-auto px-6">
         {/* Title */}
         <div ref={titleRef} className="text-center mb-16">
-          <p className={`${fonts.sm} font-bold text-muted-foreground mb-4`}>
+          <p className={`${fonts.sm} uppercase tracking-widest text-muted-foreground mb-3`}>
             {t("header.subtitle")}
           </p>
           <h2 className={`${fontHeading.md} font-bold text-foreground`}>
@@ -106,16 +106,16 @@ export function Showrooms() {
                 <p className={`text-primary ${fonts.lg} mb-8`}>{showroom.location}</p>
 
                 <div className="space-y-4 mb-8">
-                  <div className={`flex items-center gap-4 ${fonts.sm} font-semibold text-muted-foreground`}>
-                    <MapPin className="w-5 h-5 flex-shrink-0" />
+                  <div className={`flex items-center gap-4 ${fonts.sm} text-muted-foreground`}>
+                    <MapPin className="w-5 h-5 shrink-0 text-primary" />
                     <span>{showroom.address}</span>
                   </div>
-                  <div className={`flex items-center gap-4 ${fonts.sm} font-semibold  text-muted-foreground`}>
-                    <Phone className="w-5 h-5 flex-shrink-0" />
+                  <div className={`flex items-center gap-4 ${fonts.sm} text-muted-foreground`}>
+                    <Phone className="w-5 h-5 shrink-0 text-primary" />
                     <span>{showroom.phone}</span>
                   </div>
-                  <div className={`flex items-center gap-4 ${fonts.sm} font-semibold  text-muted-foreground`}>
-                    <Mail className="w-5 h-5 flex-shrink-0" />
+                  <div className={`flex items-center gap-4 ${fonts.sm} text-muted-foreground`}>
+                    <Mail className="w-5 h-5 shrink-0 text-primary" />
                     <span>{showroom.email}</span>
                   </div>
                 </div>

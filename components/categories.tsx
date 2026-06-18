@@ -86,7 +86,7 @@ export function Categories() {
             ref={titleRef}
             className={`${fontHeading.md} font-bold text-foreground`}
           >
-            {t("heading.line1")}  <br />
+            {t("heading.line1")}<br />
             <span className="text-foreground">{t("heading.line2")}</span>
           </h2>
 
@@ -117,20 +117,20 @@ export function Categories() {
         {categoryImages.map((category) => (
           <div
             key={category.id}
-            className="category-card flex-shrink-0 w-72 md:w-80 group cursor-pointer"
+            className="category-card shrink-0 w-72 md:w-80 group cursor-pointer"
           >
-            <div className="relative aspect-[3/4] overflow-hidden mb-4">
+            <div className="relative aspect-3/4 overflow-hidden mb-4">
               <img
                 src={category.image}
                 alt={t(`items.${category.id}`)}
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
+              <div className="absolute inset-0 bg-linear-to-t from-black/80 via-transparent to-transparent" />
               <div className="absolute bottom-0 left-0 right-0 p-6">
-                <span className={`${fonts.xs} font-bold text-white/70 mb-2 block`}>
+                <span className={`${fonts.xs} uppercase tracking-widest text-white/60 mb-2 block`}>
                   {category.subtitle}
                 </span>
-                <h3 className={`${fonts['2xl']} text-white group-hover:text-accent transition-colors duration-300`}>
+                <h3 className={`${fonts['2xl']} font-bold text-white group-hover:text-accent transition-colors duration-300`}>
                   {t(`items.${category.id}`)}
                 </h3>
               </div>

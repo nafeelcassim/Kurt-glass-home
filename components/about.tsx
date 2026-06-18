@@ -80,24 +80,24 @@ export function About() {
           <div>
             <h2
               ref={headingRef}
-              className={`${fontHeading.lg} mb-8 leading-[1.1]`}
+              className={`${fontHeading.lg} font-bold mb-10`}
             >
               <span className="line block overflow-hidden">
-                <span className="inline-block font-bold">{t("heading.line1")}</span>
+                <span className="inline-block">{t("heading.line1")}</span>
               </span>
               <span className="line block overflow-hidden">
-                <span className="inline-block font-bold">{t("heading.line2")}</span>
+                <span className="inline-block">{t("heading.line2")}</span>
               </span>
               <span className="line block overflow-hidden">
-                <span className="inline-block font-bold">{t("heading.line3")}</span>
+                <span className="inline-block">{t("heading.line3")}</span>
               </span>
             </h2>
 
-            <div ref={textRef} className="space-y-6">
-              <p className={`${fonts.lg} text-muted-foreground`}>
+            <div ref={textRef} className="space-y-5">
+              <p className={`${fonts.base} text-muted-foreground`}>
                 {t("description.paragraph1")}
               </p>
-              <p className={`${fonts.lg} text-muted-foreground`}>
+              <p className={`${fonts.base} text-muted-foreground`}>
                 {t("description.paragraph2")}
               </p>
 
@@ -121,7 +121,7 @@ export function About() {
           </div>
 
           {/* Image */}
-          <div ref={imageRef} className="relative aspect-[4/5]">
+          <div ref={imageRef} className="relative aspect-4/5">
             <img
               src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&q=80"
               alt="Glas Handwerkskunst"

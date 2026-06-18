@@ -64,7 +64,7 @@ export function Header() {
             alt="Kurth Logo"
             width={120}
             height={40}
-            className="h-10 w-auto transition-all duration-300 invert brightness-0"
+            className="h-15 w-auto transition-all duration-300 invert brightness-0"
             priority
           />
         </Link>
@@ -76,11 +76,11 @@ export function Header() {
               key={link.href}
               href={link.href}
               className={`${
-                fonts.sm
-              } transition-colors duration-300 animated-underline ${
+                fonts.base
+              } transition-colors duration-300 animated-underline tracking-wide font-medium ${
                 isScrolled
-                  ? "text-muted-foreground hover:text-foreground font-bold"
-                  : "text-white/80 hover:text-white font-bold"
+                  ? "text-muted-foreground hover:text-foreground"
+                  : "text-white/80 hover:text-white"
               }`}
             >
               {link.label}
