@@ -1,0 +1,162 @@
+{
+  "Header": {
+    "nav": {
+      "news": "actualités",
+      "products": "produits",
+      "about": "à propos",
+      "showrooms": "emplacement",
+      "contact": "contact"
+    }
+  },
+  "Hero": {
+    "scrollIndicator": "Découvrir"
+  },
+  "About": {
+    "heading": {
+      "line1": "le verre",
+      "line2": "rencontre",
+      "line3": "le design."
+    },
+    "description": {
+      "paragraph1": "Le verre - un élément intemporel et fascinant devenu indispensable dans l'aménagement intérieur. Il symbolise le design et la clarté et incarne un style de vie unique.",
+      "paragraph2": "Chez KURTH Glas und Spiegel AG, le savoir-faire artisanal se mêle à une profonde compréhension de l'esthétique, créant ainsi une synthèse unique de forme et de fonction. Une infrastructure hautement innovante à Zuchwil distingue cette entreprise familiale."
+    },
+    "cta": {
+      "ourStory": "Notre Histoire",
+      "watchVideos": "Voir les Vidéos"
+    },
+    "stats": {
+      "years": "Années d'Expérience"
+    }
+  },
+  "Products": {
+    "header": {
+      "subtitle": "Nos Produits",
+      "title": "produits."
+    },
+    "cta": {
+      "allProducts": "Tous les Produits"
+    },
+    "items": {
+      "murale": {
+        "name": "Revêtement en Verre",
+        "subtitle": "murale",
+        "description": "Revêtements muraux élégants en verre de haute qualité pour intérieurs"
+      },
+      "mutabilis": {
+        "name": "Verre Commutable",
+        "subtitle": "mutabilis",
+        "description": "Technologie innovante pour une confidentialité maximale en un clic"
+      },
+      "glasbilder": {
+        "name": "Art sur Verre",
+        "subtitle": "by kurth",
+        "description": "Œuvres d'art sur verre comme éléments de design uniques"
+      },
+      "spectabilis": {
+        "name": "Miroir Sans Tain",
+        "subtitle": "spectabilis",
+        "description": "Miroirs sans tain de haute qualité pour des applications spéciales"
+      },
+      "arcus": {
+        "name": "Verre Courbé",
+        "subtitle": "arcus",
+        "description": "Verre courbé pour des points forts architecturaux"
+      },
+      "luxar": {
+        "name": "Verre Anti-Reflet",
+        "subtitle": "luxar",
+        "description": "Vision cristalline sans reflets gênants"
+      },
+      "murus": {
+        "name": "Système Tout-Verre",
+        "subtitle": "murus"
+      },
+      "pavimentum": {
+        "name": "Plancher en Verre",
+        "subtitle": "pavimentum"
+      },
+      "speculum": {
+        "name": "Miroirs",
+        "subtitle": "speculum"
+      }
+    }
+  },
+  "Categories": {
+    "heading": {
+      "line1": "nos",
+      "line2": "catégories."
+    },
+    "navigation": {
+      "back": "Retour",
+      "next": "Suivant"
+    },
+    "items": {
+      "glasverkleidung": "Revêtement en Verre",
+      "schaltbaresGlas": "Verre Commutable",
+      "glasbilder": "Art sur Verre",
+      "spionspiegel": "Miroir Sans Tain",
+      "bogenglas": "Verre Courbé",
+      "entspiegeltesGlas": "Verre Anti-Reflet",
+      "ganzglasSystem": "Système Tout-Verre",
+      "spiegel": "Miroirs"
+    }
+  },
+  "Showrooms": {
+    "header": {
+      "subtitle": "Visitez-nous",
+      "title": "notre emplacement."
+    },
+    "contact": {
+      "address": "Adresse",
+      "phone": "Téléphone",
+      "email": "E-mail"
+    },
+    "cta": {
+      "planRoute": "Planifier l'itinéraire"
+    }
+  },
+  "Contact": {
+    "header": {
+      "subtitle": "Contactez-nous",
+      "title": "prenez contact."
+    },
+    "description": "Découvrez notre monde en mouvement - des montages passionnants aux aperçus de la production en passant par des conseils pratiques et des tests de verre.",
+    "cta": {
+      "getInTouch": "Prendre Contact",
+      "watchVideos": "Voir les Vidéos"
+    }
+  },
+  "Footer": {
+    "description": "Le verre rencontre le Design. Solutions en verre de haute qualité de Zuchwil, Suisse. Dirigée par les propriétaires avec plus de 50 ans d'expérience.",
+    "links": {
+      "products": "Produits",
+      "services": "Services",
+      "contact": "Contact"
+    },
+    "productLinks": {
+      "glasverkleidung": "Revêtement en Verre",
+      "schaltbaresGlas": "Verre Commutable",
+      "glasbilder": "Art sur Verre",
+      "spionspiegel": "Miroir Sans Tain",
+      "bogenglas": "Verre Courbé",
+      "entspiegeltesGlas": "Verre Anti-Reflet"
+    },
+    "serviceLinks": {
+      "ganzglasSystem": "Système Tout-Verre",
+      "glasboden": "Plancher en Verre",
+      "spiegel": "Miroirs",
+      "beratung": "Conseil"
+    },
+    "contactLinks": {
+      "standort": "Emplacement",
+      "kontakt": "Contact",
+      "karriere": "Carrière"
+    },
+    "legal": {
+      "copyright": "© {year} KURTH Glas und Spiegel AG. Tous droits réservés.",
+      "privacy": "Protection des données",
+      "imprint": "Mentions légales"
+    }
+  }
+}

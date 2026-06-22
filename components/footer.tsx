@@ -2,31 +2,16 @@
 
 import Link from "next/link"
 import Image from "next/image"
+import { useTranslations } from "next-intl"
 import { fonts } from "@/lib/fonts"
 
-const footerLinks = {
-  produkte: [
-    { label: "Glasverkleidung", href: "#" },
-    { label: "Schaltbares Glas", href: "#" },
-    { label: "Glasbilder", href: "#" },
-    { label: "Spionspiegel", href: "#" },
-    { label: "Bogenglas", href: "#" },
-    { label: "Entspiegeltes Glas", href: "#" },
-  ],
-  services: [
-    { label: "Ganzglas-System", href: "#" },
-    { label: "Glasboden", href: "#" },
-    { label: "Spiegel", href: "#" },
-    { label: "Beratung", href: "#" },
-  ],
-  kontakt: [
-    { label: "Standort", href: "#showrooms" },
-    { label: "Kontakt", href: "#contact" },
-    { label: "Karriere", href: "#" },
-  ],
-}
+const productKeys = ["glasverkleidung", "schaltbaresGlas", "glasbilder", "spionspiegel", "bogenglas", "entspiegeltesGlas"]
+const serviceKeys = ["ganzglasSystem", "glasboden", "spiegel", "beratung"]
+const contactKeys = ["standort", "kontakt", "karriere"]
+const contactHrefs = ["#showrooms", "#contact", "#"]
 
 export function Footer() {
+  const t = useTranslations("Footer")
   return (
     <footer className="bg-white text-neutral-900 py-16">
       <div className="container mx-auto px-6">
@@ -38,7 +23,7 @@ export function Footer() {
                 <div className="rounded-2xl  border-neutral-200 bg-white p-5  transition-shadow duration-300 group-hover:shadow-md">
                   <div className="flex items-center justify-between gap-4">
                     <div className="min-w-0">
-                      <span className={`${fonts['3xl']} font-bold text-neutral-900 leading-none`}>
+                      <span className={`${fonts['3xl']} font-medium text-neutral-900 leading-none`}>
                         KURTH
                       </span>
                       <span className={`block ${fonts.xs} font-bold uppercase tracking-wide text-neutral-500 mt-2`}>
@@ -66,8 +51,7 @@ export function Footer() {
                       className="h-11 w-auto opacity-90"
                     />
                     <p className={`mt-4 text-neutral-600 ${fonts.sm} font-semibold leading-relaxed`}>
-                      Glas trifft Design. Hochwertige Glaslösungen aus Zuchwil, Schweiz.
-                      Inhabergeführt mit über 50 Jahren Erfahrung.
+                      {t("description")}
                     </p>
                   </div>
                 </div>
@@ -79,16 +63,16 @@ export function Footer() {
           {/* Produkte */}
           <div>
             <h4 className={`${fonts.sm} uppercase font-bold text-neutral-900 mb-6`}>
-              Produkte
+              {t("links.products")}
             </h4>
             <ul className="space-y-3">
-              {footerLinks.produkte.map((link) => (
-                <li key={link.label}>
+              {productKeys.map((key) => (
+                <li key={key}>
                   <Link
-                    href={link.href}
+                    href="#"
                     className={`${fonts.sm} text-neutral-600 hover:text-neutral-900 transition-colors duration-300`}
                   >
-                    {link.label}
+                    {t(`productLinks.${key}`)}
                   </Link>
                 </li>
               ))}
@@ -98,16 +82,16 @@ export function Footer() {
           {/* Services */}
           <div>
             <h4 className={`${fonts.sm} uppercase text-neutral-900 mb-6 font-bold`}>
-              Services
+              {t("links.services")}
             </h4>
             <ul className="space-y-3">
-              {footerLinks.services.map((link) => (
-                <li key={link.label}>
+              {serviceKeys.map((key) => (
+                <li key={key}>
                   <Link
-                    href={link.href}
+                    href="#"
                     className={`${fonts.sm} text-neutral-600 hover:text-neutral-900 transition-colors duration-300`}
                   >
-                    {link.label}
+                    {t(`serviceLinks.${key}`)}
                   </Link>
                 </li>
               ))}
@@ -117,16 +101,16 @@ export function Footer() {
           {/* Kontakt */}
           <div>
             <h4 className={`${fonts.sm} uppercase  text-neutral-900 mb-6 font-bold`}>
-              Kontakt
+              {t("links.contact")}
             </h4>
             <ul className="space-y-3">
-              {footerLinks.kontakt.map((link) => (
-                <li key={link.label}>
+              {contactKeys.map((key, index) => (
+                <li key={key}>
                   <Link
-                    href={link.href}
+                    href={contactHrefs[index]}
                     className={`${fonts.sm} text-neutral-600 hover:text-neutral-900 transition-colors duration-300`}
                   >
-                    {link.label}
+                    {t(`contactLinks.${key}`)}
                   </Link>
                 </li>
               ))}
@@ -137,20 +121,20 @@ export function Footer() {
         {/* Bottom bar */}
         <div className="pt-8 border-t border-neutral-200 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className={`${fonts.xs} text-neutral-500`}>
-            &copy; {new Date().getFullYear()} KURTH Glas und Spiegel AG. Alle Rechte vorbehalten.
+            {t("legal.copyright", { year: new Date().getFullYear() })}
           </p>
           <div className="flex gap-6">
             <Link
               href="#"
               className={`${fonts.xs} text-neutral-500 hover:text-neutral-900 transition-colors duration-300`}
             >
-              Datenschutz
+              {t("legal.privacy")}
             </Link>
             <Link
               href="#"
               className={`${fonts.xs} text-neutral-500 hover:text-neutral-900 transition-colors duration-300`}
             >
-              Impressum
+              {t("legal.imprint")}
             </Link>
           </div>
         </div>

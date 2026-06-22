@@ -6,12 +6,14 @@ import gsap from "gsap"
 import { useGSAP } from "@gsap/react"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { ChevronDown } from "lucide-react"
+import { useTranslations } from "next-intl"
 import { fonts, fontHeading } from "@/lib/fonts"
 
 // Register useGSAP along with other plugins
 gsap.registerPlugin(useGSAP, ScrollTrigger)
 
 export function Hero() {
+  const t = useTranslations("Hero")
   const containerRef = useRef<HTMLDivElement>(null)
   const videoRef = useRef<HTMLVideoElement>(null)
   const titleRef = useRef<HTMLHeadingElement>(null)
@@ -170,7 +172,7 @@ export function Hero() {
         className="absolute bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"
       >
         <span className={`${fonts.xs} uppercase text-white/60`}>
-          Entdecken
+          {t("scrollIndicator")}
         </span>
         <ChevronDown className="w-5 h-5 text-white/60" />
       </div>

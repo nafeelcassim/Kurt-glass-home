@@ -1,15 +1,20 @@
-// Global font spacing values - change here to update everywhere
-export const FONT_LEADING = "leading-[0.9]"
-export const FONT_TRACKING = "tracking-[-0.05px]"
-export const FONT_SPACING = `${FONT_LEADING} ${FONT_TRACKING}`
+// Body text: comfortable line-height for readability, slight negative tracking for League Spartan
+export const BODY_LEADING = "leading-relaxed"
+export const BODY_TRACKING = "tracking-[-0.01em]"
+export const BODY_SPACING = `${BODY_LEADING} ${BODY_TRACKING}`
 
-// Individual font sizes with spacing baked in
+// Heading text: tight line-height, tighter tracking — matches kurth-glas.ch style
+export const HEADING_LEADING = "leading-[0.95]"
+export const HEADING_TRACKING = "tracking-[-0.02em]"
+export const FONT_SPACING = `${HEADING_LEADING} ${HEADING_TRACKING}`
+
+// Individual font sizes — body sizes use BODY_SPACING, display sizes use FONT_SPACING
 export const fonts = {
-  xs: `text-xs ${FONT_SPACING}`,
-  sm: `text-sm ${FONT_SPACING}`,
-  base: `text-base ${FONT_SPACING}`,
-  lg: `text-lg ${FONT_SPACING}`,
-  xl: `text-xl ${FONT_SPACING}`,
+  xs: `text-xs ${BODY_SPACING}`,
+  sm: `text-sm ${BODY_SPACING}`,
+  base: `text-base ${BODY_SPACING}`,
+  lg: `text-lg ${BODY_SPACING}`,
+  xl: `text-xl ${BODY_SPACING}`,
   "2xl": `text-2xl ${FONT_SPACING}`,
   "3xl": `text-3xl ${FONT_SPACING}`,
   "4xl": `text-4xl ${FONT_SPACING}`,
@@ -20,7 +25,7 @@ export const fonts = {
   "9xl": `text-9xl ${FONT_SPACING}`,
 } as const
 
-// Responsive heading presets
+// Responsive heading presets — all use tight heading spacing
 export const fontHeading = {
   // text-2xl md:text-3xl
   sm: `text-2xl md:text-3xl ${FONT_SPACING}`,

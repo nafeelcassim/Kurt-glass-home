@@ -6,12 +6,14 @@ import { useGSAP } from "@gsap/react"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import Link from "next/link"
 import { ArrowRight, Play } from "lucide-react"
+import { useTranslations } from "next-intl"
 import { fonts, fontHeading } from "@/lib/fonts"
 
 // Register both plugins
 gsap.registerPlugin(useGSAP, ScrollTrigger)
 
 export function About() {
+  const t = useTranslations("About")
   const sectionRef = useRef<HTMLDivElement>(null)
   const headingRef = useRef<HTMLHeadingElement>(null)
   const textRef = useRef<HTMLDivElement>(null)
@@ -78,30 +80,25 @@ export function About() {
           <div>
             <h2
               ref={headingRef}
-              className={`${fontHeading.lg} mb-8 leading-[1.1]`}
+              className={`${fontHeading.lg} font-bold mb-10`}
             >
               <span className="line block overflow-hidden">
-                <span className="inline-block font-bold">glas</span>
+                <span className="inline-block">{t("heading.line1")}</span>
               </span>
               <span className="line block overflow-hidden">
-                <span className="inline-block font-bold">thrifft</span>
+                <span className="inline-block">{t("heading.line2")}</span>
               </span>
               <span className="line block overflow-hidden">
-                <span className="inline-block font-bold">design</span>
+                <span className="inline-block">{t("heading.line3")}</span>
               </span>
             </h2>
 
-            <div ref={textRef} className="space-y-6">
-              <p className={`${fonts.lg} text-muted-foreground`}>
-                Glas - ein zeitloses und faszinierendes Element, das in der 
-                Innenausstattung unverzichtbar geworden ist. Es symbolisiert 
-                Design und Klarheit und verkörpert einen ganz eigenen Lifestyle.
+            <div ref={textRef} className="space-y-5">
+              <p className={`${fonts.base} text-muted-foreground`}>
+                {t("description.paragraph1")}
               </p>
-              <p className={`${fonts.lg} text-muted-foreground`}>
-                Bei KURTH Glas und Spiegel AG verschmilzt Handwerkskunst mit 
-                einem tiefen Verständnis für Ästhetik und schafft somit eine 
-                einzigartige Synthese aus Form und Funktion. Eine hochinnovative 
-                Infrastruktur in Zuchwil hebt das inhabergeführte Unternehmen ab.
+              <p className={`${fonts.base} text-muted-foreground`}>
+                {t("description.paragraph2")}
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 mt-8">
@@ -109,7 +106,7 @@ export function About() {
                   href="#"
                   className={`inline-flex items-center gap-3 ${fonts.sm} uppercase text-primary hover:text-foreground transition-colors duration-300 group animated-underline`}
                 >
-                  Unsere Geschichte
+                  {t("cta.ourStory")}
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-2 transition-transform duration-300" />
                 </Link>
                 <Link
@@ -117,14 +114,14 @@ export function About() {
                   className={`inline-flex items-center gap-3 ${fonts.sm} uppercase text-muted-foreground hover:text-foreground transition-colors duration-300 group`}
                 >
                   <Play className="w-4 h-4" />
-                  Videos ansehen
+                  {t("cta.watchVideos")}
                 </Link>
               </div>
             </div>
           </div>
 
           {/* Image */}
-          <div ref={imageRef} className="relative aspect-[4/5]">
+          <div ref={imageRef} className="relative aspect-4/5">
             <img
               src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&q=80"
               alt="Glas Handwerkskunst"
@@ -133,9 +130,7 @@ export function About() {
             <div className="absolute -bottom-6 -left-6 bg-primary text-primary-foreground p-8 hidden md:block">
               <span className={fonts['5xl']}>50+</span>
               <p className={`${fonts.sm} uppercase tracking-wider mt-2`}>
-                Jahre
-                <br />
-                Erfahrung
+                {t("stats.years")}
               </p>
             </div>
           </div>

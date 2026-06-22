@@ -5,57 +5,23 @@ import gsap from "gsap"
 import { useGSAP } from "@gsap/react"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { ArrowRight, ArrowUpRight } from "lucide-react"
+import { useTranslations } from "next-intl"
 import { fonts, fontHeading } from "@/lib/fonts"
 
 // Register both plugins
 gsap.registerPlugin(useGSAP, ScrollTrigger)
 
-const products = [
-  {
-    id: "murale",
-    name: "glasverkleidung",
-    subtitle: "murale",
-    description: "Elegante Wandverkleidungen aus hochwertigen Glas für Innenräume",
-    image: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&q=80",
-  },
-  {
-    id: "mutabilis",
-    name: "Schaltbares Glas",
-    subtitle: "mutabilis",
-    description: "Innovative Technologie für maximale Privatsphäre auf Knopfdruck",
-    image: "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=800&q=80",
-  },
-  {
-    id: "glasbilder",
-    name: "Glasbilder",
-    subtitle: "by kurth",
-    description: "Kunstvolle Glasbilder als einzigartige Designelemente",
-    image: "https://images.unsplash.com/photo-1513506003901-1e6a229e2d15?w=800&q=80",
-  },
-  {
-    id: "spectabilis",
-    name: "Spionspiegel",
-    subtitle: "spectabilis",
-    description: "Hochwertige Spionspiegel für besondere Anwendungen",
-    image: "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=800&q=80",
-  },
-  {
-    id: "arcus",
-    name: "Bogenglas",
-    subtitle: "arcus",
-    description: "Gebogenes Glas für architektonische Highlights",
-    image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80",
-  },
-  {
-    id: "luxar",
-    name: "Entspiegeltes Glas",
-    subtitle: "luxar",
-    description: "Kristallklare Sicht ohne störende Reflexionen",
-    image: "https://images.unsplash.com/photo-1600573472550-8090b5e0745e?w=800&q=80",
-  },
+const productImages = [
+  { id: "murale", image: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&q=80" },
+  { id: "mutabilis", image: "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=800&q=80" },
+  { id: "glasbilder", image: "https://images.unsplash.com/photo-1513506003901-1e6a229e2d15?w=800&q=80" },
+  { id: "spectabilis", image: "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=800&q=80" },
+  { id: "arcus", image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80" },
+  { id: "luxar", image: "https://images.unsplash.com/photo-1600573472550-8090b5e0745e?w=800&q=80" },
 ]
 
 export function Products() {
+  const t = useTranslations("Products")
   const sectionRef = useRef<HTMLDivElement>(null)
   const titleRef = useRef<HTMLDivElement>(null)
   const gridRef = useRef<HTMLDivElement>(null)
@@ -146,18 +112,18 @@ export function Products() {
         {/* Header */}
         <div ref={titleRef} className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
           <div>
-            <p className={`${fonts.sm} text-muted-foreground mb-4`}>
-              Unsere Produkte
+            <p className={`${fonts.sm} uppercase  text-muted-foreground mb-3`}>
+              {t("header.subtitle")}
             </p>
             <h2 className={`${fontHeading.md} font-bold text-foreground`}>
-              glas trifft <span className="text-foreground">design</span>
+              {t("header.title")}
             </h2>
           </div>
           <a
             href="#"
             className={`inline-flex items-center gap-3 ${fonts.sm} font-semibold  text-primary hover:text-foreground transition-colors duration-300 group animated-underline`}
           >
-            Alle Produkte
+            {t("cta.allProducts")}
             <ArrowRight className="w-4 h-4 group-hover:translate-x-2 transition-transform duration-300" />
           </a>
         </div>
@@ -168,35 +134,35 @@ export function Products() {
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
           style={{ perspective: "1000px" }}
         >
-          {products.map((product) => (
+          {productImages.map((product) => (
             <div
               key={product.id}
               className="product-card group cursor-pointer relative overflow-hidden"
             >
               {/* Image Container */}
-              <div className="relative aspect-[4/5] overflow-hidden bg-secondary">
+              <div className="relative aspect-4/5 overflow-hidden bg-secondary">
                 <img
                   src={product.image}
-                  alt={product.name}
+                  alt={t(`items.${product.id}.name`)}
                   className="product-image w-full h-full object-cover scale-105"
                 />
                 
                 {/* Gradient overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+                <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/20 to-transparent" />
                 
                 {/* Hover overlay */}
                 <div className="product-overlay absolute inset-0 bg-primary/20 opacity-0 pointer-events-none" />
                 
                 {/* Content on image */}
                 <div className="product-content absolute bottom-2 left-0 right-0 p-6">
-                  <span className={`${fonts.xs} font-bold text-white/70 mb-2 block`}>
-                    {product.subtitle}
+                  <span className={`${fonts.lg} font-normal tracking-wide text-white/70 mb-2 block`}>
+                    {t(`items.${product.id}.subtitle`)}
                   </span>
-                  <h3 className={`${fontHeading.sm} text-white mb-2`}>
-                    {product.name}
+                  <h3 className={`${fontHeading.sm} tracking-normal text-white mb-2 font-bold`}>
+                    {t(`items.${product.id}.name`)}
                   </h3>
-                  <p className={`${fonts.xl} leading-[1.2] font-light text-white/70 line-clamp-2`}>
-                    {product.description}
+                  <p className={`${fonts.lg} text-white/70 tracking-wider line-clamp-2`}>
+                    {t(`items.${product.id}.description`)}
                   </p>
                 </div>
 
@@ -211,22 +177,18 @@ export function Products() {
 
         {/* Additional products link */}
         <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-6">
-          {[
-            { name: "Ganzglas-System", subtitle: "murus" },
-            { name: "Glasboden", subtitle: "pavimentum" },
-            { name: "Spiegel", subtitle: "speculum" },
-          ].map((item) => (
+          {["murus", "pavimentum", "speculum"].map((id) => (
             <a
-              key={item.subtitle}
+              key={id}
               href="#"
               className="group flex items-center justify-between p-6 border border-border hover:border-primary transition-colors duration-300"
             >
               <div>
-                <span className={`${fonts.xs} text-muted-foreground block mb-1`}>
-                  {item.subtitle}
+                <span className={`${fonts.xs} uppercase tracking-widest text-muted-foreground block mb-1`}>
+                  {t(`items.${id}.subtitle`)}
                 </span>
-                <span className={`${fonts.xl} text-foreground group-hover:text-primary transition-colors duration-300`}>
-                  {item.name}
+                <span className={`${fonts['2xl']} text-foreground group-hover:text-primary transition-colors duration-300`}>
+                  {t(`items.${id}.name`)}
                 </span>
               </div>
               <ArrowRight className="w-5 h-5 text-muted-foreground group-hover:text-primary group-hover:translate-x-2 transition-all duration-300" />

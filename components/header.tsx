@@ -5,7 +5,9 @@ import Link from "next/link"
 import Image from "next/image"
 import gsap from "gsap"
 import { useGSAP } from "@gsap/react"
+import { useTranslations } from "next-intl"
 import { fonts } from "@/lib/fonts"
+import { LanguageSwitcher } from "@/components/language-switcher"
 
 // Register useGSAP
 gsap.registerPlugin(useGSAP)
@@ -14,6 +16,7 @@ export function Header() {
   const headerRef = useRef<HTMLElement>(null)
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const t = useTranslations("Header")
 
   // 1. Handle GSAP Animations
   useGSAP(() => {
@@ -37,11 +40,11 @@ export function Header() {
   }, [])
 
   const navLinks = [
-    { href: "#news", label: "news" },
-    { href: "#products", label: "produkte" },
-    { href: "#about", label: "über uns" },
-    { href: "#showrooms", label: "standort" },
-    { href: "#contact", label: "kontakt" },
+    { href: "#news", label: t("nav.news") },
+    { href: "#products", label: t("nav.products") },
+    { href: "#about", label: t("nav.about") },
+    { href: "#showrooms", label: t("nav.showrooms") },
+    { href: "#contact", label: t("nav.contact") },
   ]
 
   return (
@@ -61,7 +64,7 @@ export function Header() {
             alt="Kurth Logo"
             width={120}
             height={40}
-            className="h-10 w-auto transition-all duration-300 invert brightness-0"
+            className="h-15 w-auto transition-all duration-300 invert brightness-0"
             priority
           />
         </Link>
@@ -73,16 +76,18 @@ export function Header() {
               key={link.href}
               href={link.href}
               className={`${
-                fonts.sm
-              } transition-colors duration-300 animated-underline ${
+                fonts.base
+              } transition-colors duration-300 animated-underline tracking-wide font-medium ${
                 isScrolled
-                  ? "text-muted-foreground hover:text-foreground font-bold"
-                  : "text-white/80 hover:text-white font-bold"
+                  ? "text-muted-foreground hover:text-foreground"
+                  : "text-white/80 hover:text-white"
               }`}
             >
               {link.label}
             </Link>
           ))}
+
+          <LanguageSwitcher isScrolled={isScrolled} />
         </nav>
 
         {/* Mobile Menu Button */}
@@ -112,7 +117,7 @@ export function Header() {
       {/* Mobile Menu */}
       <div
         className={`md:hidden absolute top-full left-0 right-0 bg-background/98 backdrop-blur-md transition-all duration-500 overflow-hidden border-b border-border ${
-          isMenuOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+          isMenuOpen ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"
         }`}
       >
         <nav className="flex flex-col items-center gap-6 py-8">
@@ -126,6 +131,10 @@ export function Header() {
               {link.label}
             </Link>
           ))}
+
+          <div className="pt-4 border-t border-border w-full flex justify-center">
+            <LanguageSwitcher variant="buttons" />
+          </div>
         </nav>
       </div>
     </header>
