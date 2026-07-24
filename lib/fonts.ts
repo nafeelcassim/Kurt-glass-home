@@ -27,6 +27,8 @@ export const fonts = {
 
 // Responsive heading presets — all use tight heading spacing
 export const fontHeading = {
+
+  xm: `text-xl ${FONT_SPACING}`,
   // text-2xl md:text-3xl
   sm: `text-2xl md:text-3xl ${FONT_SPACING}`,
   // text-4xl md:text-5xl lg:text-6xl

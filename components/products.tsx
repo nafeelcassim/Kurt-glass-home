@@ -1,12 +1,14 @@
 "use client"
 
 import { useRef } from "react"
+import Image from "next/image"
 import gsap from "gsap"
 import { useGSAP } from "@gsap/react"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { ArrowRight, ArrowUpRight } from "lucide-react"
 import { useTranslations } from "next-intl"
 import { fonts, fontHeading } from "@/lib/fonts"
+import { SHOP_URL } from "@/lib/site"
 
 // Register both plugins
 gsap.registerPlugin(useGSAP, ScrollTrigger)
@@ -112,16 +114,18 @@ export function Products() {
         {/* Header */}
         <div ref={titleRef} className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
           <div>
-            <p className={`${fonts.sm} uppercase  text-muted-foreground mb-3`}>
+            {/* <p className={`${fonts.sm} uppercase  text-muted-foreground mb-3`}>
               {t("header.subtitle")}
-            </p>
+            </p> */}
             <h2 className={`${fontHeading.md} font-bold text-foreground`}>
               {t("header.title")}
             </h2>
           </div>
           <a
-            href="#"
-            className={`inline-flex items-center gap-3 ${fonts.sm} font-semibold  text-primary hover:text-foreground transition-colors duration-300 group animated-underline`}
+            href={SHOP_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={`inline-flex items-center gap-3 ${fonts.lg} font-semibold  text-foreground hover:text-foreground transition-colors duration-300 group animated-underline`}
           >
             {t("cta.allProducts")}
             <ArrowRight className="w-4 h-4 group-hover:translate-x-2 transition-transform duration-300" />
@@ -135,16 +139,21 @@ export function Products() {
           style={{ perspective: "1000px" }}
         >
           {productImages.map((product) => (
-            <div
+            <a
               key={product.id}
+              href={SHOP_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               className="product-card group cursor-pointer relative overflow-hidden"
             >
               {/* Image Container */}
               <div className="relative aspect-4/5 overflow-hidden bg-secondary">
-                <img
+                <Image
                   src={product.image}
                   alt={t(`items.${product.id}.name`)}
-                  className="product-image w-full h-full object-cover scale-105"
+                  fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  className="product-image object-cover scale-105"
                 />
                 
                 {/* Gradient overlay */}
@@ -155,13 +164,13 @@ export function Products() {
                 
                 {/* Content on image */}
                 <div className="product-content absolute bottom-2 left-0 right-0 p-6">
-                  <span className={`${fonts.lg} font-normal tracking-wide text-white/70 mb-2 block`}>
+                  <span className={`${fonts["2xl"]} font-normal tracking-wide text-white/70 mb-2 block`}>
                     {t(`items.${product.id}.subtitle`)}
                   </span>
-                  <h3 className={`${fontHeading.sm} tracking-normal text-white mb-2 font-bold`}>
+                  <h3 className={`${fontHeading.sm} tracking-normal text-white mb-4 font-bold`}>
                     {t(`items.${product.id}.name`)}
                   </h3>
-                  <p className={`${fonts.lg} text-white/70 tracking-wider line-clamp-2`}>
+                  <p className={`${fonts["2xl"]} text-white/70 tracking-wider line-clamp-2`}>
                     {t(`items.${product.id}.description`)}
                   </p>
                 </div>
@@ -171,7 +180,7 @@ export function Products() {
                   <ArrowUpRight className="w-6 h-6 text-white/70" />
                 </div>
               </div>
-            </div>
+            </a>
           ))}
         </div>
 
@@ -180,18 +189,20 @@ export function Products() {
           {["murus", "pavimentum", "speculum"].map((id) => (
             <a
               key={id}
-              href="#"
-              className="group flex items-center justify-between p-6 border border-border hover:border-primary transition-colors duration-300"
+              href={SHOP_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group flex items-center justify-between p-6 border border-border hover:border-foreground transition-colors duration-300"
             >
               <div>
-                <span className={`${fonts.xs} uppercase tracking-widest text-muted-foreground block mb-1`}>
+                <span className={`${fonts["2xl"]}  tracking-normal text-muted-foreground block mb-3`}>
                   {t(`items.${id}.subtitle`)}
                 </span>
-                <span className={`${fonts['2xl']} text-foreground group-hover:text-primary transition-colors duration-300`}>
+                <span className={`${fontHeading.sm} text-foreground group-hover:text-foreground transition-colors duration-300`}>
                   {t(`items.${id}.name`)}
                 </span>
               </div>
-              <ArrowRight className="w-5 h-5 text-muted-foreground group-hover:text-primary group-hover:translate-x-2 transition-all duration-300" />
+              <ArrowRight className="w-5 h-5 text-muted-foreground group-hover:text-foreground group-hover:translate-x-2 transition-all duration-300" />
             </a>
           ))}
         </div>

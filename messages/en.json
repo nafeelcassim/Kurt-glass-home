@@ -1,11 +1,14 @@
 {
   "Header": {
     "nav": {
-      "news": "news",
       "products": "products",
+      "manufacturing": "manufacturing",
+      "news": "manufacturing",
       "about": "about us",
+      "services": "services",
       "showrooms": "location",
-      "contact": "contact"
+      "contact": "contact",
+      "shop": "shop"
     }
   },
   "Hero": {
@@ -32,7 +35,7 @@
   "Products": {
     "header": {
       "subtitle": "Our Products",
-      "title": "products."
+      "title": "top products."
     },
     "cta": {
       "allProducts": "All Products"
@@ -82,24 +85,167 @@
       }
     }
   },
-  "Categories": {
+  "Services": {
     "heading": {
       "line1": "our",
-      "line2": "categories."
+      "line2": "services."
     },
     "navigation": {
-      "back": "Back",
-      "next": "Next"
+      "back": "Previous services",
+      "next": "Next services"
     },
     "items": {
-      "glasverkleidung": "Glass Cladding",
-      "schaltbaresGlas": "Switchable Glass",
-      "glasbilder": "Glass Art",
-      "spionspiegel": "Two-Way Mirror",
+      "glaszuschnitt": "Glass Cutting",
+      "kantenbearbeitung": "Edge Processing",
+      "wasserstrahlschneiden": "Waterjet Cutting",
+      "glasbearbeitung": "CNC Glass Processing",
+      "keramikdigitaldruck": "Ceramic Digital Printing",
+      "vorspannanlage": "Glass Tempering",
       "bogenglas": "Curved Glass",
-      "entspiegeltesGlas": "Anti-Reflective Glass",
-      "ganzglasSystem": "All-Glass System",
-      "spiegel": "Mirrors"
+      "lackiererei": "Glass Painting"
+    }
+  },
+  "Manufacturing": {
+    "eyebrow": "Swiss precision. Swiss quality.",
+    "title": "glass manufacturing.",
+    "description": "A modern machine park, a highly trained team and innovative processes have shaped KURTH's success for over 70 years.",
+    "cta": "Check more"
+  },
+  "InteriorExterior": {
+    "eyebrow": "Glass solutions without limits",
+    "title": {
+      "line1": "shape interiors.",
+      "line2": "define exteriors."
+    },
+    "description": "From precise interior details to high-performing building envelopes, glass connects aesthetics, light and function at every scale.",
+    "cards": {
+      "interior": {
+        "label": "Interior",
+        "eyebrow": "Space. Light. Atmosphere.",
+        "title": "glass for interiors.",
+        "description": "Made-to-measure glass solutions for spaces designed to feel open, light-filled and unmistakably individual.",
+        "application1": "All-glass partitions",
+        "application2": "Doors & showers",
+        "application3": "Mirrors & furniture glass",
+        "imageAlt": "Contemporary interior with expansive glass surfaces"
+      },
+      "exterior": {
+        "label": "Exterior",
+        "eyebrow": "Protection meets expression.",
+        "title": "glass for architecture.",
+        "description": "High-performing safety and architectural glass, precisely made for durable building envelopes.",
+        "application1": "Façade glazing",
+        "application2": "Balustrades & canopies",
+        "application3": "Safety glass",
+        "imageAlt": "Contemporary building with a glass façade"
+      }
+    }
+  },
+  "GlassSolutionsPage": {
+    "back": "Back to home", "catalogueLabel": "KURTH Glass Solutions",
+    "types": { "interior": { "eyebrow": "Interior", "title": "glass for interiors.", "description": "Individual glass solutions for homes, workplaces, hospitality and retail—precisely designed and made in our own manufactory." }, "exterior": { "eyebrow": "Exterior", "title": "glass for exteriors.", "description": "Safe, resilient architectural glass for façades, outdoor spaces and structural applications—tailored to each project." } },
+    "products": {
+      "wallCladding": { "category": "murale", "title": "glass cladding.", "description": "Hygienic, durable safety-glass back walls for kitchens, bathrooms, living spaces and public interiors." }, "switchableGlass": { "category": "mutabilis", "title": "switchable glass.", "description": "Transparency and privacy at the touch of a button, using liquid-crystal film for flexible spaces." }, "allGlassSystems": { "category": "murus", "title": "all-glass systems.", "description": "Light-filled partitions for contemporary workspaces and homes." }, "mirrors": { "category": "speculum", "title": "mirrors.", "description": "Made-to-measure mirrors for homes, hospitality, fashion and beauty." }, "twoWayMirrors": { "category": "spectabilis", "title": "two-way mirrors.", "description": "A TV screen and elegant mirror combined in one optically refined solution." }, "antiReflectiveGlass": { "category": "luxar", "title": "anti-reflective glass.", "description": "Magnetron-coated glass that creates a reflection-free view of art, images and products." }, "curvedGlass": { "category": "arcus", "title": "curved glass.", "description": "Cylindrically curved safety glass for individual forms in architecture and interiors." }, "glassFloors": { "category": "pavimentum", "title": "glass floors.", "description": "Slip-resistant, load-bearing glass floors for interior and exterior spaces." }, "facadeGlazing": { "category": "Architecture", "title": "façade glazing.", "description": "Made-to-measure glazing that combines light, protection and a clear building identity." }, "safetyGlass": { "category": "ESG & VSG", "title": "safety glass.", "description": "Thermally toughened and laminated glass for improved impact resistance and protection." }, "balustrades": { "category": "Outdoor space", "title": "balustrades & canopies.", "description": "Transparent safety elements for terraces, balconies and entrance areas." }, "outdoorKitchen": { "category": "Outdoor Living", "title": "outdoor kitchen.", "description": "Made-to-measure glass kitchens for gardens, terraces and balconies—durable, hygienic and individual." }, "curvedArchitecture": { "category": "arcus", "title": "curved architectural glass.", "description": "Curved safety glass for expressive façades and demanding construction forms." }
+    },
+    "consultation": { "eyebrow": "Your project starts here", "title": "Let us translate your idea into glass.", "cta": "Book a consultation" }
+  },
+  "ManufactoryPage": {
+    "hero": {
+      "eyebrow": "Swiss glass processing",
+      "title": "manufactory.",
+      "description": "A modern machine park, a highly trained team and highly innovative processes have shaped KURTH's success for more than 70 years.",
+      "explore": "Explore the processes",
+      "verticalLabel": "KURTH · ZUCHWIL · SWITZERLAND",
+      "processCount": "Manufacturing processes from one source",
+      "years": "Years of experience",
+      "processes": "Core processes",
+      "origin": "Swiss made"
+    },
+    "index": {
+      "eyebrow": "Our machine park",
+      "title": "Eight processes. One precision."
+    },
+    "labels": {
+      "thickness": "Glass thickness",
+      "minimum": "Minimum size",
+      "maximum": "Maximum size",
+      "colors": "Colours",
+      "finishes": "Finishes",
+      "applications": "Applications"
+    },
+    "items": {
+      "glassCutting": {
+        "kicker": "Computer-controlled precision",
+        "title": "Glass cutting",
+        "description": "Modern cutting technology transforms large glass sheets into accurately dimensioned components with efficient, repeatable results.",
+        "feature1": "Computer-controlled cutting head with diamond or carbide wheel",
+        "feature2": "Precise processing from ultra-thin glass to 24 mm thickness",
+        "feature3": "Large formats up to 3210 × 5100 mm",
+        "videoTitle": "Glass cutting process"
+      },
+      "edgeProcessing": {
+        "kicker": "Finish you can see and feel",
+        "title": "Edge processing",
+        "description": "Every edge is finished for safety, function and a refined appearance—from practical seaming to highly polished design edges.",
+        "feature1": "Seamed, ground and polished edges",
+        "feature2": "C-grind, bullnose, mitre and bevel options",
+        "feature3": "Safe, tactile finishes for demanding applications",
+        "videoTitle": "Glass edge processing"
+      },
+      "waterjet": {
+        "kicker": "Cold cutting without limits",
+        "title": "Waterjet cutting",
+        "description": "High-pressure waterjet technology enables clean cut-outs, complex contours and individual shapes across an exceptionally wide range of glass thicknesses.",
+        "feature1": "Bystronic waterjet technology",
+        "feature2": "Complex contours, holes and precision cut-outs",
+        "feature3": "Suitable for doors, tables, showers and custom components",
+        "videoTitle": "Waterjet glass cutting"
+      },
+      "cnc": {
+        "kicker": "Five-axis capability",
+        "title": "CNC glass processing",
+        "description": "The modern five-axis processing centre delivers individually milled, drilled, grooved and engraved glass parts in virtually any form.",
+        "feature1": "Milling, drilling, grooves and engraving",
+        "feature2": "All edge processes in one precise workflow",
+        "feature3": "Custom mirrors, tabletops, shelves and doors",
+        "videoTitle": "CNC glass processing"
+      },
+      "ceramicPrint": {
+        "kicker": "Permanent colour at 650°C",
+        "title": "Ceramic digital printing",
+        "description": "Photorealistic motifs and custom designs are printed directly onto glass, then fired so the ceramic colour permanently fuses with the surface.",
+        "feature1": "High-resolution, photorealistic reproduction",
+        "feature2": "Weather-, UV- and scratch-resistant finish",
+        "feature3": "Fired at 650°C for exceptional longevity",
+        "videoTitle": "Ceramic digital printing on glass"
+      },
+      "tempering": {
+        "kicker": "Safety through controlled heat",
+        "title": "Glass tempering",
+        "description": "Two modern tempering systems produce toughened safety glass in a broad range of dimensions while maintaining consistently high quality standards.",
+        "feature1": "Two modern tempering systems",
+        "feature2": "More than 30 years of ESG production experience",
+        "feature3": "Custom cutting and processing before tempering",
+        "videoTitle": "Tempered safety glass production"
+      },
+      "curvedGlass": {
+        "kicker": "Precision beyond the flat plane",
+        "title": "Curved glass",
+        "description": "Controlled forming processes create elegant glass curves for architecture, furniture and individual design solutions with accurately defined geometry.",
+        "feature1": "Tailor-made curved forms and radii",
+        "feature2": "Glass thicknesses from 4 to 24 mm",
+        "feature3": "Large curved formats up to 2400 × 2400 mm",
+        "videoTitle": "Curved glass production"
+      },
+      "painting": {
+        "kicker": "Colour meets glass",
+        "title": "Glass painting",
+        "description": "Careful surface preparation and precise multi-layer application create smooth, durable colour finishes for interiors and furniture.",
+        "feature1": "Durable 2K and heat-resistant enamel colours",
+        "feature2": "Available in all requested RAL and NCS colours",
+        "feature3": "Ideal for kitchens, glass doors and furniture",
+        "videoTitle": "Architectural glass painting"
+      }
     }
   },
   "Showrooms": {
@@ -131,6 +277,7 @@
     "description": "Glass meets Design. High-quality glass solutions from Zuchwil, Switzerland. Owner-managed with over 50 years of experience.",
     "links": {
       "products": "Products",
+      "manufacturing": "Manufacturing",
       "services": "Services",
       "contact": "Contact"
     },
@@ -143,10 +290,38 @@
       "entspiegeltesGlas": "Anti-Reflective Glass"
     },
     "serviceLinks": {
-      "ganzglasSystem": "All-Glass System",
-      "glasboden": "Glass Floor",
-      "spiegel": "Mirrors",
-      "beratung": "Consulting"
+      "glaszuschnitt": "Glass Cutting",
+      "kantenbearbeitung": "Edge Processing",
+      "wasserstrahlschneiden": "Waterjet Cutting",
+      "glasbearbeitung": "CNC Glass Processing",
+      "keramikdigitaldruck": "Ceramic Digital Printing",
+      "vorspannanlage": "Glass Tempering",
+      "bogenglas": "Curved Glass",
+      "lackiererei": "Glass Painting"
+    },
+    "atelier": {
+      "eyebrow": "Visit the atelier",
+      "title": "Experience glass up close.",
+      "quality": "Swiss precision. Swiss quality.",
+      "description": "Explore our glass samples, receive personal advice from our specialists, or discover how our solutions are made during a visit to the factory.",
+      "bookConsultation": "Book a consultation",
+      "visitShop": "Visit the shop",
+      "discoverFactory": "Discover the factory",
+      "facts": {
+        "since": "Since 1956",
+        "precision": "Swiss precision",
+        "locations": "Zuchwil & Faoug"
+      }
+    },
+    "openingHours": {
+      "title": "Opening Hours",
+      "mondayThursday": "Monday - Thursday",
+      "friday": "Friday"
+    },
+    "social": {
+      "title": "Social",
+      "instagram": "Follow @kurthglas",
+      "linkedin": "Follow on LinkedIn"
     },
     "contactLinks": {
       "standort": "Location",

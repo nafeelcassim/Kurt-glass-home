@@ -1,6 +1,6 @@
 "use client"
 
-import { useRef } from "react"
+import { useEffect, useRef, useState } from "react"
 import Image from "next/image"
 import gsap from "gsap"
 import { useGSAP } from "@gsap/react"
@@ -12,6 +12,13 @@ import { fonts, fontHeading } from "@/lib/fonts"
 // Register useGSAP along with other plugins
 gsap.registerPlugin(useGSAP, ScrollTrigger)
 
+// Poster paints as the LCP element while the video streams in (or stays, for
+// reduced-motion / data-saver users). Pexels serves a still for each video id.
+const HERO_VIDEO_SRC =
+  "https://videos.pexels.com/video-files/3209828/3209828-uhd_2560_1440_25fps.mp4"
+const HERO_POSTER_SRC =
+  "https://images.pexels.com/videos/3209828/free-video-3209828.jpg?auto=compress&cs=tinysrgb&w=1920"
+
 export function Hero() {
   const t = useTranslations("Hero")
   const containerRef = useRef<HTMLDivElement>(null)
@@ -19,6 +26,19 @@ export function Hero() {
   const titleRef = useRef<HTMLHeadingElement>(null)
   const taglineRef = useRef<HTMLParagraphElement>(null)
   const scrollIndicatorRef = useRef<HTMLDivElement>(null)
+
+  // Only fetch/autoplay the heavy background video once past hydration, and only
+  // when the user hasn't asked to reduce motion or save data. The poster carries
+  // first paint; the multi-MB download never competes with LCP.
+  const [enableVideo, setEnableVideo] = useState(false)
+  useEffect(() => {
+    const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches
+    const saveData =
+      (navigator as Navigator & { connection?: { saveData?: boolean } }).connection?.saveData === true
+    if (!prefersReducedMotion && !saveData) {
+      setEnableVideo(true)
+    }
+  }, [])
 
   useGSAP(() => {
     // Initial animation timeline
@@ -120,19 +140,22 @@ export function Hero() {
       ref={containerRef}
       className="relative h-screen overflow-hidden"
     >
-      {/* Video Background */}
+      {/* Warm up the media origins before the video source is attached (React 19 hoists these to <head>) */}
+      <link rel="preconnect" href="https://videos.pexels.com" />
+      <link rel="preconnect" href="https://images.pexels.com" />
+
+      {/* Video Background — poster carries first paint; source is attached client-side only */}
       <video
         ref={videoRef}
-        autoPlay
+        autoPlay={enableVideo}
         muted
         loop
         playsInline
+        preload="none"
+        poster={HERO_POSTER_SRC}
         className="absolute inset-0 w-full h-full object-cover"
       >
-        <source
-          src="https://videos.pexels.com/video-files/3209828/3209828-uhd_2560_1440_25fps.mp4"
-          type="video/mp4"
-        />
+        {enableVideo && <source src={HERO_VIDEO_SRC} type="video/mp4" />}
       </video>
 
       {/* Gradient overlay for better text readability */}

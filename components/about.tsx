@@ -5,6 +5,7 @@ import gsap from "gsap"
 import { useGSAP } from "@gsap/react"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import Link from "next/link"
+import Image from "next/image"
 import { ArrowRight, Play } from "lucide-react"
 import { useTranslations } from "next-intl"
 import { fonts, fontHeading } from "@/lib/fonts"
@@ -80,7 +81,7 @@ export function About() {
           <div>
             <h2
               ref={headingRef}
-              className={`${fontHeading.lg} font-bold mb-10`}
+              className={`${fontHeading.lg} font-bold mb-10 leading-[0.95]`}
             >
               <span className="line block overflow-hidden">
                 <span className="inline-block">{t("heading.line1")}</span>
@@ -94,24 +95,24 @@ export function About() {
             </h2>
 
             <div ref={textRef} className="space-y-5">
-              <p className={`${fonts.base} text-muted-foreground`}>
+              <p className={`${fonts["2xl"]} text-muted-foreground`}>
                 {t("description.paragraph1")}
               </p>
-              <p className={`${fonts.base} text-muted-foreground`}>
+              <p className={`${fonts["2xl"]} text-muted-foreground`}>
                 {t("description.paragraph2")}
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 mt-8">
                 <Link
                   href="#"
-                  className={`inline-flex items-center gap-3 ${fonts.sm} uppercase text-primary hover:text-foreground transition-colors duration-300 group animated-underline`}
+                  className={`inline-flex items-center gap-3 ${fonts.lg}  text-foreground hover:text-foreground transition-colors duration-300 group animated-underline`}
                 >
                   {t("cta.ourStory")}
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-2 transition-transform duration-300" />
                 </Link>
                 <Link
                   href="#"
-                  className={`inline-flex items-center gap-3 ${fonts.sm} uppercase text-muted-foreground hover:text-foreground transition-colors duration-300 group`}
+                  className={`inline-flex items-center gap-3 ${fonts.lg}  text-muted-foreground hover:text-foreground transition-colors duration-300 group`}
                 >
                   <Play className="w-4 h-4" />
                   {t("cta.watchVideos")}
@@ -122,14 +123,16 @@ export function About() {
 
           {/* Image */}
           <div ref={imageRef} className="relative aspect-4/5">
-            <img
+            <Image
               src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&q=80"
               alt="Glas Handwerkskunst"
-              className="w-full h-full object-cover"
+              fill
+              sizes="(max-width: 1024px) 100vw, 50vw"
+              className="object-cover"
             />
-            <div className="absolute -bottom-6 -left-6 bg-primary text-primary-foreground p-8 hidden md:block">
-              <span className={fonts['5xl']}>50+</span>
-              <p className={`${fonts.sm} uppercase tracking-wider mt-2`}>
+            <div className="absolute -bottom-6 -left-6 bg-red-600 text-primary-foreground p-8 hidden md:block">
+              <span className={fonts['5xl']}>70+</span>
+              <p className={`${fonts.sm} tracking-wider mt-2`}>
                 {t("stats.years")}
               </p>
             </div>

@@ -1,6 +1,7 @@
 "use client"
 
 import { useRef } from "react"
+import Image from "next/image"
 import gsap from "gsap"
 import { useGSAP } from "@gsap/react"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
@@ -13,17 +14,30 @@ gsap.registerPlugin(useGSAP, ScrollTrigger)
 
 const showrooms = [
   {
-    name: "KURTH Glas und Spiegel AG",
     location: "Zuchwil",
-    address: "Zuchwil, Schweiz",
-    phone: "+41 32 685 XX XX",
+    addressLines: ["Grubenweg 2", "4528 Zuchwil"],
+    phone: "+41 32 685 55 75",
     email: "info@kurth-glas.ch",
-    image: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&q=80",
+    routeUrl: "https://maps.google.com/?q=Grubenweg+2+4528+Zuchwil",
+    image:
+      "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1600&q=80&auto=format&fit=crop",
+    imageAlt: "Factory and location in Zuchwil",
+  },
+  {
+    location: "Faoug",
+    addressLines: ["Route de Morat 6", "1595 Faoug"],
+    phone: "+41 26 670 41 80",
+    email: "matthias.flach@kurth-glas.ch",
+    routeUrl: "https://maps.google.com/?q=Route+de+Morat+6+1595+Faoug",
+    image:
+      "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?w=1600&q=80&auto=format&fit=crop",
+    imageAlt: "Factory and location in Faoug",
   },
 ]
 
 export function Showrooms() {
   const t = useTranslations("Showrooms")
+  const tContact = useTranslations("Contact")
   const sectionRef = useRef<HTMLDivElement>(null)
   const titleRef = useRef<HTMLDivElement>(null)
   const cardsRef = useRef<HTMLDivElement>(null)
@@ -50,12 +64,13 @@ export function Showrooms() {
     if (cards) {
       gsap.fromTo(
         cards,
-        { y: 80, opacity: 0 },
+        { y: 80, opacity: 0, scale: 0.96 },
         {
           y: 0,
           opacity: 1,
+          scale: 1,
           duration: 1,
-          stagger: 0.2,
+          stagger: 0.14,
           ease: "power3.out",
           scrollTrigger: {
             trigger: cardsRef.current,
@@ -64,69 +79,123 @@ export function Showrooms() {
         }
       )
     }
+
+    const glows = sectionRef.current?.querySelectorAll(".location-glow")
+    if (glows) {
+      gsap.to(glows, {
+        x: (index) => (index % 2 === 0 ? -20 : 20),
+        y: (index) => (index % 2 === 0 ? 24 : -24),
+        duration: 6,
+        repeat: -1,
+        yoyo: true,
+        ease: "sine.inOut",
+        stagger: 0.5,
+      })
+    }
   }, { scope: sectionRef })
 
   return (
-    <section ref={sectionRef} id="showrooms" className="py-24 md:py-32 bg-[#111111]">
-      <div className="container mx-auto px-6">
+    <section ref={sectionRef} id="showrooms" className="relative overflow-hidden py-24 md:py-32 bg-neutral-950 text-white">
+      <div className="location-glow pointer-events-none absolute -left-20 top-20 h-72 w-72 rounded-full bg-amber-300/10 blur-3xl" />
+      <div className="location-glow pointer-events-none absolute -right-16 bottom-10 h-80 w-80 rounded-full bg-orange-400/10 blur-3xl" />
+
+      <div id="contact" className="absolute -top-24" />
+
+      <div className="container mx-auto px-6 relative z-10">
         {/* Title */}
         <div ref={titleRef} className="text-center mb-16">
-          <p className={`${fonts.sm} uppercase tracking-widest text-muted-foreground mb-3`}>
+          <p className={`${fonts.lg} tracking-[0.22em] text-white/60 mb-3`}>
             {t("header.subtitle")}
           </p>
-          <h2 className={`${fontHeading.md} font-bold text-foreground`}>
+          <h2 className={`${fontHeading.md} font-bold text-white`}>
             {t("header.title")}
           </h2>
+          <p className={`${fonts["2xl"]} text-white/70 mt-8 max-w-3xl mx-auto`}>
+            {tContact("description")}
+          </p>
+
         </div>
 
-        {/* Showroom card */}
+        {/* Showroom cards */}
         <div
           ref={cardsRef}
-          className="max-w-4xl mx-auto"
+          className="max-w-6xl mx-auto grid gap-6 md:grid-cols-2"
         >
           {showrooms.map((showroom) => (
-            <div
-              key={`${showroom.name}-${showroom.location}`}
-              className="showroom-card group bg-background border border-border overflow-hidden grid md:grid-cols-2"
+            <article
+              key={showroom.location}
+              className="showroom-card group rounded-3xl border border-white/15 bg-linear-to-b from-white/9 to-white/3 p-8 md:p-10 backdrop-blur-sm transition-all duration-500 hover:-translate-y-1 hover:border-white/30"
             >
-              {/* Image */}
-              <div className="relative aspect-video md:aspect-auto overflow-hidden">
-                <img
+              <div className="relative mb-7 overflow-hidden rounded-2xl border border-white/15 aspect-16/10">
+                <Image
                   src={showroom.image}
-                  alt={`${showroom.name} ${showroom.location}`}
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  alt={showroom.imageAlt}
+                  fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  onError={(event) => {
+                    event.currentTarget.onerror = null
+                    event.currentTarget.srcset = ""
+                    event.currentTarget.src = "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1600&q=80&auto=format&fit=crop"
+                  }}
+                  className="object-cover transition-transform duration-700 group-hover:scale-105"
                 />
+                <div className="absolute inset-0 bg-linear-to-t from-neutral-950/65 via-neutral-900/20 to-transparent" />
+                <span className={`${fonts.xs} absolute bottom-4 left-4 rounded-full border border-white bg-neutral-950/45 px-3 py-1 uppercase tracking-[0.14em] text-amber-100`}>
+                  Factory · {showroom.location}
+                </span>
               </div>
 
-              {/* Content */}
-              <div className="p-8 md:p-12 flex flex-col justify-center">
-                <h3 className={`${fonts['2xl']} font-bold text-foreground mb-1`}>
-                  {showroom.name}
-                </h3>
-                <p className={`text-primary ${fonts.lg} mb-8`}>{showroom.location}</p>
+              <h3 className={`${fonts["2xl"]} font-bold text-white`}>
+                {showroom.location}
+              </h3>
 
-                <div className="space-y-4 mb-8">
-                  <div className={`flex items-center gap-4 ${fonts.sm} text-muted-foreground`}>
-                    <MapPin className="w-5 h-5 shrink-0 text-primary" />
-                    <span>{showroom.address}</span>
-                  </div>
-                  <div className={`flex items-center gap-4 ${fonts.sm} text-muted-foreground`}>
-                    <Phone className="w-5 h-5 shrink-0 text-primary" />
-                    <span>{showroom.phone}</span>
-                  </div>
-                  <div className={`flex items-center gap-4 ${fonts.sm} text-muted-foreground`}>
-                    <Mail className="w-5 h-5 shrink-0 text-primary" />
-                    <span>{showroom.email}</span>
-                  </div>
+              <div className="mt-8 space-y-5">
+                <div className={`flex items-start gap-4 ${fonts.lg} text-white/85`}>
+                  <MapPin className="w-5 h-5 shrink-0 mt-0.5 text-foreground" />
+                  <address className="not-italic leading-relaxed">
+                    {showroom.addressLines.map((line) => (
+                      <div key={line}>{line}</div>
+                    ))}
+                  </address>
                 </div>
 
-                <button className={`inline-flex items-center gap-3 bg-primary text-primary-foreground px-6 py-4 ${fonts.sm} font-bold uppercase  hover:bg-foreground hover:text-black transition-colors duration-300 w-fit`}>
-                  <Navigation className="w-4 h-4 font" />
-                  {t("cta.planRoute")}
-                </button>
+                <a
+                  href={`tel:${showroom.phone.replace(/\s+/g, "")}`}
+                  className={`flex items-center gap-4 ${fonts.lg} text-white/85 transition-colors duration-300 hover:text-amber-100`}
+                >
+                  <Phone className="w-5 h-5 shrink-0 text-foreground" />
+                  <span>Telefon {showroom.phone}</span>
+                </a>
+
+                <a
+                  href={`mailto:${showroom.email}`}
+                  className={`flex items-center gap-4 ${fonts.lg} text-white/85 transition-colors duration-300 hover:text-amber-100 break-all`}
+                >
+                  <Mail className="w-5 h-5 shrink-0 text-foreground" />
+                  <span>Email {showroom.email}</span>
+                </a>
               </div>
-            </div>
+
+              <a
+                href={showroom.routeUrl}
+                target="_blank"
+                rel="noreferrer"
+                className={`group mt-10 inline-flex items-center gap-3 ${fonts.sm} font-bold uppercase tracking-[0.12em]  animated-underline transition-all duration-300 hover:text-foreground`}
+              >
+                <Navigation className="w-4 h-4 text-foreground transition-transform duration-300 ease-out group-hover:-translate-y-1 group-hover:translate-x-1" />
+                {t("cta.planRoute")}
+              </a>
+            </article>
           ))}
+        </div>
+
+        <div className="mt-14 text-center">
+          <a
+            href="mailto:info@kurth-glas.ch"
+            className={`${fonts.lg} font-semibold inline-flex items-center justify-center text-white/85 animated-underline hover:text-white transition-colors duration-300`}
+          >
+            {tContact("cta.getInTouch")}
+          </a>
         </div>
       </div>
     </section>

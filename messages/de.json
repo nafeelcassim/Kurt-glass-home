@@ -1,11 +1,14 @@
 {
   "Header": {
     "nav": {
-      "news": "news",
       "products": "produkte",
+      "manufacturing": "manufaktur",
+      "news": "manufaktur",
       "about": "über uns",
+      "services": "services",
       "showrooms": "standort",
-      "contact": "kontakt"
+      "contact": "kontakt",
+      "shop": "shop"
     }
   },
   "Hero": {
@@ -32,7 +35,7 @@
   "Products": {
     "header": {
       "subtitle": "Unsere Produkte",
-      "title": "produkte."
+      "title": "top-produkte."
     },
     "cta": {
       "allProducts": "Alle Produkte"
@@ -44,62 +47,221 @@
         "description": "Elegante Wandverkleidungen aus hochwertigen Glas für Innenräume"
       },
       "mutabilis": {
-        "name": "Schaltbares Glas",
+        "name": "schaltbares glas",
         "subtitle": "mutabilis",
         "description": "Innovative Technologie für maximale Privatsphäre auf Knopfdruck"
       },
       "glasbilder": {
-        "name": "Glasbilder",
+        "name": "glasbilder",
         "subtitle": "by kurth",
         "description": "Kunstvolle Glasbilder als einzigartige Designelemente"
       },
       "spectabilis": {
-        "name": "Spionspiegel",
+        "name": "spionspiegel",
         "subtitle": "spectabilis",
         "description": "Hochwertige Spionspiegel für besondere Anwendungen"
       },
       "arcus": {
-        "name": "Bogenglas",
+        "name": "bogenglas",
         "subtitle": "arcus",
         "description": "Gebogenes Glas für architektonische Highlights"
       },
       "luxar": {
-        "name": "Entspiegeltes Glas",
+        "name": "entspiegeltes glas",
         "subtitle": "luxar",
         "description": "Kristallklare Sicht ohne störende Reflexionen"
       },
       "murus": {
-        "name": "Ganzglas-System",
+        "name": "ganzglas-system",
         "subtitle": "murus"
       },
       "pavimentum": {
-        "name": "Glasboden",
+        "name": "glasboden",
         "subtitle": "pavimentum"
       },
       "speculum": {
-        "name": "Spiegel",
+        "name": "spiegel",
         "subtitle": "speculum"
       }
     }
   },
-  "Categories": {
+  "Services": {
     "heading": {
       "line1": "unsere",
-      "line2": "kategorien."
+      "line2": "services."
     },
     "navigation": {
-      "back": "Zurück",
-      "next": "Weiter"
+      "back": "Vorherige Services",
+      "next": "Nächste Services"
     },
     "items": {
-      "glasverkleidung": "glasverkleidung",
-      "schaltbaresGlas": "Schaltbares Glas",
-      "glasbilder": "Glasbilder",
-      "spionspiegel": "Spionspiegel",
-      "bogenglas": "Bogenglas",
-      "entspiegeltesGlas": "Entspiegeltes Glas",
-      "ganzglasSystem": "Ganzglas-System",
-      "spiegel": "Spiegel"
+      "glaszuschnitt": "glaszuschnitt",
+      "kantenbearbeitung": "kantenbearbeitung",
+      "wasserstrahlschneiden": "wasserstrahlschneiden",
+      "glasbearbeitung": "glasbearbeitung",
+      "keramikdigitaldruck": "keramikdigitaldruck",
+      "vorspannanlage": "vorspannanlage",
+      "bogenglas": "bogenglas",
+      "lackiererei": "lackiererei"
+    }
+  },
+  "Manufacturing": {
+    "eyebrow": "Schweizer Präzision. Schweizer Qualität.",
+    "title": "glasmanufaktur.",
+    "description": "Ein moderner Maschinenpark, ein top ausgebildetes Team und hochinnovative Prozesse zeichenen den Erfolg von KURTH seit über 70 Jahren aus.",
+    "cta": "Mehr entdecken"
+  },
+  "InteriorExterior": {
+    "eyebrow": "Glaslösungen ohne Grenzen",
+    "title": {
+      "line1": "innenräume gestalten.",
+      "line2": "fassaden prägen."
+    },
+    "description": "Von präzisen Details im Raum bis zu leistungsstarken Gebäudehüllen: Glas verbindet Ästhetik, Licht und Funktion in jeder Dimension.",
+    "cards": {
+      "interior": {
+        "label": "Innenbereich",
+        "eyebrow": "Raum. Licht. Atmosphäre.",
+        "title": "glas für innenräume.",
+        "description": "Massgefertigte Glaslösungen für Räume, die offen, lichtdurchflutet und unverwechselbar wirken sollen.",
+        "application1": "Ganzglas-Trennwände",
+        "application2": "Türen & Duschen",
+        "application3": "Spiegel & Möbelglas",
+        "imageAlt": "Moderner Innenraum mit grossen Glasflächen"
+      },
+      "exterior": {
+        "label": "Aussenbereich",
+        "eyebrow": "Schutz trifft Ausdruck.",
+        "title": "glas für architektur.",
+        "description": "Leistungsstarke Sicherheits- und Architekturgläser, präzise gefertigt für dauerhafte Gebäudehüllen.",
+        "application1": "Fassadenverglasung",
+        "application2": "Brüstungen & Vordächer",
+        "application3": "Sicherheitsglas",
+        "imageAlt": "Moderne Glasfassade eines Gebäudes"
+      }
+    }
+  },
+  "GlassSolutionsPage": {
+    "back": "Zur Startseite",
+    "catalogueLabel": "KURTH Glaslösungen",
+    "types": {
+      "interior": { "eyebrow": "Innenbereich", "title": "glas für innenräume.", "description": "Individuelle Glaslösungen für Wohnräume, Arbeitswelten, Hotellerie und Retail – präzise geplant und in der eigenen Manufaktur gefertigt." },
+      "exterior": { "eyebrow": "Aussenbereich", "title": "glas für aussenräume.", "description": "Sicheres, beständiges Architekturglas für Fassaden, Aussenräume und tragende Anwendungen – auf jedes Bauvorhaben abgestimmt." }
+    },
+    "products": {
+      "wallCladding": { "category": "murale", "title": "glasverkleidung.", "description": "Hygienische, langlebige Sicherheitsglas-Rückwände für Küche, Bad, Wohnen und öffentliche Räume." },
+      "switchableGlass": { "category": "mutabilis", "title": "schaltbares glas.", "description": "Transparenz und Privatsphäre auf Knopfdruck – mit Flüssigkristallfilm für flexible Räume." },
+      "allGlassSystems": { "category": "murus", "title": "ganzglas-system.", "description": "Lichtdurchflutete Trennwände für moderne Arbeits- und Wohnwelten." },
+      "mirrors": { "category": "speculum", "title": "spiegel.", "description": "Massgefertigte Spiegel für Zuhause, Hotellerie, Mode und Beauty." },
+      "twoWayMirrors": { "category": "spectabilis", "title": "spionspiegel.", "description": "TV-Bildschirm und eleganter Spiegel in einer optisch hochwertigen Lösung." },
+      "antiReflectiveGlass": { "category": "luxar", "title": "entspiegeltes glas.", "description": "Magnetronbeschichtetes Glas für eine reflexfreie Sicht auf Kunst, Bilder und Produkte." },
+      "curvedGlass": { "category": "arcus", "title": "bogenglas.", "description": "Zylindrisch gebogenes Sicherheitsglas für individuelle Formen in Architektur und Innenausbau." },
+      "glassFloors": { "category": "pavimentum", "title": "glasböden.", "description": "Rutschhemmende, tragfähige Glasböden für Innen- und Aussenbereiche." },
+      "facadeGlazing": { "category": "Architektur", "title": "fassadenverglasung.", "description": "Massgefertigte Verglasungen, die Licht, Schutz und eine klare Gebäudeidentität verbinden." },
+      "safetyGlass": { "category": "ESG & VSG", "title": "sicherheitsglas.", "description": "Thermisch vorgespanntes und laminiertes Glas für erhöhte Schlagfestigkeit und Schutz." },
+      "balustrades": { "category": "Aussenraum", "title": "brüstungen & vordächer.", "description": "Transparente Sicherheitselemente für Terrassen, Balkone und Eingangsbereiche." },
+      "outdoorKitchen": { "category": "Outdoor Living", "title": "outdoor kitchen.", "description": "Massgefertigte Glasküchen für Garten, Terrasse und Balkon – robust, hygienisch und individuell." },
+      "curvedArchitecture": { "category": "arcus", "title": "bogenglas für architektur.", "description": "Gebogenes Sicherheitsglas für markante Fassaden und anspruchsvolle Bauformen." }
+    },
+    "consultation": { "eyebrow": "Ihr Projekt beginnt hier", "title": "Lassen Sie uns Ihre Idee in Glas übersetzen.", "cta": "Beratungstermin buchen" }
+  },
+  "ManufactoryPage": {
+    "hero": {
+      "eyebrow": "Schweizer Glasverarbeitung",
+      "title": "manufaktur.",
+      "description": "Ein moderner Maschinenpark, ein top ausgebildetes Team und hochinnovative Prozesse zeichnen den Erfolg von KURTH seit über 70 Jahren aus.",
+      "explore": "Prozesse entdecken",
+      "verticalLabel": "KURTH · ZUCHWIL · SCHWEIZ",
+      "processCount": "Fertigungsprozesse aus einer Hand",
+      "years": "Jahre Erfahrung",
+      "processes": "Kernprozesse",
+      "origin": "Swiss made"
+    },
+    "index": {
+      "eyebrow": "Unser Maschinenpark",
+      "title": "Acht Prozesse. Eine Präzision."
+    },
+    "labels": {
+      "thickness": "Glasstärke",
+      "minimum": "Grösse min.",
+      "maximum": "Grösse max.",
+      "colors": "Farben",
+      "finishes": "Ausführungen",
+      "applications": "Anwendungen"
+    },
+    "items": {
+      "glassCutting": {
+        "kicker": "Computergesteuerte Präzision",
+        "title": "glaszuschnitt",
+        "description": "Modernste Schneidtechnologie verwandelt grossformatige Glastafeln effizient und reproduzierbar in exakt dimensionierte Bauteile.",
+        "feature1": "Computergesteuerter Schneidkopf mit Diamant- oder Hartmetallrad",
+        "feature2": "Präzise Bearbeitung von Dünnglas bis 24 mm Stärke",
+        "feature3": "Grossformate bis 3210 × 5100 mm",
+        "videoTitle": "Prozess Glaszuschnitt"
+      },
+      "edgeProcessing": {
+        "kicker": "Finish, das man sieht und fühlt",
+        "title": "kantenbearbeitung",
+        "description": "Jede Kante wird für Sicherheit, Funktion und eine hochwertige Optik veredelt—vom praktischen Säumen bis zur polierten Designkante.",
+        "feature1": "Gesäumte, rodierte und polierte Kanten",
+        "feature2": "C-Schliff, Bullnose, Gehrung und Facette",
+        "feature3": "Sichere und haptisch hochwertige Abschlüsse",
+        "videoTitle": "Glas-Kantenbearbeitung"
+      },
+      "waterjet": {
+        "kicker": "Kaltschneiden ohne Formgrenzen",
+        "title": "wasserstrahlschneiden",
+        "description": "Hochdruck-Wasserstrahltechnologie ermöglicht saubere Ausschnitte, komplexe Konturen und individuelle Formen über ein aussergewöhnlich breites Stärkenspektrum.",
+        "feature1": "Wasserstrahltechnologie von Bystronic",
+        "feature2": "Komplexe Konturen, Bohrungen und Präzisionsausschnitte",
+        "feature3": "Für Türen, Tische, Duschen und Spezialbauteile",
+        "videoTitle": "Wasserstrahlschneiden von Glas"
+      },
+      "cnc": {
+        "kicker": "Fünf Achsen für jede Form",
+        "title": "glasbearbeitung",
+        "description": "Das moderne 5-Achsen-Bearbeitungszentrum fertigt individuell gefräste, gebohrte, gerillte und gravierte Glasteile in nahezu jeder Form.",
+        "feature1": "Fräsen, Bohren, Rillenschliff und Gravuren",
+        "feature2": "Sämtliche Kantenbearbeitungen in einem präzisen Prozess",
+        "feature3": "Individuelle Spiegel, Tischplatten, Tablare und Türen",
+        "videoTitle": "CNC-Glasbearbeitung"
+      },
+      "ceramicPrint": {
+        "kicker": "Permanente Farbe bei 650°C",
+        "title": "keramikdigitaldruck",
+        "description": "Fotorealistische Motive und individuelle Designs werden direkt auf Glas gedruckt und eingebrannt, sodass die keramische Farbe dauerhaft mit der Oberfläche verschmilzt.",
+        "feature1": "Hochauflösende, fotorealistische Wiedergabe",
+        "feature2": "Witterungs-, UV- und kratzbeständig",
+        "feature3": "Bei 650°C eingebrannt für maximale Langlebigkeit",
+        "videoTitle": "Keramikdigitaldruck auf Glas"
+      },
+      "tempering": {
+        "kicker": "Sicherheit durch kontrollierte Hitze",
+        "title": "vorspannanlage",
+        "description": "Zwei moderne Vorspannanlagen produzieren Einscheibensicherheitsglas in zahlreichen Formaten und gewährleisten dabei konstant höchste Qualitätsstandards.",
+        "feature1": "Zwei moderne Vorspannanlagen",
+        "feature2": "Über 30 Jahre Erfahrung in der ESG-Produktion",
+        "feature3": "Individueller Zuschnitt und Bearbeitung vor dem Vorspannen",
+        "videoTitle": "Produktion von Einscheibensicherheitsglas"
+      },
+      "curvedGlass": {
+        "kicker": "Präzision jenseits der Ebene",
+        "title": "bogenglas",
+        "description": "Kontrollierte Formprozesse schaffen elegante Glasradien für Architektur, Möbel und individuelle Designlösungen mit exakt definierter Geometrie.",
+        "feature1": "Massgefertigte Bogenformen und Radien",
+        "feature2": "Glasstärken von 4 bis 24 mm",
+        "feature3": "Grossformate bis 2400 × 2400 mm",
+        "videoTitle": "Herstellung von Bogenglas"
+      },
+      "painting": {
+        "kicker": "Farbe trifft Glas",
+        "title": "lackiererei",
+        "description": "Sorgfältige Oberflächenvorbereitung und präziser Mehrschichtauftrag erzeugen glatte, langlebige Farbflächen für Innenausbau und Möbel.",
+        "feature1": "Beständige 2K- und hitzefeste Emailfarben",
+        "feature2": "In sämtlichen gewünschten RAL- und NCS-Farben",
+        "feature3": "Ideal für Küchenrückwände, Glastüren und Möbel",
+        "videoTitle": "Lackierung von Architekturglas"
+      }
     }
   },
   "Showrooms": {
@@ -130,9 +292,10 @@
   "Footer": {
     "description": "Glas trifft Design. Hochwertige Glaslösungen aus Zuchwil, Schweiz. Inhabergeführt mit über 50 Jahren Erfahrung.",
     "links": {
-      "products": "Produkte",
-      "services": "Services",
-      "contact": "Kontakt"
+      "products": "produkte.",
+      "manufacturing": "manufaktur.",
+      "services": "services.",
+      "contact": "kontakt."
     },
     "productLinks": {
       "glasverkleidung": "Glasverkleidung",
@@ -143,15 +306,43 @@
       "entspiegeltesGlas": "Entspiegeltes Glas"
     },
     "serviceLinks": {
-      "ganzglasSystem": "Ganzglas-System",
-      "glasboden": "Glasboden",
-      "spiegel": "Spiegel",
-      "beratung": "Beratung"
+      "glaszuschnitt": "glaszuschnitt",
+      "kantenbearbeitung": "kantenbearbeitung",
+      "wasserstrahlschneiden": "wasserstrahlschneiden",
+      "glasbearbeitung": "glasbearbeitung",
+      "keramikdigitaldruck": "keramikdigitaldruck",
+      "vorspannanlage": "vorspannanlage",
+      "bogenglas": "bogenglas",
+      "lackiererei": "lackiererei"
+    },
+    "atelier": {
+      "eyebrow": "Besuche unser Atelier",
+      "title": "Glas hautnah erleben.",
+      "quality": "Schweizer Präzision. Schweizer Qualität.",
+      "description": "Entdecke unsere Glasmuster, lass dich persönlich von unseren Spezialisten beraten oder erlebe bei einer Führung, wie unsere Glaslösungen entstehen.",
+      "bookConsultation": "Beratungstermin buchen",
+      "visitShop": "Zum Onlineshop",
+      "discoverFactory": "Manufaktur entdecken",
+      "facts": {
+        "since": "Seit 1956",
+        "precision": "Schweizer Präzision",
+        "locations": "Zuchwil & Faoug"
+      }
+    },
+    "openingHours": {
+      "title": "öffnungszeiten",
+      "mondayThursday": "Montag - Donnerstag",
+      "friday": "Freitag"
+    },
+    "social": {
+      "title": "social media",
+      "instagram": "Folge @kurthglas",
+      "linkedin": "Auf LinkedIn folgen"
     },
     "contactLinks": {
-      "standort": "Standort",
-      "kontakt": "Kontakt",
-      "karriere": "Karriere"
+      "standort": "standort",
+      "kontakt": "kontakt",
+      "karriere": "karriere"
     },
     "legal": {
       "copyright": "© {year} KURTH Glas und Spiegel AG. Alle Rechte vorbehalten.",

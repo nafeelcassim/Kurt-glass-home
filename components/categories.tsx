@@ -1,6 +1,7 @@
 "use client"
 
 import { useRef } from "react"
+import Image from "next/image"
 import gsap from "gsap"
 import { useGSAP } from "@gsap/react"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
@@ -11,19 +12,19 @@ import { fonts, fontHeading } from "@/lib/fonts"
 // Register both plugins
 gsap.registerPlugin(useGSAP, ScrollTrigger)
 
-const categoryImages = [
-  { id: "glasverkleidung", subtitle: "murale", image: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&q=80" },
-  { id: "schaltbaresGlas", subtitle: "mutabilis", image: "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=800&q=80" },
-  { id: "glasbilder", subtitle: "by kurth", image: "https://images.unsplash.com/photo-1513506003901-1e6a229e2d15?w=800&q=80" },
-  { id: "spionspiegel", subtitle: "spectabilis", image: "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=800&q=80" },
-  { id: "bogenglas", subtitle: "arcus", image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80" },
-  { id: "entspiegeltesGlas", subtitle: "luxar", image: "https://images.unsplash.com/photo-1600573472550-8090b5e0745e?w=800&q=80" },
-  { id: "ganzglasSystem", subtitle: "murus", image: "https://images.unsplash.com/photo-1600607687644-c7171b42498f?w=800&q=80" },
-  { id: "spiegel", subtitle: "speculum", image: "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=800&q=80" },
+const services = [
+  { id: "glaszuschnitt", subtitle: "precision", image: "https://images.unsplash.com/photo-1565008447742-97f6f38c985c?w=800&q=80", href: "https://www.kurth-glas.ch/glaszuschnitt-2" },
+  { id: "kantenbearbeitung", subtitle: "finishing", image: "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?w=800&q=80", href: "https://www.kurth-glas.ch/kopie-von-glaszuschnitt" },
+  { id: "wasserstrahlschneiden", subtitle: "bystronic", image: "https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=800&q=80", href: "https://www.kurth-glas.ch/kopie-von-kantenbearbeitung" },
+  { id: "glasbearbeitung", subtitle: "cnc", image: "https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=800&q=80", href: "https://www.kurth-glas.ch/kopie-von-wasserstrahlschneiden" },
+  { id: "keramikdigitaldruck", subtitle: "650°c", image: "https://images.unsplash.com/photo-1513506003901-1e6a229e2d15?w=800&q=80", href: "https://www.kurth-glas.ch/kopie-von-glasbearbeitung" },
+  { id: "vorspannanlage", subtitle: "esg", image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&q=80", href: "https://www.kurth-glas.ch/kopie-von-keramikdigitaldruck" },
+  { id: "bogenglas", subtitle: "arcus", image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80", href: "https://www.kurth-glas.ch/kopie-von-vorspannanlage" },
+  { id: "lackiererei", subtitle: "ral + ncs", image: "https://images.unsplash.com/photo-1561214115-f2f134cc4912?w=800&q=80", href: "https://www.kurth-glas.ch/kopie-von-bogenglas" },
 ]
 
-export function Categories() {
-  const t = useTranslations("Categories")
+export function Services() {
+  const t = useTranslations("Services")
   const sectionRef = useRef<HTMLDivElement>(null)
   const carouselRef = useRef<HTMLDivElement>(null)
   const titleRef = useRef<HTMLHeadingElement>(null)
@@ -47,7 +48,7 @@ export function Categories() {
     )
 
     // Cards stagger animation
-    const cards = carouselRef.current?.querySelectorAll(".category-card")
+    const cards = carouselRef.current?.querySelectorAll(".service-card")
     if (cards) {
       gsap.fromTo(
         cards,
@@ -79,7 +80,7 @@ export function Categories() {
   }
 
   return (
-    <section ref={sectionRef} id="categories" className="py-24 md:py-32 overflow-hidden bg-[#141414]">
+    <section ref={sectionRef} id="services" className="py-24 md:py-32 overflow-hidden bg-[#141414]">
       <div className="container mx-auto px-6 mb-12">
         <div className="flex items-end justify-between">
           <h2
@@ -114,28 +115,38 @@ export function Categories() {
         ref={carouselRef}
         className="flex gap-6 px-6 overflow-x-auto horizontal-scroll pb-4"
       >
-        {categoryImages.map((category) => (
-          <div
-            key={category.id}
-            className="category-card shrink-0 w-72 md:w-80 group cursor-pointer"
+        {services.map((service) => (
+          <a
+            key={service.id}
+            href={service.href}
+            target="_blank"
+            rel="noreferrer"
+            className="service-card shrink-0 w-72 md:w-80 group"
           >
             <div className="relative aspect-3/4 overflow-hidden mb-4">
-              <img
-                src={category.image}
-                alt={t(`items.${category.id}`)}
-                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+              <Image
+                src={service.image}
+                alt={t(`items.${service.id}`)}
+                fill
+                sizes="(max-width: 768px) 288px, 320px"
+                onError={(event) => {
+                  event.currentTarget.onerror = null
+                  event.currentTarget.srcset = ""
+                  event.currentTarget.src = "https://images.unsplash.com/photo-1565008447742-97f6f38c985c?w=800&q=80"
+                }}
+                className="object-cover transition-transform duration-700 group-hover:scale-110"
               />
-              <div className="absolute inset-0 bg-linear-to-t from-black/80 via-transparent to-transparent" />
+              <div className="absolute inset-0 bg-linear-to-t from-black/85 via-black/15 to-transparent" />
               <div className="absolute bottom-0 left-0 right-0 p-6">
-                <span className={`${fonts.xs} uppercase tracking-widest text-white/60 mb-2 block`}>
-                  {category.subtitle}
+                <span className={`${fonts["2xl"]} tracking-normal text-white/60 mb-2 block`}>
+                  {service.subtitle}
                 </span>
-                <h3 className={`${fonts['2xl']} font-bold text-white group-hover:text-accent transition-colors duration-300`}>
-                  {t(`items.${category.id}`)}
+                <h3 className={`${fonts['2xl']} font-bold text-white group-hover:text-white transition-colors animated-underline duration-300`}>
+                  {t(`items.${service.id}`)}
                 </h3>
               </div>
             </div>
-          </div>
+          </a>
         ))}
       </div>
     </section>

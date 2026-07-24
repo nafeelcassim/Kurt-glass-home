@@ -1,11 +1,14 @@
 {
   "Header": {
     "nav": {
-      "news": "actualités",
       "products": "produits",
+      "manufacturing": "manufacture",
+      "news": "manufacture",
       "about": "à propos",
+      "services": "services",
       "showrooms": "emplacement",
-      "contact": "contact"
+      "contact": "contact",
+      "shop": "boutique"
     }
   },
   "Hero": {
@@ -32,7 +35,7 @@
   "Products": {
     "header": {
       "subtitle": "Nos Produits",
-      "title": "produits."
+      "title": "meilleurs produits."
     },
     "cta": {
       "allProducts": "Tous les Produits"
@@ -82,24 +85,167 @@
       }
     }
   },
-  "Categories": {
+  "Services": {
     "heading": {
       "line1": "nos",
-      "line2": "catégories."
+      "line2": "services."
     },
     "navigation": {
-      "back": "Retour",
-      "next": "Suivant"
+      "back": "Services précédents",
+      "next": "Services suivants"
     },
     "items": {
-      "glasverkleidung": "Revêtement en Verre",
-      "schaltbaresGlas": "Verre Commutable",
-      "glasbilder": "Art sur Verre",
-      "spionspiegel": "Miroir Sans Tain",
+      "glaszuschnitt": "Découpe du Verre",
+      "kantenbearbeitung": "Façonnage des Bords",
+      "wasserstrahlschneiden": "Découpe au Jet d'Eau",
+      "glasbearbeitung": "Usinage CNC du Verre",
+      "keramikdigitaldruck": "Impression Numérique Céramique",
+      "vorspannanlage": "Trempe du Verre",
       "bogenglas": "Verre Courbé",
-      "entspiegeltesGlas": "Verre Anti-Reflet",
-      "ganzglasSystem": "Système Tout-Verre",
-      "spiegel": "Miroirs"
+      "lackiererei": "Laquage du Verre"
+    }
+  },
+  "Manufacturing": {
+    "eyebrow": "Précision suisse. Qualité suisse.",
+    "title": "manufacture du verre.",
+    "description": "Un parc de machines moderne, une équipe hautement qualifiée et des processus innovants façonnent le succès de KURTH depuis plus de 70 ans.",
+    "cta": "En savoir plus"
+  },
+  "InteriorExterior": {
+    "eyebrow": "Des solutions verrières sans limites",
+    "title": {
+      "line1": "façonner les intérieurs.",
+      "line2": "définir les façades."
+    },
+    "description": "Des détails précis à l'intérieur aux enveloppes de bâtiment performantes, le verre réunit esthétique, lumière et fonctionnalité à toutes les échelles.",
+    "cards": {
+      "interior": {
+        "label": "Intérieur",
+        "eyebrow": "Espace. Lumière. Atmosphère.",
+        "title": "le verre intérieur.",
+        "description": "Des solutions verrières sur mesure pour des espaces ouverts, lumineux et résolument individuels.",
+        "application1": "Cloisons tout-verre",
+        "application2": "Portes & douches",
+        "application3": "Miroirs & verre de mobilier",
+        "imageAlt": "Intérieur contemporain avec de grandes surfaces vitrées"
+      },
+      "exterior": {
+        "label": "Extérieur",
+        "eyebrow": "La protection devient expression.",
+        "title": "le verre architectural.",
+        "description": "Des verres de sécurité et architecturaux performants, fabriqués avec précision pour des enveloppes durables.",
+        "application1": "Vitrage de façade",
+        "application2": "Garde-corps & auvents",
+        "application3": "Verre de sécurité",
+        "imageAlt": "Bâtiment contemporain avec façade en verre"
+      }
+    }
+  },
+  "GlassSolutionsPage": {
+    "back": "Retour à l'accueil", "catalogueLabel": "Solutions verrières KURTH",
+    "types": { "interior": { "eyebrow": "Intérieur", "title": "le verre intérieur.", "description": "Des solutions verrières individuelles pour l'habitat, les espaces de travail, l'hôtellerie et le commerce, conçues et fabriquées dans notre manufacture." }, "exterior": { "eyebrow": "Extérieur", "title": "le verre extérieur.", "description": "Du verre architectural sûr et durable pour façades, espaces extérieurs et applications structurelles, adapté à chaque projet." } },
+    "products": {
+      "wallCladding": { "category": "murale", "title": "revêtement en verre.", "description": "Des parois arrière en verre de sécurité hygiéniques et durables pour cuisines, salles de bain et espaces publics." }, "switchableGlass": { "category": "mutabilis", "title": "verre commutable.", "description": "Transparence et intimité sur commande grâce à un film à cristaux liquides." }, "allGlassSystems": { "category": "murus", "title": "systèmes tout-verre.", "description": "Des cloisons lumineuses pour les espaces de travail et l'habitat contemporains." }, "mirrors": { "category": "speculum", "title": "miroirs.", "description": "Des miroirs sur mesure pour l'habitat, l'hôtellerie, la mode et la beauté." }, "twoWayMirrors": { "category": "spectabilis", "title": "miroirs sans tain.", "description": "Un écran TV et un miroir élégant réunis dans une solution raffinée." }, "antiReflectiveGlass": { "category": "luxar", "title": "verre anti-reflet.", "description": "Un verre à revêtement magnetron offrant une vue sans reflets sur l'art et les produits." }, "curvedGlass": { "category": "arcus", "title": "verre courbé.", "description": "Du verre de sécurité courbé pour des formes individuelles en architecture et intérieur." }, "glassFloors": { "category": "pavimentum", "title": "sols en verre.", "description": "Des sols en verre antidérapants et porteurs pour les espaces intérieurs et extérieurs." }, "facadeGlazing": { "category": "Architecture", "title": "vitrage de façade.", "description": "Des vitrages sur mesure associant lumière, protection et identité architecturale." }, "safetyGlass": { "category": "ESG & VSG", "title": "verre de sécurité.", "description": "Du verre trempé et feuilleté pour une résistance accrue aux chocs et une meilleure protection." }, "balustrades": { "category": "Espace extérieur", "title": "garde-corps & auvents.", "description": "Des éléments de sécurité transparents pour terrasses, balcons et entrées." }, "outdoorKitchen": { "category": "Outdoor Living", "title": "cuisine extérieure.", "description": "Des cuisines en verre sur mesure pour jardins, terrasses et balcons : durables et hygiéniques." }, "curvedArchitecture": { "category": "arcus", "title": "verre courbé architectural.", "description": "Du verre de sécurité courbé pour des façades expressives et des formes exigeantes." }
+    },
+    "consultation": { "eyebrow": "Votre projet commence ici", "title": "Traduisons votre idée en verre.", "cta": "Réserver un conseil" }
+  },
+  "ManufactoryPage": {
+    "hero": {
+      "eyebrow": "Transformation suisse du verre",
+      "title": "manufacture.",
+      "description": "Un parc de machines moderne, une équipe hautement qualifiée et des processus très innovants façonnent le succès de KURTH depuis plus de 70 ans.",
+      "explore": "Découvrir les processus",
+      "verticalLabel": "KURTH · ZUCHWIL · SUISSE",
+      "processCount": "Processus de fabrication d'une seule source",
+      "years": "Années d'expérience",
+      "processes": "Processus clés",
+      "origin": "Swiss made"
+    },
+    "index": {
+      "eyebrow": "Notre parc de machines",
+      "title": "Huit processus. Une précision."
+    },
+    "labels": {
+      "thickness": "Épaisseur",
+      "minimum": "Format minimum",
+      "maximum": "Format maximum",
+      "colors": "Couleurs",
+      "finishes": "Finitions",
+      "applications": "Applications"
+    },
+    "items": {
+      "glassCutting": {
+        "kicker": "Précision pilotée par ordinateur",
+        "title": "découpe du verre",
+        "description": "Une technologie de découpe moderne transforme efficacement les grandes feuilles de verre en composants aux dimensions exactes et reproductibles.",
+        "feature1": "Tête de coupe pilotée par ordinateur avec molette diamant ou carbure",
+        "feature2": "Usinage précis du verre ultrafin jusqu'à 24 mm",
+        "feature3": "Grands formats jusqu'à 3210 × 5100 mm",
+        "videoTitle": "Processus de découpe du verre"
+      },
+      "edgeProcessing": {
+        "kicker": "Une finition visible et perceptible",
+        "title": "façonnage des bords",
+        "description": "Chaque bord est travaillé pour la sécurité, la fonction et une apparence raffinée, de l'arête simple à la finition design polie.",
+        "feature1": "Bords ourlés, rodés et polis",
+        "feature2": "Profil C, bullnose, onglet et biseau",
+        "feature3": "Finitions sûres et agréables au toucher",
+        "videoTitle": "Façonnage des bords du verre"
+      },
+      "waterjet": {
+        "kicker": "Découpe à froid sans limites",
+        "title": "découpe au jet d'eau",
+        "description": "La technologie au jet d'eau haute pression permet des découpes nettes, des contours complexes et des formes individuelles sur une plage exceptionnelle d'épaisseurs.",
+        "feature1": "Technologie de jet d'eau Bystronic",
+        "feature2": "Contours complexes, perçages et découpes de précision",
+        "feature3": "Pour portes, tables, douches et pièces spéciales",
+        "videoTitle": "Découpe du verre au jet d'eau"
+      },
+      "cnc": {
+        "kicker": "Capacité cinq axes",
+        "title": "usinage CNC du verre",
+        "description": "Le centre d'usinage moderne à cinq axes réalise des pièces en verre fraisées, percées, rainurées et gravées individuellement dans presque toutes les formes.",
+        "feature1": "Fraisage, perçage, rainurage et gravure",
+        "feature2": "Tous les façonnages de bords dans un processus précis",
+        "feature3": "Miroirs, plateaux, étagères et portes sur mesure",
+        "videoTitle": "Usinage CNC du verre"
+      },
+      "ceramicPrint": {
+        "kicker": "Couleur permanente à 650°C",
+        "title": "impression numérique céramique",
+        "description": "Les motifs photoréalistes et designs personnalisés sont imprimés directement sur le verre puis cuits afin que la couleur céramique fusionne durablement avec la surface.",
+        "feature1": "Reproduction photoréaliste haute résolution",
+        "feature2": "Résistance aux intempéries, aux UV et aux rayures",
+        "feature3": "Cuisson à 650°C pour une longévité exceptionnelle",
+        "videoTitle": "Impression numérique céramique sur verre"
+      },
+      "tempering": {
+        "kicker": "La sécurité par la chaleur contrôlée",
+        "title": "trempe du verre",
+        "description": "Deux installations modernes produisent du verre de sécurité trempé dans de nombreux formats tout en garantissant des standards de qualité élevés et constants.",
+        "feature1": "Deux installations de trempe modernes",
+        "feature2": "Plus de 30 ans d'expérience dans la production ESG",
+        "feature3": "Découpe et usinage personnalisés avant la trempe",
+        "videoTitle": "Production de verre de sécurité trempé"
+      },
+      "curvedGlass": {
+        "kicker": "La précision au-delà du plan",
+        "title": "verre courbé",
+        "description": "Des processus de formage contrôlés créent des courbes élégantes pour l'architecture, le mobilier et les solutions de design individuelles.",
+        "feature1": "Formes courbes et rayons sur mesure",
+        "feature2": "Épaisseurs de verre de 4 à 24 mm",
+        "feature3": "Grands formats jusqu'à 2400 × 2400 mm",
+        "videoTitle": "Production de verre courbé"
+      },
+      "painting": {
+        "kicker": "La couleur rencontre le verre",
+        "title": "laquage du verre",
+        "description": "Une préparation soignée et une application précise en plusieurs couches créent des surfaces colorées lisses et durables pour l'intérieur et le mobilier.",
+        "feature1": "Couleurs 2K durables et émaux résistants à la chaleur",
+        "feature2": "Disponible dans toutes les couleurs RAL et NCS souhaitées",
+        "feature3": "Idéal pour cuisines, portes vitrées et mobilier",
+        "videoTitle": "Laquage du verre architectural"
+      }
     }
   },
   "Showrooms": {
@@ -131,6 +277,7 @@
     "description": "Le verre rencontre le Design. Solutions en verre de haute qualité de Zuchwil, Suisse. Dirigée par les propriétaires avec plus de 50 ans d'expérience.",
     "links": {
       "products": "Produits",
+      "manufacturing": "Manufacture",
       "services": "Services",
       "contact": "Contact"
     },
@@ -143,10 +290,38 @@
       "entspiegeltesGlas": "Verre Anti-Reflet"
     },
     "serviceLinks": {
-      "ganzglasSystem": "Système Tout-Verre",
-      "glasboden": "Plancher en Verre",
-      "spiegel": "Miroirs",
-      "beratung": "Conseil"
+      "glaszuschnitt": "Découpe du Verre",
+      "kantenbearbeitung": "Façonnage des Bords",
+      "wasserstrahlschneiden": "Découpe au Jet d'Eau",
+      "glasbearbeitung": "Usinage CNC du Verre",
+      "keramikdigitaldruck": "Impression Céramique",
+      "vorspannanlage": "Trempe du Verre",
+      "bogenglas": "Verre Courbé",
+      "lackiererei": "Laquage du Verre"
+    },
+    "atelier": {
+      "eyebrow": "Visitez notre atelier",
+      "title": "Découvrez le verre de près.",
+      "quality": "Précision suisse. Qualité suisse.",
+      "description": "Explorez nos échantillons de verre, profitez des conseils personnalisés de nos spécialistes ou découvrez notre production lors d'une visite de la manufacture.",
+      "bookConsultation": "Réserver un conseil",
+      "visitShop": "Visiter la boutique",
+      "discoverFactory": "Découvrir la manufacture",
+      "facts": {
+        "since": "Depuis 1956",
+        "precision": "Précision suisse",
+        "locations": "Zuchwil & Faoug"
+      }
+    },
+    "openingHours": {
+      "title": "Horaires d'ouverture",
+      "mondayThursday": "Lundi - Jeudi",
+      "friday": "Vendredi"
+    },
+    "social": {
+      "title": "Réseaux sociaux",
+      "instagram": "Suivre @kurthglas",
+      "linkedin": "Suivre sur LinkedIn"
     },
     "contactLinks": {
       "standort": "Emplacement",

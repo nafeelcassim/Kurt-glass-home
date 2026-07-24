@@ -151,6 +151,7 @@
   transition: width 0.4s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
-.animated-underline:hover::after {
+.animated-underline:hover::after,
+.group:hover .animated-underline::after {
   width: 100%;
 }

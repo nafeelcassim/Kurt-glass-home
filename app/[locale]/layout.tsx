@@ -41,7 +41,7 @@ export default async function RootLayout({
   }
 
   return (
-    <html lang={locale} className={`${leagueSpartan.variable} bg-background`}>
+    <html lang={locale} data-scroll-behavior="smooth" className={`${leagueSpartan.variable} bg-background`}>
       <body className="bg-background text-foreground font-sans antialiased">
           <NextIntlClientProvider>{children}</NextIntlClientProvider>
         {process.env.NODE_ENV === 'production' && <Analytics />}
