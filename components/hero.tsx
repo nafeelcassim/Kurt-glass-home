@@ -13,11 +13,10 @@ import { fonts, fontHeading } from "@/lib/fonts"
 gsap.registerPlugin(useGSAP, ScrollTrigger)
 
 // Poster paints as the LCP element while the video streams in (or stays, for
-// reduced-motion / data-saver users). Pexels serves a still for each video id.
+// reduced-motion / data-saver users). Poster is the video's first frame.
 const HERO_VIDEO_SRC =
-  "https://videos.pexels.com/video-files/3209828/3209828-uhd_2560_1440_25fps.mp4"
-const HERO_POSTER_SRC =
-  "https://images.pexels.com/videos/3209828/free-video-3209828.jpg?auto=compress&cs=tinysrgb&w=1920"
+  "https://qjpz0te97ckckvfq.public.blob.vercel-storage.com/static-files/WhatsApp%20Video%202026-11-03%20at%2019.37.20-trimmed-4.5s.mp4"
+const HERO_POSTER_SRC = "/hero-poster-v3.jpg"
 
 export function Hero() {
   const t = useTranslations("Hero")
@@ -140,9 +139,8 @@ export function Hero() {
       ref={containerRef}
       className="relative h-screen overflow-hidden"
     >
-      {/* Warm up the media origins before the video source is attached (React 19 hoists these to <head>) */}
-      <link rel="preconnect" href="https://videos.pexels.com" />
-      <link rel="preconnect" href="https://images.pexels.com" />
+      {/* Warm up the video origin before the source is attached (React 19 hoists this to <head>) */}
+      <link rel="preconnect" href="https://qjpz0te97ckckvfq.public.blob.vercel-storage.com" />
 
       {/* Video Background — poster carries first paint; source is attached client-side only */}
       <video

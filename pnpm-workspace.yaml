@@ -1,0 +1,7 @@
+allowBuilds:
+  "@parcel/watcher": true
+  "@swc/core": true
+  sharp: true
+
+# Supply-chain guard: skip versions published < 7 days ago (minutes)
+minimumReleaseAge: 10080
