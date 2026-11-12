@@ -124,8 +124,8 @@ export function About() {
           {/* Image */}
           <div ref={imageRef} className="relative aspect-4/5">
             <Image
-              src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&q=80"
-              alt="Glas Handwerkskunst"
+              src="/media/web_round-mirror.jpg"
+              alt="Made-to-measure round mirror in a designed interior"
               fill
               sizes="(max-width: 1024px) 100vw, 50vw"
               className="object-cover"

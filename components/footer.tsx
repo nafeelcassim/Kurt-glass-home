@@ -1,8 +1,9 @@
 import Link from "next/link"
+import { Link as LocaleLink } from "@/i18n/navigation"
 import { ArrowUpRight, Instagram, Linkedin } from "lucide-react"
 import { getTranslations } from "next-intl/server"
 import { fonts, fontHeading } from "@/lib/fonts"
-import { SHOP_URL } from "@/lib/site"
+import { BOOKING_URL, SHOP_URL } from "@/lib/site"
 import { FooterAnimation } from "@/components/section-animations"
 
 const manufacturingKeys = ["glaszuschnitt", "kantenbearbeitung", "wasserstrahlschneiden", "glasbearbeitung", "keramikdigitaldruck", "vorspannanlage", "bogenglas", "lackiererei"]
@@ -16,8 +17,9 @@ const manufacturingHrefs = [
   "https://www.kurth-glas.ch/kopie-von-vorspannanlage",
   "https://www.kurth-glas.ch/kopie-von-bogenglas",
 ]
-const contactKeys = ["standort", "kontakt", "karriere"]
-const contactHrefs = ["#showrooms", "#showrooms", "#"]
+// Home-page anchors are prefixed with "/" so they also work from sub-pages (LocaleLink adds the locale).
+const contactKeys = ["standort", "kontakt", "faq"]
+const contactHrefs = ["/#showrooms", "/#contact", "/faq"]
 
 export async function Footer() {
   const t = await getTranslations("Footer")
@@ -48,7 +50,7 @@ export async function Footer() {
             </p>
             <div className="footer-intro mt-8 flex flex-wrap items-center gap-x-8 gap-y-4">
               <Link
-                href="https://outlook.office365.com/owa/calendar/KurthGlasSpiegelAG@kurth-glas.ch/bookings/"
+                href={BOOKING_URL}
                 target="_blank"
                 rel="noreferrer"
                 className={`${fonts.lg} font-semibold group inline-flex items-center gap-3 text-white transition-colors duration-300 hover:text-white/65 animated-underline`}
@@ -122,12 +124,12 @@ export async function Footer() {
             <ul className="space-y-3">
               {contactKeys.map((key, index) => (
                 <li key={key}>
-                  <Link
+                  <LocaleLink
                     href={contactHrefs[index]}
                     className={`${fonts.lg} text-white/60 transition-colors duration-300 hover:text-white`}
                   >
                     {t(`contactLinks.${key}`)}
-                  </Link>
+                  </LocaleLink>
                 </li>
               ))}
             </ul>

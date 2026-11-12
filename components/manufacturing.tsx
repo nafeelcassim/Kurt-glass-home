@@ -3,31 +3,18 @@ import { ArrowUpRight } from "lucide-react"
 import { Link } from "@/i18n/navigation"
 import { fonts, fontHeading } from "@/lib/fonts"
 import { ManufacturingAnimation } from "@/components/section-animations"
+import { BackgroundVideo } from "@/components/background-video"
 
 export async function Manufacturing() {
   const t = await getTranslations("Manufacturing")
 
   return (
     <ManufacturingAnimation>
-      <video
-        autoPlay
-        muted
-        loop
-        playsInline
-        preload="auto"
-        poster="https://images.pexels.com/videos/7519304/pexels-photo-7519304.jpeg?auto=compress&cs=tinysrgb&w=1920"
-        aria-hidden="true"
+      <BackgroundVideo
+        src="/media/manufacturing-montage.mp4"
+        poster="/media/manufacturing-montage.jpg"
         className="manufacturing-video absolute inset-0 h-full w-full object-cover"
-      >
-        <source
-          src="https://www.pexels.com/download/video/7519304/"
-          type="video/mp4"
-        />
-        <source
-          src="https://videos.pexels.com/video-files/3209828/3209828-uhd_2560_1440_25fps.mp4"
-          type="video/mp4"
-        />
-      </video>
+      />
 
       <div className="absolute inset-0 bg-black/45" />
       <div className="absolute inset-0 bg-linear-to-r from-black/85 via-black/45 to-black/15" />

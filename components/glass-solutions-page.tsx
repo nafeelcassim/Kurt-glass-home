@@ -9,6 +9,7 @@ import { useTranslations } from "next-intl"
 import Image from "next/image"
 import { Link } from "@/i18n/navigation"
 import { fonts, fontHeading } from "@/lib/fonts"
+import { BOOKING_URL } from "@/lib/site"
 
 gsap.registerPlugin(useGSAP, ScrollTrigger)
 
@@ -16,22 +17,22 @@ type SolutionType = "interior" | "exterior"
 
 const catalogues: Record<SolutionType, Array<{ id: string; href: string; image: string }>> = {
   interior: [
-    { id: "wallCladding", href: "https://www.kurth-glas.ch/glasverkleidung", image: "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1200&q=85" },
-    { id: "switchableGlass", href: "https://www.kurth-glas.ch/schaltbares-glas", image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=85" },
-    { id: "allGlassSystems", href: "https://www.kurth-glas.ch/ganzglas-system", image: "https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1200&q=85" },
-    { id: "mirrors", href: "https://www.kurth-glas.ch/spiegel", image: "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1200&q=85" },
-    { id: "twoWayMirrors", href: "https://www.kurth-glas.ch/spionspiegel", image: "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=1200&q=85" },
-    { id: "antiReflectiveGlass", href: "https://www.kurth-glas.ch/luxar", image: "https://images.unsplash.com/photo-1561214115-f2f134cc4912?auto=format&fit=crop&w=1200&q=85" },
-    { id: "curvedGlass", href: "https://www.kurth-glas.ch/bogenglas", image: "https://images.unsplash.com/photo-1549490349-8643362247b5?auto=format&fit=crop&w=1200&q=85" },
-    { id: "glassFloors", href: "https://www.kurth-glas.ch/glasboden", image: "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1200&q=85" },
+    { id: "wallCladding", href: "https://www.kurth-glas.ch/glasverkleidung", image: "/media/web_murale-marble-backwall.jpg" },
+    { id: "switchableGlass", href: "https://www.kurth-glas.ch/schaltbares-glas", image: "/media/web_switchable-glass.jpg" },
+    { id: "allGlassSystems", href: "https://www.kurth-glas.ch/ganzglas-system", image: "/media/web_all-glass-room.jpg" },
+    { id: "mirrors", href: "https://www.kurth-glas.ch/spiegel", image: "/media/web_round-mirror.jpg" },
+    { id: "twoWayMirrors", href: "https://www.kurth-glas.ch/spionspiegel", image: "/media/web_two-way-mirror-tv.jpg" },
+    { id: "antiReflectiveGlass", href: "https://www.kurth-glas.ch/luxar", image: "/media/web_anti-reflective-vitrine.jpg" },
+    { id: "curvedGlass", href: "https://www.kurth-glas.ch/bogenglas", image: "/media/web_curved-glass-staircase-2.jpg" },
+    { id: "glassFloors", href: "https://www.kurth-glas.ch/glasboden", image: "/media/web_glass-stairs.jpg" },
   ],
   exterior: [
     { id: "facadeGlazing", href: "https://www.kurth-glas.ch/glas", image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=85" },
-    { id: "safetyGlass", href: "https://www.kurth-glas.ch/manufaktur", image: "https://images.unsplash.com/photo-1565008447742-97f6f38c985c?auto=format&fit=crop&w=1200&q=85" },
-    { id: "balustrades", href: "https://www.kurth-glas.ch/glas", image: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=85" },
-    { id: "outdoorKitchen", href: "https://www.kurth-glas.ch/outdoor-kitchen", image: "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1200&q=85" },
-    { id: "curvedArchitecture", href: "https://www.kurth-glas.ch/bogenglas", image: "https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&w=1200&q=85" },
-    { id: "glassFloors", href: "https://www.kurth-glas.ch/glasboden", image: "https://images.unsplash.com/photo-1600607688969-a5bfcd646154?auto=format&fit=crop&w=1200&q=85" },
+    { id: "safetyGlass", href: "https://www.kurth-glas.ch/manufaktur", image: "/media/APJ_1535.jpg" },
+    { id: "balustrades", href: "https://www.kurth-glas.ch/glas", image: "/media/web_entrance-windbreak-black.jpg" },
+    { id: "outdoorKitchen", href: "https://www.kurth-glas.ch/outdoor-kitchen", image: "/media/web_outdoor-kitchen.jpg" },
+    { id: "curvedArchitecture", href: "https://www.kurth-glas.ch/bogenglas", image: "/media/web_curved-glass-staircase.jpg" },
+    { id: "glassFloors", href: "https://www.kurth-glas.ch/glasboden", image: "/media/web_glass-floor.jpg" },
   ],
 }
 
@@ -100,7 +101,7 @@ export function GlassSolutionsPage({ type }: { type: SolutionType }) {
                   src={product.image}
                   alt={t(`products.${product.id}.title`)}
                   fill
-                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  sizes="(max-width: 640px) 188vw, (max-width: 1024px) 94vw, 63vw" // 3:2 photo covering a 4:5 card
                   className="object-cover transition-transform duration-1000 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-linear-to-t from-black/75 via-transparent to-transparent" />
@@ -127,7 +128,7 @@ export function GlassSolutionsPage({ type }: { type: SolutionType }) {
             <p className={`${fonts.lg} tracking-[0.18em] text-white/45`}>{t("consultation.eyebrow")}</p>
             <h2 className={`${fontHeading.md} mt-4 max-w-2xl font-bold`}>{t("consultation.title")}</h2>
           </div>
-          <a href="https://outlook.office365.com/owa/calendar/KurthGlasSpiegelAG@kurth-glas.ch/bookings/" target="_blank" rel="noreferrer" className={`${fonts.lg} group inline-flex items-center gap-4 font-semibold text-white animated-underline`}>
+          <a href={BOOKING_URL} target="_blank" rel="noreferrer" className={`${fonts.lg} group inline-flex items-center gap-4 font-semibold text-white animated-underline`}>
             {t("consultation.cta")}
             <ArrowUpRight className="h-5 w-5 transition-transform duration-300 group-hover:-translate-y-1 group-hover:translate-x-1" />
           </a>

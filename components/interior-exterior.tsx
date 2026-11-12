@@ -15,11 +15,11 @@ gsap.registerPlugin(useGSAP, ScrollTrigger)
 const solutions = [
   {
     id: "interior",
-    image: "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1600&q=85",
+    image: "/media/web_glass-room-interior.jpg",
   },
   {
     id: "exterior",
-    image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1600&q=85",
+    image: "/media/_DSC0856.jpg",
   },
 ]
 
