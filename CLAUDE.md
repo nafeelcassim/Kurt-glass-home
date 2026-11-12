@@ -10,7 +10,7 @@ Marketing site for Kurth Glass. Next.js 16 (App Router, React 19), Tailwind v4, 
 pnpm dev      # dev server
 pnpm build    # production build
 pnpm start    # serve production build
-npx tsc --noEmit   # type-check — `next build` does NOT (ignoreBuildErrors: true in next.config.mjs)
+npx tsc --noEmit   # type-check (also enforced by `next build`)
 ```
 
 - `pnpm lint` runs `eslint .`, but ESLint is not installed, so it fails. There are no tests.
@@ -27,6 +27,6 @@ npx tsc --noEmit   # type-check — `next build` does NOT (ignoreBuildErrors: tr
 - Sections start hidden (opacity 0) until their ScrollTrigger fires. `SmoothScroll` calls `ScrollTrigger.refresh()` after each pathname change, including client-side locale switches. Do not add a global ScrollTrigger kill: it races with the newly mounted locale's triggers and leaves the page blank.
 - Preferred pattern for new or refactored sections: a server component (`getTranslations` from `next-intl/server`) wraps its content in a thin client animator from `components/section-animations.tsx`. `Manufacturing` and `Footer` use this pattern. Converting the remaining sections was paused on purpose; see `PERFORMANCE_AUDIT.md` §3.
 
-**Styling.** Tailwind v4 is configured through `app/globals.css`; there is no tailwind config file. Typography presets (`fonts`, `fontHeading`) are in `lib/fonts.ts`, so reuse them instead of writing raw leading and tracking classes. `components.json` is set up for shadcn, but `components/ui` does not exist yet. External URLs such as `SHOP_URL` belong in `lib/site.ts`. Remote image hosts must be allowlisted in `next.config.mjs` under `images.remotePatterns`.
+**Styling.** Tailwind v4 is configured through `app/globals.css`; there is no tailwind config file. Typography presets (`fonts`, `fontHeading`) are in `lib/fonts.ts`, so reuse them instead of writing raw leading and tracking classes. `components.json` is set up for shadcn, but `components/ui` does not exist yet. External URLs such as `SHOP_URL` belong in `lib/site.ts`. Remote image hosts must be allowlisted in `next.config.mjs` under `images.remotePatterns`; any new external origin (video, script, analytics) must also be added to the Content-Security-Policy in `next.config.mjs` or the browser will block it.
 
 **`PERFORMANCE_AUDIT.md`** records performance decisions, including items intentionally declined or paused. Check it before reopening any of them.
