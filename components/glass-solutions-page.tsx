@@ -27,7 +27,7 @@ const catalogues: Record<SolutionType, Array<{ id: string; href: string; image: 
     { id: "glassFloors", href: "https://www.kurth-glas.ch/glasboden", image: "/media/web_glass-stairs.jpg" },
   ],
   exterior: [
-    { id: "facadeGlazing", href: "https://www.kurth-glas.ch/glas", image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=85" },
+    { id: "facadeGlazing", href: "https://www.kurth-glas.ch/glas", image: "/media/web_printed-glass-terrace-wall.jpg" },
     { id: "safetyGlass", href: "https://www.kurth-glas.ch/manufaktur", image: "/media/APJ_1535.jpg" },
     { id: "balustrades", href: "https://www.kurth-glas.ch/glas", image: "/media/web_entrance-windbreak-black.jpg" },
     { id: "outdoorKitchen", href: "https://www.kurth-glas.ch/outdoor-kitchen", image: "/media/web_outdoor-kitchen.jpg" },
