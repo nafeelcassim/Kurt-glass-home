@@ -14,3 +14,5 @@ next.user-config.*
 node_modules
 .next/
 .DS_Store
+# Next.js-generated agent notes (recreated by the dev server)
+AGENTS.md

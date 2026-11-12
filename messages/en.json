@@ -41,47 +41,44 @@
       "allProducts": "All Products"
     },
     "items": {
-      "murale": {
-        "name": "Glass Cladding",
-        "subtitle": "murale",
-        "description": "Elegant wall cladding made of high-quality glass for interiors"
-      },
       "mutabilis": {
         "name": "Switchable Glass",
-        "subtitle": "mutabilis",
-        "description": "Innovative technology for maximum privacy at the touch of a button"
+        "subtitle": "mutabilis"
       },
       "glasbilder": {
         "name": "Glass Art",
-        "subtitle": "by kurth",
-        "description": "Artistic glass pictures as unique design elements"
+        "subtitle": "by kurth"
       },
       "spectabilis": {
         "name": "Two-Way Mirror",
-        "subtitle": "spectabilis",
-        "description": "High-quality two-way mirrors for special applications"
+        "subtitle": "spectabilis"
       },
       "arcus": {
         "name": "Curved Glass",
-        "subtitle": "arcus",
-        "description": "Curved glass for architectural highlights"
+        "subtitle": "arcus"
       },
       "luxar": {
         "name": "Anti-Reflective Glass",
-        "subtitle": "luxar",
-        "description": "Crystal clear view without disturbing reflections"
-      },
-      "murus": {
-        "name": "All-Glass System",
-        "subtitle": "murus"
+        "subtitle": "luxar"
       },
       "pavimentum": {
         "name": "Glass Floor",
         "subtitle": "pavimentum"
       },
+      "murale": {
+        "name": "Glass kitchen splashbacks"
+      },
+      "imber": {
+        "name": "Made-to-measure glass showers"
+      },
+      "murus": {
+        "name": "Frameless glass partitions"
+      },
+      "ventus": {
+        "name": "Made-to-measure glass windbreaks"
+      },
       "speculum": {
-        "name": "Mirrors",
-        "subtitle": "speculum"
+        "name": "Made-to-measure mirrors"
       }
     }
   },
@@ -326,12 +323,309 @@
     "contactLinks": {
       "standort": "Location",
       "kontakt": "Contact",
-      "karriere": "Careers"
+      "faq": "FAQ"
     },
     "legal": {
       "copyright": "© {year} KURTH Glas und Spiegel AG. All rights reserved.",
       "privacy": "Privacy Policy",
       "imprint": "Imprint"
+    }
+  },
+  "FaqPage": {
+    "meta": {
+      "title": "FAQ – Glass, mirrors, showers & partitions | KURTH Glas",
+      "description": "Answers about KURTH Glas und Spiegel AG: made-to-measure glass showers, glass partitions, windbreaks, mirrors and kitchen splashbacks, safety glass (ESG/VSG) and glass processing in Zuchwil and Faoug."
+    },
+    "hero": {
+      "eyebrow": "Frequently asked questions",
+      "title": "questions & answers.",
+      "description": "Everything about our products, our glass and how a project with KURTH works – from the first idea to installation."
+    },
+    "topics": "Topics",
+    "categories": [
+      {
+        "id": "company",
+        "title": "About KURTH",
+        "items": [
+          {
+            "q": "Who is KURTH Glas und Spiegel AG?",
+            "a": "KURTH Glas und Spiegel AG is an owner-managed Swiss glass processing company that has been cutting, finishing and installing glass since 1956. It produces at two sites, in Zuchwil (canton of Solothurn) and Faoug (canton of Vaud), and handles every step in-house: cutting, edge processing, waterjet and CNC processing, tempering, ceramic digital printing, curved glass and glass painting."
+          },
+          {
+            "q": "Where are your locations and how can I contact you?",
+            "a": "Zuchwil: Grubenweg 2, 4528 Zuchwil, phone +41 32 685 55 75, info@kurth-glas.ch. Faoug: Route de Morat 6, 1595 Faoug, phone +41 26 670 41 80, matthias.flach@kurth-glas.ch."
+          },
+          {
+            "q": "What are your opening hours?",
+            "a": "Monday to Thursday from 07:10 to 12:00 and from 13:30 to 17:30. Friday from 07:10 to 12:00 and from 13:30 to 16:30."
+          },
+          {
+            "q": "Can I see glass samples or visit your manufactory?",
+            "a": "Yes. Our atelier offers a large selection of glass samples, and our specialists advise you in person. On request, we also show you around our manufactory. You can book a consultation online.",
+            "link": {
+              "href": "https://outlook.office365.com/owa/calendar/KurthGlasSpiegelAG@kurth-glas.ch/bookings/",
+              "label": "Book a consultation"
+            }
+          },
+          {
+            "q": "Who are your customers?",
+            "a": "We work for private customers as well as for businesses and building projects: homes, offices and practices, hospitality and retail, and architectural projects with façade, balustrade and safety glass."
+          },
+          {
+            "q": "Where do you install?",
+            "a": "Our own installation team travels from Zuchwil or Faoug, whichever is closer to your site. Travel costs are calculated from the nearer location."
+          },
+          {
+            "q": "Who owns KURTH Glas und Spiegel AG?",
+            "a": "Since 2011, the company has been owned and managed by Evelyne and Fabian Flury, who took it over from Martin Kurth, the second-generation owner. Martin Kurth remains on the board of directors as an advisor. Around 20 trained employees produce every product in-house."
+          },
+          {
+            "q": "What makes KURTH unique?",
+            "a": "According to KURTH, it is the only company in Switzerland that combines photo-realistic printing on glass with its own glass-bending process. In cooperation with ENTER, KURTH was also the first Swiss company to produce switchable glass."
+          },
+          {
+            "q": "Are brochures and data sheets available?",
+            "a": "Yes. KURTH brochures can be downloaded in German and French on kurth-glas.ch.",
+            "link": {
+              "href": "https://www.kurth-glas.ch/prospekte",
+              "label": "Brochures"
+            }
+          }
+        ]
+      },
+      {
+        "id": "products",
+        "title": "Product pages",
+        "items": [
+          {
+            "q": "Which KURTH products have their own product pages?",
+            "a": "Five product lines have dedicated pages where you can plan your project and send an inquiry: murale. glass kitchen splashbacks (murale.glaszentrum.ch), imber. made-to-measure glass showers (imber.glaszentrum.ch), murus. frameless glass partitions (murus.glaszentrum.ch), ventus. made-to-measure glass windbreaks (ventus.glaszentrum.ch) and speculum. made-to-measure mirrors (speculum.glaszentrum.ch)."
+          },
+          {
+            "q": "What is murale.?",
+            "a": "murale. is the KURTH range of glass kitchen splashbacks: made-to-measure back walls of safety glass for kitchens, and also for bathrooms and living spaces. Glass is hygienic and durable, and it can be painted in any RAL or NCS colour or printed with your own motif using ceramic digital printing. On murale.glaszentrum.ch you can capture your wall and plan the splashback online.",
+            "link": {
+              "href": "https://murale.glaszentrum.ch",
+              "label": "murale.glaszentrum.ch"
+            }
+          },
+          {
+            "q": "What are the advantages of a glass back wall (murale.)?",
+            "a": "Glass back walls are more resistant to moisture, scratches and stains than conventional wall coverings, wear less and last longer. They are easy to care for – a damp cloth is enough – make a room look larger and brighter, and are recyclable at the end of their life. Besides kitchens and bathrooms, murale. is used in practices, schools and museums."
+          },
+          {
+            "q": "What is imber.?",
+            "a": "imber. stands for made-to-measure glass showers from KURTH: niche, corner, walk-in or bathtub screens. Every imber. shower is made of 8 mm toughened safety glass (ESG) with polished edges, with fittings in the colour of your choice. On imber.glaszentrum.ch you design your shower in 3D and see a fixed price including on-site measurement, delivery and installation.",
+            "link": {
+              "href": "https://imber.glaszentrum.ch",
+              "label": "imber.glaszentrum.ch"
+            }
+          },
+          {
+            "q": "What is murus.?",
+            "a": "murus. are frameless all-glass partitions for offices, practices, reception areas and homes: a straight wall, a corner office, a room within a room or a free-standing glass box. The glass is 8, 10 or 12 mm thick, made to measure in Zuchwil and installed by our own team. On murus.glaszentrum.ch you plan your partition in 3D and see a guide price.",
+            "link": {
+              "href": "https://murus.glaszentrum.ch",
+              "label": "murus.glaszentrum.ch"
+            }
+          },
+          {
+            "q": "What is ventus.?",
+            "a": "ventus. is a made-to-measure glass windbreak for house entrances, seating areas and terraces. It keeps wind and driving rain out without blocking light or the view. ventus. is made of toughened safety glass (ESG) in clear, extra-clear or satin finishes, optionally with ceramic printing, and fixed with a U-profile or holders in black or stainless steel. KURTH installs every windbreak itself.",
+            "link": {
+              "href": "https://ventus.glaszentrum.ch",
+              "label": "ventus.glaszentrum.ch"
+            }
+          },
+          {
+            "q": "What is speculum.?",
+            "a": "speculum. are made-to-measure mirrors for bathrooms, wardrobes, living rooms and fitness or ballet studios, in any size and shape – including free-form contours, faceted edges and printed borders. Holes and cut-outs for holders, sockets or lights are possible. We cut and finish every mirror in Zuchwil; you choose whether we install it or you collect it.",
+            "link": {
+              "href": "https://speculum.glaszentrum.ch",
+              "label": "speculum.glaszentrum.ch"
+            }
+          },
+          {
+            "q": "Which other glass products does KURTH make?",
+            "a": "Besides the five product lines, KURTH makes glass doors and glass sliding doors (portavant), all-glass balustrades, glass stairs, glass floors (pavimentum), curved glass (arcus), switchable glass (mutabilis), two-way mirrors (spectabilis), anti-reflective glass (luxar), glass pictures and an outdoor kitchen made entirely of glass."
+          },
+          {
+            "q": "What is pavimentum?",
+            "a": "pavimentum are glass floors and stair treads made of toughened safety glass with a high load-bearing capacity, for living rooms, bathrooms, staircases and outdoor areas. All floors are available with an anti-slip coating. With ceramic digital printing, the glass can be given colours and textures – or imitate wood, concrete or marble."
+          },
+          {
+            "q": "What is the KURTH Outdoor Kitchen?",
+            "a": "An outdoor kitchen built entirely of glass for gardens, terraces and balconies, available in different sizes and variants. It is weatherproof, easy to clean thanks to its smooth, non-porous surface and withstands the heat of integrated grills and cooking appliances. With ceramic digital printing, every kitchen can be designed individually."
+          }
+        ]
+      },
+      {
+        "id": "showers",
+        "title": "Glass showers",
+        "items": [
+          {
+            "q": "What is included in the fixed price of an imber. shower?",
+            "a": "The shower in your design and size, on-site measurement, delivery and installation by our team. Glass, nano coating and fitting colour are included in the price shown, as is removing your old shower if you wish. Travel to the installation is calculated from Zuchwil or Faoug using the postcode of the site. If the on-site measurement results in different dimensions, the price is recalculated using the same price list."
+          },
+          {
+            "q": "Which glass types are available for showers?",
+            "a": "Clear glass shows off the whole bathroom, extra-clear glass looks especially brilliant without a green tint, satin glass is bright but opaque, and tinted glass is darker and warmer. All shower glass is 8 mm ESG with polished edges."
+          },
+          {
+            "q": "What is calxless.?",
+            "a": "calxless. is the coated glass from KURTH: coated, protected, limescale-free. Water beads off, limescale and dirt adhere less, and cleaning is quicker. For other glass types, an optional nano coating has the same effect."
+          },
+          {
+            "q": "How do I clean a glass shower?",
+            "a": "Moisten the glass with clear water and clean it with a clean microfibre cloth. Alternatively, wipe it from top to bottom with a squeegee after showering so that no water spots remain. Do not use abrasive cleaning agents."
+          },
+          {
+            "q": "Do you also make showers for gyms and hotels?",
+            "a": "Yes. Beyond private bathrooms, KURTH plans, manufactures and installs glass showers for fitness centres, wellness areas and hotels, where showers are used intensively and robustness, hygiene and easy care count most."
+          }
+        ]
+      },
+      {
+        "id": "partitions",
+        "title": "Glass partitions & windbreaks",
+        "items": [
+          {
+            "q": "Which doors are available for glass partitions?",
+            "a": "All-glass doors are available as hinged doors, pivot doors that swing both ways, and sliding doors. They run on a floor spring or hang on glass-to-glass hinges. Alternatively, a framed door in a slim aluminium frame with lever handle and lock is available. Fittings are powder-coated in any RAL or NCS colour or anodised."
+          },
+          {
+            "q": "Which glass types are available for partitions and windbreaks?",
+            "a": "FASILIS is the standard glass with a slight green tint. LUX is extra-clear. SATIN and SATIN LUX let light through but are not transparent, with a soft matt surface."
+          },
+          {
+            "q": "How do I get privacy with a glass wall?",
+            "a": "With satin glass, with a privacy band applied by ceramic digital printing, or with switchable glass (mutabilis) that turns opaque at the touch of a button."
+          },
+          {
+            "q": "Does a glass wall need markings?",
+            "a": "Large transparent glass surfaces should be clearly visible so that nobody walks into them. We advise you on this and print strips, dots or your logo permanently into the glass."
+          },
+          {
+            "q": "Which glass is used for a glass windbreak?",
+            "a": "Toughened safety glass (ESG). We determine the glass thickness and fixing according to height, width and wind load – at the latest during the on-site measurement. Elements can be 300 to 3000 mm wide and 500 to 3000 mm high."
+          }
+        ]
+      },
+      {
+        "id": "mirrors",
+        "title": "Mirrors & special glass",
+        "items": [
+          {
+            "q": "How do I order a free-form mirror?",
+            "a": "Choose the shape «free form» in the speculum. price calculator and enter the width and height of the area the mirror has to fit into. After your inquiry, send us a drawing or template with dimensions."
+          },
+          {
+            "q": "How does a two-way mirror work?",
+            "a": "From the brighter side, it looks like a mirror; from the darker side, you can see through it. This requires a clear difference in brightness between the two sides. With spectabilis, KURTH also combines a TV screen and a mirror in one surface."
+          },
+          {
+            "q": "What is switchable glass (mutabilis)?",
+            "a": "mutabilis contains a liquid-crystal film that switches the glass from transparent to opaque at the touch of a button – ideal for meeting rooms and flexible spaces."
+          },
+          {
+            "q": "What is anti-reflective glass (luxar)?",
+            "a": "luxar is magnetron-coated glass that largely eliminates reflections and glare. It gives a clear view of artworks, pictures and products, for example in display cases."
+          },
+          {
+            "q": "Do you make mirrors from smoked glass?",
+            "a": "Yes. Besides clear mirrors, KURTH makes mirrors from smoked glass, round or angular, as one-offs from its own production."
+          },
+          {
+            "q": "How does a TV mirror (spectabilis) work?",
+            "a": "When the TV is on, you see the picture in the usual quality; when it is switched off, the screen disappears behind an elegant mirror. Thanks to a full-convection tempering furnace, KURTH produces distortion-free mirrors of high optical quality. An optional lamination gives the two-way mirror extra durability and protection."
+          }
+        ]
+      },
+      {
+        "id": "process",
+        "title": "Inquiry, prices & installation",
+        "items": [
+          {
+            "q": "Are the prices on the product pages binding?",
+            "a": "On murus., ventus. and speculum. you see a guide price; the binding quotation follows after we have checked your details, if needed during an on-site measurement. With imber., the fixed price becomes binding with our written quotation; if the on-site measurement shows different dimensions, it is recalculated using the same price list."
+          },
+          {
+            "q": "How precisely do I need to measure?",
+            "a": "Approximate dimensions are enough. For showers, measure in millimetres between the finished walls; for partitions, the length of the wall and the room height from the finished floor to the ceiling. Before production, we measure precisely on site."
+          },
+          {
+            "q": "What happens after I send an inquiry?",
+            "a": "We get back to you, usually within two working days, arrange an on-site measurement if needed and send you the quotation. Once you confirm, we manufacture and install."
+          },
+          {
+            "q": "Can I send photos or plans?",
+            "a": "Yes. Photos and plans help us assess your situation faster. Please send them by email to info@kurth-glas.ch after your inquiry and quote your inquiry number."
+          },
+          {
+            "q": "Do you install yourselves?",
+            "a": "Yes. Glass showers, glass partitions and windbreaks are always installed by our own team. Mirrors can be installed by us or collected from Zuchwil."
+          }
+        ]
+      },
+      {
+        "id": "glass",
+        "title": "Glass & safety",
+        "items": [
+          {
+            "q": "What is the difference between ESG and VSG?",
+            "a": "ESG (toughened safety glass) is heat-treated, withstands impacts and temperature differences, and breaks into small, blunt crumbs. VSG (laminated safety glass) consists of two panes with an interlayer; if it breaks, the fragments stick to the film. We advise you on which suits your application."
+          },
+          {
+            "q": "Can glass be curved?",
+            "a": "Yes. KURTH produces cylindrically curved safety glass in thicknesses from 4 to 24 mm and in formats up to 2400 × 2400 mm – for architecture, interiors and furniture."
+          },
+          {
+            "q": "How durable is ceramic digital printing on glass?",
+            "a": "Very durable. The motif is printed photo-realistically onto the glass and then fired at 650 °C, so that the ceramic colour fuses permanently with the surface. The result is resistant to weather, UV light and scratches."
+          },
+          {
+            "q": "Can glass be painted in any colour?",
+            "a": "Yes. Our paint shop coats glass in any RAL or NCS colour using durable 2K paints and heat-resistant enamel colours – ideal for kitchens, glass doors and furniture."
+          },
+          {
+            "q": "What is TVG (partially toughened glass)?",
+            "a": "TVG is glass that is heat-strengthened less than ESG. KURTH tempers ESG and TVG on two tempering systems, heating the glass to around 620 °C and then cooling it rapidly. Curved glass is also available in ESG or TVG."
+          },
+          {
+            "q": "What is the minimum radius for curved glass?",
+            "a": "The minimum bending radius is 450 mm. Curved glass is available in thicknesses from 4 to 24 mm, from 200 × 300 mm up to 2400 × 2400 mm, as ESG or TVG."
+          }
+        ]
+      },
+      {
+        "id": "manufacturing",
+        "title": "Manufacturing",
+        "items": [
+          {
+            "q": "Which processes do you handle in-house?",
+            "a": "Glass cutting, edge processing, waterjet cutting (Bystronic), CNC processing on a five-axis machining centre, glass tempering on two tempering systems, ceramic digital printing, curved glass and glass painting – all in our own manufactory."
+          },
+          {
+            "q": "What sizes and thicknesses can you process?",
+            "a": "Cutting: 0.5 to 24 mm, up to 3210 × 5100 mm. Waterjet: up to 50 mm thick, up to 2000 × 4000 mm. CNC processing: 3 to 50 mm, up to 2000 × 4000 mm. Tempering: 3 to 24 mm, up to 2400 × 4200 mm. Ceramic printing: up to 2400 × 4000 mm. Curved glass: 4 to 24 mm, up to 2400 × 2400 mm. For other dimensions, please contact us."
+          },
+          {
+            "q": "Which edge finishes are possible?",
+            "a": "Seamed, ground and polished edges, as well as C-grind, bullnose, mitre, bevel and hard edges."
+          }
+        ]
+      }
+    ],
+    "shop": {
+      "title": "Ordering glass online?",
+      "description": "Questions about our online shop – configuring, prices, payment, pickup and delivery – are answered in the shop FAQ.",
+      "cta": "Shop FAQ",
+      "href": "https://shop.kurth-glas.ch/en/faq"
+    },
+    "contact": {
+      "title": "Still have a question?",
+      "description": "Our specialists in Zuchwil and Faoug are happy to advise you personally.",
+      "cta": "Book a consultation"
     }
   }
 }

@@ -41,47 +41,44 @@
       "allProducts": "Alle Produkte"
     },
     "items": {
-      "murale": {
-        "name": "glasverkleidung",
-        "subtitle": "murale",
-        "description": "Elegante Wandverkleidungen aus hochwertigen Glas für Innenräume"
-      },
       "mutabilis": {
         "name": "schaltbares glas",
-        "subtitle": "mutabilis",
-        "description": "Innovative Technologie für maximale Privatsphäre auf Knopfdruck"
+        "subtitle": "mutabilis"
       },
       "glasbilder": {
         "name": "glasbilder",
-        "subtitle": "by kurth",
-        "description": "Kunstvolle Glasbilder als einzigartige Designelemente"
+        "subtitle": "by kurth"
       },
       "spectabilis": {
         "name": "spionspiegel",
-        "subtitle": "spectabilis",
-        "description": "Hochwertige Spionspiegel für besondere Anwendungen"
+        "subtitle": "spectabilis"
       },
       "arcus": {
         "name": "bogenglas",
-        "subtitle": "arcus",
-        "description": "Gebogenes Glas für architektonische Highlights"
+        "subtitle": "arcus"
       },
       "luxar": {
         "name": "entspiegeltes glas",
-        "subtitle": "luxar",
-        "description": "Kristallklare Sicht ohne störende Reflexionen"
-      },
-      "murus": {
-        "name": "ganzglas-system",
-        "subtitle": "murus"
+        "subtitle": "luxar"
       },
       "pavimentum": {
         "name": "glasboden",
         "subtitle": "pavimentum"
       },
+      "murale": {
+        "name": "küchenrückwände aus glas"
+      },
+      "imber": {
+        "name": "glasduschen nach mass"
+      },
+      "murus": {
+        "name": "ganzglas-trennwände"
+      },
+      "ventus": {
+        "name": "glaswindschutz nach mass"
+      },
       "speculum": {
-        "name": "spiegel",
-        "subtitle": "speculum"
+        "name": "spiegel nach mass"
       }
     }
   },
@@ -342,12 +339,309 @@
     "contactLinks": {
       "standort": "standort",
       "kontakt": "kontakt",
-      "karriere": "karriere"
+      "faq": "FAQ"
     },
     "legal": {
       "copyright": "© {year} KURTH Glas und Spiegel AG. Alle Rechte vorbehalten.",
       "privacy": "Datenschutz",
       "imprint": "Impressum"
+    }
+  },
+  "FaqPage": {
+    "meta": {
+      "title": "FAQ – Glas, Spiegel, Duschen & Trennwände | KURTH Glas",
+      "description": "Antworten zur KURTH Glas und Spiegel AG: Glasduschen, Ganzglas-Trennwände, Glaswindschutz, Spiegel und Küchenrückwände nach Mass, Sicherheitsglas (ESG/VSG) und Glasverarbeitung in Zuchwil und Faoug."
+    },
+    "hero": {
+      "eyebrow": "Häufige Fragen",
+      "title": "fragen & antworten.",
+      "description": "Alles zu unseren Produkten, unserem Glas und zum Ablauf eines Projekts mit KURTH – von der ersten Idee bis zur Montage."
+    },
+    "topics": "Themen",
+    "categories": [
+      {
+        "id": "company",
+        "title": "Über KURTH",
+        "items": [
+          {
+            "q": "Wer ist die KURTH Glas und Spiegel AG?",
+            "a": "Die KURTH Glas und Spiegel AG ist ein inhabergeführtes Schweizer Glasverarbeitungsunternehmen, das seit 1956 Glas zuschneidet, veredelt und montiert. Produziert wird an zwei Standorten, in Zuchwil (Kanton Solothurn) und Faoug (Kanton Waadt). Alle Schritte erfolgen im eigenen Haus: Zuschnitt, Kantenbearbeitung, Wasserstrahl- und CNC-Bearbeitung, Vorspannen, Keramikdigitaldruck, Bogenglas und Glaslackierung."
+          },
+          {
+            "q": "Wo sind Ihre Standorte und wie erreiche ich Sie?",
+            "a": "Zuchwil: Grubenweg 2, 4528 Zuchwil, Telefon +41 32 685 55 75, info@kurth-glas.ch. Faoug: Route de Morat 6, 1595 Faoug, Telefon +41 26 670 41 80, matthias.flach@kurth-glas.ch."
+          },
+          {
+            "q": "Wann sind Sie geöffnet?",
+            "a": "Montag bis Donnerstag von 07.10 bis 12.00 Uhr und von 13.30 bis 17.30 Uhr. Freitag von 07.10 bis 12.00 Uhr und von 13.30 bis 16.30 Uhr."
+          },
+          {
+            "q": "Kann ich Glasmuster ansehen oder Ihre Manufaktur besuchen?",
+            "a": "Ja. In unserem Atelier steht eine grosse Auswahl an Glasmustern bereit, und unsere Spezialisten beraten Sie persönlich. Auf Wunsch führen wir Sie auch durch unsere Manufaktur. Einen Beratungstermin können Sie online buchen.",
+            "link": {
+              "href": "https://outlook.office365.com/owa/calendar/KurthGlasSpiegelAG@kurth-glas.ch/bookings/",
+              "label": "Beratungstermin buchen"
+            }
+          },
+          {
+            "q": "Für wen arbeiten Sie?",
+            "a": "Für Privatkundinnen und Privatkunden ebenso wie für Unternehmen und Bauprojekte: Wohnen, Büros und Praxen, Gastronomie und Handel sowie Architekturprojekte mit Fassaden-, Geländer- und Sicherheitsglas."
+          },
+          {
+            "q": "Wo montieren Sie?",
+            "a": "Unser eigenes Montageteam fährt ab Zuchwil oder Faoug, je nachdem, welcher Standort näher bei Ihnen liegt. Die Anfahrt berechnen wir ab dem näheren Standort."
+          },
+          {
+            "q": "Wem gehört die KURTH Glas und Spiegel AG?",
+            "a": "Seit 2011 führen Evelyne und Fabian Flury das Unternehmen als Inhaber. Sie haben es von Martin Kurth übernommen, dem Inhaber in zweiter Generation, der weiterhin im Verwaltungsrat und als Berater tätig ist. Rund 20 gut ausgebildete Mitarbeitende fertigen jedes Produkt im eigenen Haus."
+          },
+          {
+            "q": "Was macht KURTH einzigartig?",
+            "a": "Nach eigenen Angaben ist KURTH das einzige Unternehmen in der Schweiz, das fotorealistischen Glasdruck mit einem eigenen Verfahren zum Biegen von Glas verbindet. Zudem stellt KURTH in Zusammenarbeit mit ENTER als erste Schweizer Firma schaltbares Glas her."
+          },
+          {
+            "q": "Gibt es Prospekte und Datenblätter?",
+            "a": "Ja. Die KURTH-Prospekte stehen auf kurth-glas.ch auf Deutsch und Französisch zum Download bereit.",
+            "link": {
+              "href": "https://www.kurth-glas.ch/prospekte",
+              "label": "Prospekte"
+            }
+          }
+        ]
+      },
+      {
+        "id": "products",
+        "title": "Produktseiten",
+        "items": [
+          {
+            "q": "Welche KURTH-Produkte haben eigene Produktseiten?",
+            "a": "Fünf Produktlinien haben eigene Seiten, auf denen Sie Ihr Projekt planen und anfragen können: murale. Küchenrückwände aus Glas (murale.glaszentrum.ch), imber. Glasduschen nach Mass (imber.glaszentrum.ch), murus. Ganzglas-Trennwände (murus.glaszentrum.ch), ventus. Glaswindschutz nach Mass (ventus.glaszentrum.ch) und speculum. Spiegel nach Mass (speculum.glaszentrum.ch)."
+          },
+          {
+            "q": "Was ist murale.?",
+            "a": "murale. ist die KURTH-Linie für Küchenrückwände aus Glas: Rückwände aus Sicherheitsglas nach Mass für Küchen, aber auch für Bad und Wohnraum. Glas ist hygienisch und langlebig und lässt sich in jeder RAL- oder NCS-Farbe lackieren oder im Keramikdigitaldruck mit Ihrem eigenen Motiv bedrucken. Auf murale.glaszentrum.ch erfassen Sie Ihre Wand und planen die Rückwand online.",
+            "link": {
+              "href": "https://murale.glaszentrum.ch",
+              "label": "murale.glaszentrum.ch"
+            }
+          },
+          {
+            "q": "Welche Vorteile hat eine Glasrückwand (murale.)?",
+            "a": "Glasrückwände sind widerstandsfähiger gegen Feuchtigkeit, Kratzer und Flecken als herkömmliche Wandverkleidungen, nutzen sich weniger ab und halten länger. Sie sind pflegeleicht – ein feuchtes Tuch genügt –, lassen einen Raum grösser und heller wirken und sind am Ende ihrer Lebensdauer recycelbar. Neben Küche und Bad wird murale. auch in Praxen, Schulen und Museen eingesetzt."
+          },
+          {
+            "q": "Was ist imber.?",
+            "a": "imber. steht für Glasduschen nach Mass von KURTH: Nische, Ecke, Walk-in oder auf der Badewanne. Jede imber.-Dusche besteht aus Einscheiben-Sicherheitsglas (ESG) 8 mm mit polierten Kanten, die Beschläge gibt es in Ihrer Wunschfarbe. Auf imber.glaszentrum.ch gestalten Sie Ihre Dusche in 3D und sehen einen Festpreis inklusive Aufmass vor Ort, Lieferung und Montage.",
+            "link": {
+              "href": "https://imber.glaszentrum.ch",
+              "label": "imber.glaszentrum.ch"
+            }
+          },
+          {
+            "q": "Was ist murus.?",
+            "a": "murus. sind rahmenlose Ganzglas-Trennwände für Büros, Praxen, Empfangsbereiche und Wohnräume: als gerade Wand, Eckbüro, Raum im Raum oder freistehende Glasbox. Das Glas ist 8, 10 oder 12 mm dick, wird in Zuchwil nach Mass gefertigt und von unserem eigenen Team montiert. Auf murus.glaszentrum.ch planen Sie Ihre Trennwand in 3D und sehen einen Richtpreis.",
+            "link": {
+              "href": "https://murus.glaszentrum.ch",
+              "label": "murus.glaszentrum.ch"
+            }
+          },
+          {
+            "q": "Was ist ventus.?",
+            "a": "ventus. ist ein Glaswindschutz nach Mass für Hauseingänge, Sitzplätze und Terrassen. Er hält Wind und Schlagregen ab, ohne Licht und Sicht zu nehmen. ventus. besteht aus Einscheiben-Sicherheitsglas (ESG) in klarer, extraklarer oder satinierter Ausführung, auf Wunsch mit Keramikdruck, befestigt mit U-Profil oder Haltern in Schwarz oder Chromstahl. KURTH montiert jeden Glaswindschutz selbst.",
+            "link": {
+              "href": "https://ventus.glaszentrum.ch",
+              "label": "ventus.glaszentrum.ch"
+            }
+          },
+          {
+            "q": "Was ist speculum.?",
+            "a": "speculum. sind Spiegel nach Mass für Bad, Garderobe, Wohnraum sowie Fitness- und Ballettsäle, in jeder Grösse und Form – auch mit freier Kontur, Facettenschliff oder bedrucktem Rand. Bohrungen und Ausschnitte für Spiegelhalter, Steckdosen oder Licht sind möglich. Wir schneiden und bearbeiten jeden Spiegel in Zuchwil; Sie wählen, ob wir montieren oder ob Sie ihn abholen.",
+            "link": {
+              "href": "https://speculum.glaszentrum.ch",
+              "label": "speculum.glaszentrum.ch"
+            }
+          },
+          {
+            "q": "Welche weiteren Glasprodukte stellt KURTH her?",
+            "a": "Neben den fünf Produktlinien fertigt KURTH Glastüren und Glasschiebetüren (portavant), Ganzglasgeländer, Glastreppen, Glasböden (pavimentum), Bogenglas (arcus), schaltbares Glas (mutabilis), Spionspiegel (spectabilis), entspiegeltes Glas (luxar), Glasbilder und eine Outdoor-Küche ganz aus Glas."
+          },
+          {
+            "q": "Was ist pavimentum?",
+            "a": "pavimentum sind Glasböden und Treppenstufen aus gehärtetem Sicherheitsglas mit hoher Tragfähigkeit, für Wohnräume, Bäder, Treppen und den Aussenbereich. Alle Böden sind mit einer Antirutsch-Beschichtung erhältlich. Mit Keramikdigitaldruck lässt sich das Glas mit Farben und Texturen gestalten – oder es imitiert Holz, Beton oder Marmor."
+          },
+          {
+            "q": "Was ist die KURTH Outdoor Kitchen?",
+            "a": "Eine Outdoor-Küche komplett aus Glas für Garten, Terrasse und Balkon, in verschiedenen Grössen und Varianten. Sie ist wetterfest, dank der glatten, porenfreien Oberfläche leicht zu reinigen und hält die Hitze von integrierten Grill- und Kochgeräten aus. Mit Keramikdigitaldruck wird jede Küche individuell gestaltet."
+          }
+        ]
+      },
+      {
+        "id": "showers",
+        "title": "Glasduschen",
+        "items": [
+          {
+            "q": "Was ist im Festpreis einer imber.-Dusche enthalten?",
+            "a": "Die Dusche in Ihrer Ausführung und Grösse, das Aufmass vor Ort, die Lieferung und die Montage durch unser Team. Glas, Nano-Beschichtung und Farbe der Beschläge sind im angezeigten Preis eingerechnet, ebenso das Entfernen der alten Dusche, wenn Sie das wünschen. Die Anfahrt zur Montage rechnen wir anhand der Postleitzahl ab Zuchwil oder Faoug ein. Ergibt das Aufmass andere Masse, rechnen wir nach derselben Preisliste neu."
+          },
+          {
+            "q": "Welche Gläser gibt es für Duschen?",
+            "a": "Klarglas zeigt das ganze Bad, Weissglas wirkt extraklar ohne Grünstich, satiniertes Glas ist hell und blickdicht, getöntes Glas dunkler und wohnlich. Alle Duschgläser sind ESG 8 mm mit polierten Kanten."
+          },
+          {
+            "q": "Was ist calxless.?",
+            "a": "calxless. ist das beschichtete Glas von KURTH: beschichtet, geschützt, kalkfrei. Wasser perlt ab, Kalk und Schmutz haften weniger, die Reinigung geht schneller. Für andere Gläser bewirkt eine optionale Nano-Beschichtung dasselbe."
+          },
+          {
+            "q": "Wie reinige ich eine Glasdusche?",
+            "a": "Mit klarem Wasser anfeuchten und mit einem sauberen Mikrofasertuch reinigen. Oder nach dem Duschen mit einem Gummischaber von oben nach unten abziehen, dann bleiben keine Wasserflecken. Keine scheuernden Reinigungsmittel verwenden."
+          },
+          {
+            "q": "Machen Sie auch Duschen für Fitnesscenter und Hotels?",
+            "a": "Ja. Neben privaten Bädern plant, fertigt und montiert KURTH Glasduschen für Fitnesscenter, Wellnessbereiche und Hotels, wo Duschen besonders intensiv genutzt werden und Robustheit, Hygiene und einfache Pflege zählen."
+          }
+        ]
+      },
+      {
+        "id": "partitions",
+        "title": "Glastrennwände & Windschutz",
+        "items": [
+          {
+            "q": "Welche Türen gibt es für Glastrennwände?",
+            "a": "Ganzglastüren gibt es als Anschlagtür, als Pendeltür, die in beide Richtungen schwingt, und als Schiebetür. Sie laufen auf einem Bodentürschliesser oder hängen mit Glas-Glas-Bändern am Festteil. Dazu kommt die Zargentür: eine Glastür in einer schlanken Alu-Zarge mit Drücker und Schloss. Die Beschläge sind pulverbeschichtet in jeder RAL- oder NCS-Farbe oder eloxiert."
+          },
+          {
+            "q": "Welche Gläser gibt es für Trennwände und Windschutz?",
+            "a": "FASILIS ist das Standardglas mit leichtem Grünstich. LUX ist extraklar. SATIN und SATIN LUX sind lichtdurchlässig, aber nicht durchsichtig, mit sanft-matter Oberfläche."
+          },
+          {
+            "q": "Wie bekomme ich Sichtschutz bei einer Glaswand?",
+            "a": "Mit satiniertem Glas, mit einem Sichtschutzband im Keramikdigitaldruck oder mit schaltbarem Glas (mutabilis), das auf Knopfdruck undurchsichtig wird."
+          },
+          {
+            "q": "Braucht eine Glaswand eine Markierung?",
+            "a": "Grosse durchsichtige Glasflächen sollten gut sichtbar sein, damit niemand dagegen läuft. Wir beraten Sie dazu und drucken Streifen, Punkte oder Ihr Logo dauerhaft ins Glas."
+          },
+          {
+            "q": "Welches Glas wird für einen Glaswindschutz verwendet?",
+            "a": "Einscheiben-Sicherheitsglas (ESG). Glasdicke und Befestigung legen wir nach Höhe, Breite und Windlast fest – spätestens beim Aufmass. Die Elemente können 300 bis 3000 mm breit und 500 bis 3000 mm hoch sein."
+          }
+        ]
+      },
+      {
+        "id": "mirrors",
+        "title": "Spiegel & Spezialglas",
+        "items": [
+          {
+            "q": "Wie bestelle ich einen Spiegel in freier Form?",
+            "a": "Wählen Sie im speculum.-Richtpreis-Rechner die Form «Freie Form» und geben Sie Breite und Höhe der Fläche an, in die der Spiegel passt. Nach der Anfrage senden Sie uns bitte eine Zeichnung oder Schablone mit Massen."
+          },
+          {
+            "q": "Wie funktioniert ein Spionspiegel?",
+            "a": "Von der helleren Seite wirkt er wie ein Spiegel, von der dunkleren Seite sieht man hindurch. Dafür braucht es einen deutlichen Helligkeitsunterschied zwischen den beiden Seiten. Mit spectabilis kombiniert KURTH ausserdem Fernseher und Spiegel in einer Fläche."
+          },
+          {
+            "q": "Was ist schaltbares Glas (mutabilis)?",
+            "a": "mutabilis enthält eine Flüssigkristallfolie, die das Glas auf Knopfdruck von durchsichtig auf undurchsichtig schaltet – ideal für Besprechungsräume und flexible Räume."
+          },
+          {
+            "q": "Was ist entspiegeltes Glas (luxar)?",
+            "a": "luxar ist ein magnetronbeschichtetes Glas, das Spiegelungen und Blendung weitgehend verhindert. Es gibt den klaren Blick frei auf Kunstwerke, Bilder und Produkte, zum Beispiel in Vitrinen."
+          },
+          {
+            "q": "Fertigen Sie Spiegel aus Rauchglas?",
+            "a": "Ja. Neben klaren Spiegeln fertigt KURTH Spiegel aus Rauchglas, rund oder eckig, als Unikate aus der eigenen Produktion."
+          },
+          {
+            "q": "Wie funktioniert ein TV-Spiegel (spectabilis)?",
+            "a": "Bei eingeschaltetem Fernseher sehen Sie das Bild in gewohnt hoher Qualität; sobald er ausgeschaltet ist, verschwindet der Bildschirm hinter einem eleganten Spiegel. Dank eines Vollkonvektions-Härteofens fertigt KURTH verzerrungsfreie Spiegel von hoher optischer Qualität. Eine optionale Laminierung verleiht dem Spionspiegel zusätzliche Langlebigkeit und Schutz."
+          }
+        ]
+      },
+      {
+        "id": "process",
+        "title": "Anfrage, Preise & Montage",
+        "items": [
+          {
+            "q": "Sind die Preise auf den Produktseiten verbindlich?",
+            "a": "Bei murus., ventus. und speculum. sehen Sie einen Richtpreis; die verbindliche Offerte folgt, nachdem wir Ihre Angaben geprüft haben, bei Bedarf beim Aufmass vor Ort. Bei imber. wird der Festpreis mit unserem schriftlichen Angebot verbindlich; ergibt das Aufmass andere Masse, rechnen wir nach derselben Preisliste neu."
+          },
+          {
+            "q": "Wie genau muss ich messen?",
+            "a": "Ungefähre Masse genügen. Bei Duschen messen Sie in Millimetern zwischen den fertigen Wänden, bei Trennwänden die Länge der Wand und die Raumhöhe vom fertigen Boden bis zur Decke. Vor der Fertigung messen wir bei Ihnen vor Ort genau nach."
+          },
+          {
+            "q": "Was passiert nach meiner Anfrage?",
+            "a": "Wir melden uns, in der Regel innert zwei Arbeitstagen, vereinbaren bei Bedarf einen Termin für das Aufmass und senden Ihnen die Offerte. Mit Ihrer Zusage fertigen und montieren wir."
+          },
+          {
+            "q": "Kann ich Fotos oder Pläne mitsenden?",
+            "a": "Ja. Fotos und Pläne helfen uns, Ihre Situation schneller einzuschätzen. Bitte senden Sie sie nach der Anfrage per E-Mail an info@kurth-glas.ch und nennen Sie Ihre Anfragenummer."
+          },
+          {
+            "q": "Montieren Sie selbst?",
+            "a": "Ja. Glasduschen, Glastrennwände und Glaswindschutz montiert immer unser eigenes Team. Spiegel montieren wir, oder Sie holen sie in Zuchwil ab."
+          }
+        ]
+      },
+      {
+        "id": "glass",
+        "title": "Glas & Sicherheit",
+        "items": [
+          {
+            "q": "Was ist der Unterschied zwischen ESG und VSG?",
+            "a": "ESG (Einscheiben-Sicherheitsglas) ist thermisch vorgespannt, verträgt Stösse und Temperaturunterschiede und zerfällt bei einem Bruch in kleine, stumpfe Krümel. VSG (Verbund-Sicherheitsglas) besteht aus zwei Scheiben mit einer Folie dazwischen; bei einem Bruch bleiben die Splitter an der Folie haften. Welche Ausführung zu Ihrer Anwendung passt, besprechen wir mit Ihnen."
+          },
+          {
+            "q": "Kann Glas gebogen werden?",
+            "a": "Ja. KURTH fertigt zylindrisch gebogenes Sicherheitsglas in Glasdicken von 4 bis 24 mm und in Formaten bis 2400 × 2400 mm – für Architektur, Innenausbau und Möbel."
+          },
+          {
+            "q": "Wie beständig ist Keramikdigitaldruck auf Glas?",
+            "a": "Sehr beständig. Das Motiv wird fotorealistisch auf das Glas gedruckt und anschliessend bei 650 °C eingebrannt, sodass die Keramikfarbe dauerhaft mit der Oberfläche verschmilzt. Das Ergebnis ist witterungs-, UV- und kratzbeständig."
+          },
+          {
+            "q": "Kann Glas in jeder Farbe lackiert werden?",
+            "a": "Ja. Unsere Lackiererei beschichtet Glas in jeder RAL- oder NCS-Farbe mit langlebigen 2K-Farben und hitzebeständigen Emailfarben – ideal für Küchen, Glastüren und Möbel."
+          },
+          {
+            "q": "Was ist TVG (teilvorgespanntes Glas)?",
+            "a": "TVG ist Glas, das weniger stark vorgespannt ist als ESG. KURTH spannt ESG und TVG auf zwei Vorspannanlagen vor: Das Glas wird auf rund 620 °C erhitzt und anschliessend schnell abgekühlt. Auch Bogenglas ist als ESG oder TVG erhältlich."
+          },
+          {
+            "q": "Wie klein darf der Radius bei Bogenglas sein?",
+            "a": "Der Mindestradius beträgt 450 mm. Bogenglas gibt es in Glasdicken von 4 bis 24 mm, von 200 × 300 mm bis 2400 × 2400 mm, als ESG oder TVG."
+          }
+        ]
+      },
+      {
+        "id": "manufacturing",
+        "title": "Fertigung",
+        "items": [
+          {
+            "q": "Welche Verfahren bieten Sie im eigenen Haus an?",
+            "a": "Glaszuschnitt, Kantenbearbeitung, Wasserstrahlschneiden (Bystronic), CNC-Bearbeitung auf einem 5-Achs-Bearbeitungszentrum, Vorspannen auf zwei Vorspannanlagen, Keramikdigitaldruck, Bogenglas und Glaslackierung – alles in unserer eigenen Manufaktur."
+          },
+          {
+            "q": "Welche Grössen und Glasdicken können Sie bearbeiten?",
+            "a": "Zuschnitt: 0,5 bis 24 mm, bis 3210 × 5100 mm. Wasserstrahl: bis 50 mm Dicke, bis 2000 × 4000 mm. CNC-Bearbeitung: 3 bis 50 mm, bis 2000 × 4000 mm. Vorspannen: 3 bis 24 mm, bis 2400 × 4200 mm. Keramikdruck: bis 2400 × 4000 mm. Bogenglas: 4 bis 24 mm, bis 2400 × 2400 mm. Für andere Masse fragen Sie uns gerne an."
+          },
+          {
+            "q": "Welche Kantenbearbeitungen sind möglich?",
+            "a": "Gesäumte, rodierte (geschliffene) und polierte Kanten sowie C-Schliff, Bullnose, Gehrung, Facette und Hartkante."
+          }
+        ]
+      }
+    ],
+    "shop": {
+      "title": "Glas online bestellen?",
+      "description": "Fragen zu unserem Onlineshop – Konfiguration, Preise, Zahlung, Abholung und Lieferung – beantworten wir in den Shop-FAQ.",
+      "cta": "Shop-FAQ",
+      "href": "https://shop.kurth-glas.ch/de/faq"
+    },
+    "contact": {
+      "title": "Noch eine Frage offen?",
+      "description": "Unsere Spezialisten in Zuchwil und Faoug beraten Sie gerne persönlich.",
+      "cta": "Beratungstermin buchen"
     }
   }
 }

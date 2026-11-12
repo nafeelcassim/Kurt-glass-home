@@ -19,8 +19,7 @@ const showrooms = [
     phone: "+41 32 685 55 75",
     email: "info@kurth-glas.ch",
     routeUrl: "https://maps.google.com/?q=Grubenweg+2+4528+Zuchwil",
-    image:
-      "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1600&q=80&auto=format&fit=crop",
+    image: "/media/_DSC0869.jpg",
     imageAlt: "Factory and location in Zuchwil",
   },
   {
@@ -29,8 +28,7 @@ const showrooms = [
     phone: "+41 26 670 41 80",
     email: "matthias.flach@kurth-glas.ch",
     routeUrl: "https://maps.google.com/?q=Route+de+Morat+6+1595+Faoug",
-    image:
-      "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?w=1600&q=80&auto=format&fit=crop",
+    image: "/media/_DSC0745.jpg",
     imageAlt: "Factory and location in Faoug",
   },
 ]
@@ -132,11 +130,6 @@ export function Showrooms() {
                   alt={showroom.imageAlt}
                   fill
                   sizes="(max-width: 768px) 100vw, 50vw"
-                  onError={(event) => {
-                    event.currentTarget.onerror = null
-                    event.currentTarget.srcset = ""
-                    event.currentTarget.src = "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1600&q=80&auto=format&fit=crop"
-                  }}
                   className="object-cover transition-transform duration-700 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-linear-to-t from-neutral-950/65 via-neutral-900/20 to-transparent" />

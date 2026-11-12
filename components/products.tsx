@@ -13,14 +13,18 @@ import { SHOP_URL } from "@/lib/site"
 // Register both plugins
 gsap.registerPlugin(useGSAP, ScrollTrigger)
 
-const productImages = [
-  { id: "murale", image: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&q=80" },
-  { id: "mutabilis", image: "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=800&q=80" },
-  { id: "glasbilder", image: "https://images.unsplash.com/photo-1513506003901-1e6a229e2d15?w=800&q=80" },
-  { id: "spectabilis", image: "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=800&q=80" },
-  { id: "arcus", image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80" },
-  { id: "luxar", image: "https://images.unsplash.com/photo-1600573472550-8090b5e0745e?w=800&q=80" },
+// Product brands with their own sites. Logo = client-supplied white wordmark (white on photos, per brand guide).
+// Images: reference photos from the client's own sites (kurth-glas.ch, *.glaszentrum.ch), served from
+// /public/media until moved to Vercel storage.
+const brandProducts = [
+  { id: "murale", href: "https://murale.glaszentrum.ch", image: "/media/web_murale-alpine-print-kitchen.jpg" },
+  { id: "imber", href: "https://imber.glaszentrum.ch", image: "/media/web_imber-marble-shower.jpg" },
+  { id: "murus", href: "https://murus.glaszentrum.ch", image: "/media/web_murus-printed-meeting-box.jpg" },
+  { id: "ventus", href: "https://ventus.glaszentrum.ch", image: "/media/web_entrance-windbreak-black.jpg" },
+  { id: "speculum", href: "https://speculum.glaszentrum.ch", image: "/media/web_bathroom-mirror.jpg" },
 ]
+
+const shopProducts = ["mutabilis", "glasbilder", "spectabilis", "arcus", "luxar", "pavimentum"]
 
 export function Products() {
   const t = useTranslations("Products")
@@ -135,24 +139,26 @@ export function Products() {
         {/* Products Grid */}
         <div
           ref={gridRef}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8"
           style={{ perspective: "1000px" }}
         >
-          {productImages.map((product) => (
+          {/* 5 cards: 2 wide on the first row, 3 on the second */}
+          {brandProducts.map((product, i) => (
             <a
               key={product.id}
-              href={SHOP_URL}
+              href={product.href}
               target="_blank"
               rel="noopener noreferrer"
-              className="product-card group cursor-pointer relative overflow-hidden"
+              className={`product-card group cursor-pointer relative overflow-hidden ${i < 2 ? "lg:col-span-3" : "lg:col-span-2"}`}
             >
               {/* Image Container */}
-              <div className="relative aspect-4/5 overflow-hidden bg-secondary">
+              <div className={`relative ${i < 2 ? "aspect-4/5 lg:aspect-4/3" : "aspect-4/5"} overflow-hidden bg-secondary`}>
                 <Image
                   src={product.image}
-                  alt={t(`items.${product.id}.name`)}
+                  alt=""
                   fill
-                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  // 3:2 photo covering a 4:5 card is 1.875x the card width (4:3 wide cards: ~1.1x)
+                  sizes={i < 2 ? "(max-width: 768px) 188vw, (max-width: 1024px) 94vw, 56vw" : "(max-width: 768px) 188vw, (max-width: 1024px) 94vw, 63vw"}
                   className="product-image object-cover scale-105"
                 />
                 
@@ -164,15 +170,15 @@ export function Products() {
                 
                 {/* Content on image */}
                 <div className="product-content absolute bottom-2 left-0 right-0 p-6">
-                  <span className={`${fonts["2xl"]} font-normal tracking-wide text-white/70 mb-2 block`}>
-                    {t(`items.${product.id}.subtitle`)}
-                  </span>
-                  <h3 className={`${fontHeading.sm} tracking-normal text-white mb-4 font-bold`}>
+                  <img
+                    src={`/brands/${product.id}.svg`}
+                    alt={`${product.id}.`}
+                    // speculum.svg is 1792 units tall (room for the "p" descender) vs 1400 for the others; scale so letters match
+                    className={`${product.id === "speculum" ? "h-[2.875rem] md:h-14 mb-1" : "h-9 md:h-11 mb-4"} w-auto`}
+                  />
+                  <h3 className={`${fonts["2xl"]} tracking-wide text-white/80`}>
                     {t(`items.${product.id}.name`)}
                   </h3>
-                  <p className={`${fonts["2xl"]} text-white/70 tracking-wider line-clamp-2`}>
-                    {t(`items.${product.id}.description`)}
-                  </p>
                 </div>
 
                 {/* Arrow icon */}
@@ -186,7 +192,7 @@ export function Products() {
 
         {/* Additional products link */}
         <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-6">
-          {["murus", "pavimentum", "speculum"].map((id) => (
+          {shopProducts.map((id) => (
             <a
               key={id}
               href={SHOP_URL}

@@ -1,6 +1,7 @@
 "use client"
 
 import { useRef } from "react"
+import Image from "next/image"
 import gsap from "gsap"
 import { useGSAP } from "@gsap/react"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
@@ -13,50 +14,47 @@ gsap.registerPlugin(useGSAP, ScrollTrigger)
 const services = [
   {
     id: "glassCutting",
-    video: "https://www.pexels.com/download/video/7219716/",
-    poster: "https://images.pexels.com/videos/7219716/pexels-photo-7219716.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    video: "/media/DSC_0913.mp4",
+    poster: "/media/DSC_0913.jpg",
     specs: ["0.5 – 24 mm", "35 × 35 mm", "3210 × 5100 mm"],
   },
   {
     id: "edgeProcessing",
-    video: "https://www.pexels.com/download/video/7219703/",
-    poster: "https://images.pexels.com/videos/7219703/pexels-photo-7219703.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    video: "/media/DSC_0781.mp4",
+    poster: "/media/DSC_0781.jpg",
     specs: ["0.5 – 24 mm", "20 × 20 mm", "3210 × 4000 mm"],
   },
   {
     id: "waterjet",
-    video: "https://www.pexels.com/download/video/7219717/",
-    poster: "https://images.pexels.com/videos/7219717/pexels-photo-7219717.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    video: "/media/DSC_0727.mp4",
+    poster: "/media/DSC_0727.jpg",
     specs: ["0.5 – 50 mm", "10 × 10 mm", "2000 × 4000 mm"],
   },
   {
     id: "cnc",
-    video: "https://www.pexels.com/download/video/7519304/",
-    poster: "https://images.pexels.com/videos/7519304/pexels-photo-7519304.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    poster: "/media/web_workshop-cnc.jpg",
     specs: ["3 – 50 mm", "160 × 160 mm", "2000 × 4000 mm"],
   },
   {
     id: "ceramicPrint",
-    video: "https://www.pexels.com/download/video/7519305/",
-    poster: "https://images.pexels.com/videos/7519305/pexels-photo-7519305.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    video: "/media/APJ_1692.mp4",
+    poster: "/media/APJ_1692.jpg",
     specs: ["0.5 – 50 mm", "10 × 10 mm", "2400 × 4000 mm"],
   },
   {
     id: "tempering",
-    video: "https://www.pexels.com/download/video/7520876/",
-    poster: "https://images.pexels.com/videos/7520876/pexels-photo-7520876.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    video: "/media/APJ_1621.mp4",
+    poster: "/media/APJ_1621.jpg",
     specs: ["3 – 24 mm", "100 × 100 mm", "2400 × 4200 mm"],
   },
   {
     id: "curvedGlass",
-    video: "https://www.pexels.com/download/video/7519880/",
-    poster: "https://images.pexels.com/videos/7519880/pexels-photo-7519880.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    poster: "/media/web_curved-glass-staircase-2.jpg",
     specs: ["4 – 24 mm", "200 × 300 mm", "2400 × 2400 mm"],
   },
   {
     id: "painting",
-    video: "https://www.pexels.com/download/video/7519300/",
-    poster: "https://images.pexels.com/videos/7519300/pexels-photo-7519300.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    poster: "/media/web_workshop-painting.jpg",
     specs: ["RAL + NCS", "2K + enamel", "Interior + furniture"],
   },
 ] as const
@@ -166,7 +164,7 @@ export function ManufactoryPage() {
         <div
           aria-hidden="true"
           className="manufactory-hero-image absolute inset-0 h-full w-full bg-cover bg-center opacity-65"
-          style={{ backgroundImage: "url(https://images.pexels.com/photos/36423794/pexels-photo-36423794.jpeg?auto=compress&cs=tinysrgb&w=2400)" }}
+          style={{ backgroundImage: "url(/media/APJ_1429.jpg)" }}
         />
         <div className="absolute inset-0 bg-linear-to-r from-black via-black/70 to-black/20" />
         <div className="absolute inset-0 bg-linear-to-t from-neutral-950 via-black/10 to-black/55" />
@@ -287,29 +285,42 @@ export function ManufactoryPage() {
                     if (video) resetVideo(video)
                   }}
                 >
-                  <video
-                    muted
-                    loop
-                    playsInline
-                    preload="metadata"
-                    poster={service.poster}
-                    tabIndex={0}
-                    aria-label={t(`items.${service.id}.videoTitle`)}
-                    onFocus={(event) => playVideo(event.currentTarget)}
-                    onBlur={(event) => resetVideo(event.currentTarget)}
-                    onClick={(event) => {
-                      if (event.currentTarget.paused) {
-                        playVideo(event.currentTarget)
-                      }
-                    }}
-                    className="absolute inset-0 h-full w-full cursor-pointer object-cover transition-transform duration-700 group-hover:scale-[1.025]"
-                  >
-                    <source src={service.video} type="video/mp4" />
-                  </video>
-                  <div className="pointer-events-none absolute inset-0 bg-black/15 transition-opacity duration-500 group-hover:opacity-0 group-focus-within:opacity-0" />
-                  <span className="pointer-events-none absolute left-1/2 top-1/2 flex h-16 w-16 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border border-white/60 bg-black/20 text-white backdrop-blur-sm transition-all duration-500 group-hover:scale-75 group-hover:opacity-0 group-focus-within:scale-75 group-focus-within:opacity-0">
-                    <Play className="ml-1 h-6 w-6 fill-current" />
-                  </span>
+                  {"video" in service ? (
+                    <>
+                      <video
+                        muted
+                        loop
+                        playsInline
+                        preload="metadata"
+                        poster={service.poster}
+                        tabIndex={0}
+                        aria-label={t(`items.${service.id}.videoTitle`)}
+                        onFocus={(event) => playVideo(event.currentTarget)}
+                        onBlur={(event) => resetVideo(event.currentTarget)}
+                        onClick={(event) => {
+                          if (event.currentTarget.paused) {
+                            playVideo(event.currentTarget)
+                          }
+                        }}
+                        className="absolute inset-0 h-full w-full cursor-pointer object-cover transition-transform duration-700 group-hover:scale-[1.025]"
+                      >
+                        <source src={service.video} type="video/mp4" />
+                      </video>
+                      <div className="pointer-events-none absolute inset-0 bg-black/15 transition-opacity duration-500 group-hover:opacity-0 group-focus-within:opacity-0" />
+                      <span className="pointer-events-none absolute left-1/2 top-1/2 flex h-16 w-16 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border border-white/60 bg-black/20 text-white backdrop-blur-sm transition-all duration-500 group-hover:scale-75 group-hover:opacity-0 group-focus-within:scale-75 group-focus-within:opacity-0">
+                        <Play className="ml-1 h-6 w-6 fill-current" />
+                      </span>
+                    </>
+                  ) : (
+                    // No footage for this process yet: show a still instead of a video.
+                    <Image
+                      src={service.poster}
+                      alt={t(`items.${service.id}.title`)}
+                      fill
+                      sizes="(max-width: 1024px) 100vw, 58vw"
+                      className="object-cover transition-transform duration-700 group-hover:scale-[1.025]"
+                    />
+                  )}
                 </div>
               </div>
 

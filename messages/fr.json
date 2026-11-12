@@ -41,47 +41,44 @@
       "allProducts": "Tous les Produits"
     },
     "items": {
-      "murale": {
-        "name": "Revêtement en Verre",
-        "subtitle": "murale",
-        "description": "Revêtements muraux élégants en verre de haute qualité pour intérieurs"
-      },
       "mutabilis": {
         "name": "Verre Commutable",
-        "subtitle": "mutabilis",
-        "description": "Technologie innovante pour une confidentialité maximale en un clic"
+        "subtitle": "mutabilis"
       },
       "glasbilder": {
         "name": "Art sur Verre",
-        "subtitle": "by kurth",
-        "description": "Œuvres d'art sur verre comme éléments de design uniques"
+        "subtitle": "by kurth"
       },
       "spectabilis": {
         "name": "Miroir Sans Tain",
-        "subtitle": "spectabilis",
-        "description": "Miroirs sans tain de haute qualité pour des applications spéciales"
+        "subtitle": "spectabilis"
       },
       "arcus": {
         "name": "Verre Courbé",
-        "subtitle": "arcus",
-        "description": "Verre courbé pour des points forts architecturaux"
+        "subtitle": "arcus"
       },
       "luxar": {
         "name": "Verre Anti-Reflet",
-        "subtitle": "luxar",
-        "description": "Vision cristalline sans reflets gênants"
-      },
-      "murus": {
-        "name": "Système Tout-Verre",
-        "subtitle": "murus"
+        "subtitle": "luxar"
       },
       "pavimentum": {
         "name": "Plancher en Verre",
         "subtitle": "pavimentum"
       },
+      "murale": {
+        "name": "Crédences de cuisine en verre"
+      },
+      "imber": {
+        "name": "Douches en verre sur mesure"
+      },
+      "murus": {
+        "name": "Cloisons tout verre"
+      },
+      "ventus": {
+        "name": "Pare-vent en verre sur mesure"
+      },
       "speculum": {
-        "name": "Miroirs",
-        "subtitle": "speculum"
+        "name": "Miroirs sur mesure"
       }
     }
   },
@@ -326,12 +323,309 @@
     "contactLinks": {
       "standort": "Emplacement",
       "kontakt": "Contact",
-      "karriere": "Carrière"
+      "faq": "FAQ"
     },
     "legal": {
       "copyright": "© {year} KURTH Glas und Spiegel AG. Tous droits réservés.",
       "privacy": "Protection des données",
       "imprint": "Mentions légales"
+    }
+  },
+  "FaqPage": {
+    "meta": {
+      "title": "FAQ – Verre, miroirs, douches & cloisons | KURTH Glas",
+      "description": "Réponses sur KURTH Glas und Spiegel AG : douches en verre, cloisons tout verre, pare-vent, miroirs et crédences de cuisine sur mesure, verre de sécurité (ESG/VSG) et transformation du verre à Zuchwil et Faoug."
+    },
+    "hero": {
+      "eyebrow": "Questions fréquentes",
+      "title": "questions & réponses.",
+      "description": "Tout sur nos produits, notre verre et le déroulement d’un projet avec KURTH – de la première idée jusqu’au montage."
+    },
+    "topics": "Thèmes",
+    "categories": [
+      {
+        "id": "company",
+        "title": "À propos de KURTH",
+        "items": [
+          {
+            "q": "Qui est KURTH Glas und Spiegel AG ?",
+            "a": "KURTH Glas und Spiegel AG est une entreprise suisse de transformation du verre, dirigée par ses propriétaires, qui découpe, façonne et pose du verre depuis 1956. Elle produit sur deux sites, à Zuchwil (canton de Soleure) et à Faoug (canton de Vaud), et réalise toutes les étapes en interne : découpe, façonnage des chants, découpe au jet d’eau et usinage CNC, trempe, impression numérique céramique, verre bombé et laquage du verre."
+          },
+          {
+            "q": "Où se trouvent vos sites et comment vous contacter ?",
+            "a": "Zuchwil : Grubenweg 2, 4528 Zuchwil, téléphone +41 32 685 55 75, info@kurth-glas.ch. Faoug : Route de Morat 6, 1595 Faoug, téléphone +41 26 670 41 80, matthias.flach@kurth-glas.ch."
+          },
+          {
+            "q": "Quels sont vos horaires d’ouverture ?",
+            "a": "Du lundi au jeudi de 07h10 à 12h00 et de 13h30 à 17h30. Le vendredi de 07h10 à 12h00 et de 13h30 à 16h30."
+          },
+          {
+            "q": "Puis-je voir des échantillons de verre ou visiter votre manufacture ?",
+            "a": "Oui. Notre atelier propose un grand choix d’échantillons de verre, et nos spécialistes vous conseillent personnellement. Sur demande, nous vous faisons aussi visiter notre manufacture. Vous pouvez réserver un rendez-vous de conseil en ligne.",
+            "link": {
+              "href": "https://outlook.office365.com/owa/calendar/KurthGlasSpiegelAG@kurth-glas.ch/bookings/",
+              "label": "Réserver un rendez-vous"
+            }
+          },
+          {
+            "q": "Pour qui travaillez-vous ?",
+            "a": "Pour les particuliers comme pour les entreprises et les projets de construction : habitat, bureaux et cabinets, hôtellerie-restauration et commerce, ainsi que projets d’architecture avec verre de façade, garde-corps et verre de sécurité."
+          },
+          {
+            "q": "Où effectuez-vous les montages ?",
+            "a": "Notre propre équipe de montage se déplace depuis Zuchwil ou Faoug, selon le site le plus proche de chez vous. Les frais de déplacement sont calculés depuis le site le plus proche."
+          },
+          {
+            "q": "À qui appartient KURTH Glas und Spiegel AG ?",
+            "a": "Depuis 2011, Evelyne et Fabian Flury dirigent l’entreprise en tant que propriétaires. Ils l’ont reprise de Martin Kurth, propriétaire de la deuxième génération, qui reste actif au conseil d’administration et comme conseiller. Une vingtaine de collaborateurs qualifiés fabriquent chaque produit en interne."
+          },
+          {
+            "q": "Qu’est-ce qui rend KURTH unique ?",
+            "a": "Selon ses propres indications, KURTH est la seule entreprise de Suisse à combiner l’impression photoréaliste sur verre et un procédé propre de bombage du verre. En collaboration avec ENTER, KURTH a en outre été la première entreprise suisse à produire du verre commutable."
+          },
+          {
+            "q": "Existe-t-il des brochures et des fiches techniques ?",
+            "a": "Oui. Les brochures KURTH peuvent être téléchargées en allemand et en français sur kurth-glas.ch.",
+            "link": {
+              "href": "https://www.kurth-glas.ch/prospekte",
+              "label": "Brochures"
+            }
+          }
+        ]
+      },
+      {
+        "id": "products",
+        "title": "Pages produits",
+        "items": [
+          {
+            "q": "Quels produits KURTH ont leur propre page ?",
+            "a": "Cinq lignes de produits ont une page dédiée, sur laquelle vous pouvez planifier votre projet et envoyer une demande : murale. crédences de cuisine en verre (murale.glaszentrum.ch), imber. douches en verre sur mesure (imber.glaszentrum.ch), murus. cloisons tout verre (murus.glaszentrum.ch), ventus. pare-vent en verre sur mesure (ventus.glaszentrum.ch) et speculum. miroirs sur mesure (speculum.glaszentrum.ch)."
+          },
+          {
+            "q": "Qu’est-ce que murale. ?",
+            "a": "murale. est la gamme KURTH de crédences de cuisine en verre : des panneaux muraux en verre de sécurité sur mesure pour la cuisine, mais aussi pour la salle de bains et les pièces à vivre. Le verre est hygiénique et durable ; il peut être laqué dans toutes les teintes RAL ou NCS ou imprimé avec votre propre motif par impression numérique céramique. Sur murale.glaszentrum.ch, vous saisissez votre mur et planifiez la crédence en ligne.",
+            "link": {
+              "href": "https://murale.glaszentrum.ch",
+              "label": "murale.glaszentrum.ch"
+            }
+          },
+          {
+            "q": "Quels sont les avantages d’une crédence en verre (murale.) ?",
+            "a": "Les panneaux muraux en verre résistent mieux à l’humidité, aux rayures et aux taches que les revêtements muraux traditionnels, s’usent moins et durent plus longtemps. Ils s’entretiennent facilement – un chiffon humide suffit –, agrandissent et éclaircissent visuellement une pièce et sont recyclables en fin de vie. Outre la cuisine et la salle de bains, murale. est utilisé dans des cabinets, des écoles et des musées."
+          },
+          {
+            "q": "Qu’est-ce que imber. ?",
+            "a": "imber. désigne les douches en verre sur mesure de KURTH : en niche, en angle, à l’italienne ou sur baignoire. Chaque douche imber. est en verre de sécurité trempé (ESG) de 8 mm aux chants polis, avec des ferrures dans la couleur de votre choix. Sur imber.glaszentrum.ch, vous concevez votre douche en 3D et obtenez un prix fixe incluant la prise de mesures sur place, la livraison et le montage.",
+            "link": {
+              "href": "https://imber.glaszentrum.ch",
+              "label": "imber.glaszentrum.ch"
+            }
+          },
+          {
+            "q": "Qu’est-ce que murus. ?",
+            "a": "murus. sont des cloisons tout verre sans cadre pour bureaux, cabinets, réceptions et logements : paroi droite, bureau d’angle, pièce dans la pièce ou boîte en verre autoportante. Le verre a une épaisseur de 8, 10 ou 12 mm ; il est fabriqué sur mesure à Zuchwil et posé par notre propre équipe. Sur murus.glaszentrum.ch, vous planifiez votre cloison en 3D et voyez un prix indicatif.",
+            "link": {
+              "href": "https://murus.glaszentrum.ch",
+              "label": "murus.glaszentrum.ch"
+            }
+          },
+          {
+            "q": "Qu’est-ce que ventus. ?",
+            "a": "ventus. est un pare-vent en verre sur mesure pour entrées de maison, coins salon extérieurs et terrasses. Il arrête le vent et la pluie battante sans priver de lumière ni de vue. ventus. est en verre de sécurité trempé (ESG), clair, extra-clair ou satiné, avec impression céramique en option, fixé par profilé en U ou par pinces, en noir ou en acier inoxydable. KURTH pose lui-même chaque pare-vent.",
+            "link": {
+              "href": "https://ventus.glaszentrum.ch",
+              "label": "ventus.glaszentrum.ch"
+            }
+          },
+          {
+            "q": "Qu’est-ce que speculum. ?",
+            "a": "speculum. sont des miroirs sur mesure pour salles de bains, vestiaires, pièces à vivre et salles de fitness ou de ballet, dans toutes les tailles et formes – y compris contours libres, biseaux et bords imprimés. Perçages et découpes pour fixations, prises ou éclairage sont possibles. Nous découpons et façonnons chaque miroir à Zuchwil ; vous choisissez entre la pose par nos soins ou l’enlèvement.",
+            "link": {
+              "href": "https://speculum.glaszentrum.ch",
+              "label": "speculum.glaszentrum.ch"
+            }
+          },
+          {
+            "q": "Quels autres produits verriers KURTH fabrique-t-il ?",
+            "a": "Outre les cinq lignes de produits, KURTH fabrique des portes en verre et portes coulissantes en verre (portavant), des garde-corps tout verre, des escaliers en verre, des sols en verre (pavimentum), du verre bombé (arcus), du verre commutable (mutabilis), des miroirs sans tain (spectabilis), du verre antireflet (luxar), des tableaux en verre et une cuisine d’extérieur entièrement en verre."
+          },
+          {
+            "q": "Qu’est-ce que pavimentum ?",
+            "a": "pavimentum désigne des sols et marches d’escalier en verre de sécurité trempé à haute capacité portante, pour pièces à vivre, salles de bains, escaliers et extérieurs. Tous les sols sont disponibles avec un revêtement antidérapant. Grâce à l’impression numérique céramique, le verre peut recevoir couleurs et textures – ou imiter le bois, le béton ou le marbre."
+          },
+          {
+            "q": "Qu’est-ce que la KURTH Outdoor Kitchen ?",
+            "a": "Une cuisine d’extérieur entièrement en verre pour jardins, terrasses et balcons, disponible en différentes tailles et variantes. Elle résiste aux intempéries, se nettoie facilement grâce à sa surface lisse et non poreuse et supporte la chaleur des grils et appareils de cuisson intégrés. Grâce à l’impression numérique céramique, chaque cuisine est personnalisée."
+          }
+        ]
+      },
+      {
+        "id": "showers",
+        "title": "Douches en verre",
+        "items": [
+          {
+            "q": "Que comprend le prix fixe d’une douche imber. ?",
+            "a": "La douche dans la finition et la taille choisies, la prise de mesures sur place, la livraison et le montage par notre équipe. Le verre, le revêtement nano et la couleur des ferrures sont inclus dans le prix affiché, tout comme le démontage de l’ancienne douche si vous le souhaitez. Le déplacement est calculé depuis Zuchwil ou Faoug selon le code postal du lieu de montage. Si la prise de mesures donne d’autres dimensions, le prix est recalculé selon la même liste de prix."
+          },
+          {
+            "q": "Quels verres sont disponibles pour les douches ?",
+            "a": "Le verre clair met en valeur toute la salle de bains, le verre extra-clair est particulièrement brillant, sans teinte verte, le verre satiné est lumineux mais opaque et le verre teinté est plus sombre et chaleureux. Tous les verres de douche sont en ESG 8 mm aux chants polis."
+          },
+          {
+            "q": "Qu’est-ce que calxless. ?",
+            "a": "calxless. est le verre traité de KURTH : traité, protégé, sans calcaire. L’eau perle, le calcaire et la saleté adhèrent moins et le nettoyage est plus rapide. Pour les autres verres, un revêtement nano optionnel a le même effet."
+          },
+          {
+            "q": "Comment nettoyer une douche en verre ?",
+            "a": "Humidifiez le verre à l’eau claire et nettoyez-le avec un chiffon microfibre propre. Ou passez une raclette de haut en bas après la douche, pour éviter les traces d’eau. N’utilisez pas de produits abrasifs."
+          },
+          {
+            "q": "Réalisez-vous aussi des douches pour salles de fitness et hôtels ?",
+            "a": "Oui. Au-delà des salles de bains privées, KURTH planifie, fabrique et pose des douches en verre pour centres de fitness, espaces wellness et hôtels, où les douches sont très sollicitées et où robustesse, hygiène et entretien facile sont essentiels."
+          }
+        ]
+      },
+      {
+        "id": "partitions",
+        "title": "Cloisons en verre & pare-vent",
+        "items": [
+          {
+            "q": "Quelles portes sont disponibles pour les cloisons en verre ?",
+            "a": "Les portes tout verre existent en version battante, pivotante (s’ouvrant dans les deux sens) et coulissante. Elles fonctionnent avec un ferme-porte au sol ou sont suspendues par des charnières verre-verre à la partie fixe. Il existe aussi la porte à huisserie : une porte en verre dans un fin cadre en aluminium, avec poignée et serrure. Les ferrures sont thermolaquées dans toutes les teintes RAL ou NCS, ou anodisées."
+          },
+          {
+            "q": "Quels verres sont disponibles pour les cloisons et les pare-vent ?",
+            "a": "FASILIS est le verre standard, avec une légère teinte verte. LUX est extra-clair. SATIN et SATIN LUX laissent passer la lumière sans être transparents, avec une surface mate et douce."
+          },
+          {
+            "q": "Comment obtenir de l’intimité avec une paroi en verre ?",
+            "a": "Avec du verre satiné, avec une bande occultante en impression numérique céramique ou avec du verre commutable (mutabilis), qui devient opaque d’une simple pression sur un bouton."
+          },
+          {
+            "q": "Une paroi en verre doit-elle être signalée ?",
+            "a": "Les grandes surfaces vitrées transparentes doivent être bien visibles, afin que personne ne s’y heurte. Nous vous conseillons et imprimons durablement des bandes, des points ou votre logo dans le verre."
+          },
+          {
+            "q": "Quel verre est utilisé pour un pare-vent ?",
+            "a": "Du verre de sécurité trempé (ESG). Nous déterminons l’épaisseur du verre et la fixation selon la hauteur, la largeur et la charge de vent – au plus tard lors de la prise de mesures. Les éléments peuvent mesurer de 300 à 3000 mm de large et de 500 à 3000 mm de haut."
+          }
+        ]
+      },
+      {
+        "id": "mirrors",
+        "title": "Miroirs & verres spéciaux",
+        "items": [
+          {
+            "q": "Comment commander un miroir de forme libre ?",
+            "a": "Choisissez la forme « Forme libre » dans le calculateur de prix speculum. et indiquez la largeur et la hauteur de la surface dans laquelle le miroir doit s’inscrire. Après votre demande, envoyez-nous un dessin ou un gabarit avec les dimensions."
+          },
+          {
+            "q": "Comment fonctionne un miroir sans tain ?",
+            "a": "Du côté le plus clair, il agit comme un miroir ; du côté le plus sombre, on voit à travers. Cela nécessite une nette différence de luminosité entre les deux côtés. Avec spectabilis, KURTH combine en outre un téléviseur et un miroir en une seule surface."
+          },
+          {
+            "q": "Qu’est-ce que le verre commutable (mutabilis) ?",
+            "a": "mutabilis contient un film à cristaux liquides qui fait passer le verre de transparent à opaque d’une pression sur un bouton – idéal pour les salles de réunion et les espaces modulables."
+          },
+          {
+            "q": "Qu’est-ce que le verre antireflet (luxar) ?",
+            "a": "luxar est un verre à couche magnétron qui élimine en grande partie les reflets et l’éblouissement. Il offre une vue nette sur les œuvres d’art, les images et les produits, par exemple dans les vitrines."
+          },
+          {
+            "q": "Fabriquez-vous des miroirs en verre fumé ?",
+            "a": "Oui. Outre les miroirs clairs, KURTH fabrique des miroirs en verre fumé, ronds ou angulaires, comme pièces uniques issues de sa propre production."
+          },
+          {
+            "q": "Comment fonctionne un miroir TV (spectabilis) ?",
+            "a": "Lorsque le téléviseur est allumé, vous voyez l’image dans la qualité habituelle ; dès qu’il est éteint, l’écran disparaît derrière un élégant miroir. Grâce à un four de trempe à convection intégrale, KURTH fabrique des miroirs sans distorsion d’une grande qualité optique. Un feuilletage optionnel apporte au miroir sans tain une durabilité et une protection supplémentaires."
+          }
+        ]
+      },
+      {
+        "id": "process",
+        "title": "Demande, prix & montage",
+        "items": [
+          {
+            "q": "Les prix affichés sur les pages produits sont-ils contractuels ?",
+            "a": "Sur murus., ventus. et speculum., vous voyez un prix indicatif ; l’offre ferme suit après vérification de vos données, si nécessaire lors d’une prise de mesures sur place. Pour imber., le prix fixe devient contractuel avec notre offre écrite ; si la prise de mesures donne d’autres dimensions, il est recalculé selon la même liste de prix."
+          },
+          {
+            "q": "Avec quelle précision dois-je mesurer ?",
+            "a": "Des dimensions approximatives suffisent. Pour une douche, mesurez en millimètres entre les murs finis ; pour une cloison, la longueur de la paroi et la hauteur de la pièce du sol fini au plafond. Avant la fabrication, nous prenons les mesures exactes sur place."
+          },
+          {
+            "q": "Que se passe-t-il après ma demande ?",
+            "a": "Nous vous recontactons, en général dans les deux jours ouvrables, convenons si nécessaire d’un rendez-vous pour la prise de mesures et vous envoyons l’offre. Après votre accord, nous fabriquons et posons."
+          },
+          {
+            "q": "Puis-je envoyer des photos ou des plans ?",
+            "a": "Oui. Les photos et les plans nous aident à évaluer votre situation plus rapidement. Envoyez-les par e-mail à info@kurth-glas.ch après votre demande, en indiquant votre numéro de demande."
+          },
+          {
+            "q": "Effectuez-vous le montage vous-mêmes ?",
+            "a": "Oui. Les douches, cloisons et pare-vent en verre sont toujours posés par notre propre équipe. Les miroirs peuvent être posés par nos soins ou retirés à Zuchwil."
+          }
+        ]
+      },
+      {
+        "id": "glass",
+        "title": "Verre & sécurité",
+        "items": [
+          {
+            "q": "Quelle est la différence entre ESG et VSG ?",
+            "a": "L’ESG (verre de sécurité trempé) est traité thermiquement, résiste aux chocs et aux écarts de température et se brise en petits fragments émoussés. Le VSG (verre de sécurité feuilleté) se compose de deux vitrages avec un film intercalaire ; en cas de bris, les éclats restent collés au film. Nous vous conseillons sur la version adaptée à votre usage."
+          },
+          {
+            "q": "Le verre peut-il être bombé ?",
+            "a": "Oui. KURTH fabrique du verre de sécurité bombé cylindrique en épaisseurs de 4 à 24 mm et en formats jusqu’à 2400 × 2400 mm – pour l’architecture, l’aménagement intérieur et le mobilier."
+          },
+          {
+            "q": "L’impression numérique céramique sur verre est-elle durable ?",
+            "a": "Très durable. Le motif est imprimé de façon photoréaliste sur le verre, puis cuit à 650 °C, de sorte que la couleur céramique fusionne durablement avec la surface. Le résultat résiste aux intempéries, aux UV et aux rayures."
+          },
+          {
+            "q": "Le verre peut-il être laqué dans n’importe quelle couleur ?",
+            "a": "Oui. Notre atelier de laquage revêt le verre dans toutes les teintes RAL ou NCS avec des peintures 2K durables et des émaux résistants à la chaleur – idéal pour les cuisines, les portes en verre et le mobilier."
+          },
+          {
+            "q": "Qu’est-ce que le TVG (verre durci) ?",
+            "a": "Le TVG est un verre moins fortement trempé que l’ESG. KURTH trempe l’ESG et le TVG sur deux installations : le verre est chauffé à environ 620 °C, puis refroidi rapidement. Le verre bombé est lui aussi disponible en ESG ou en TVG."
+          },
+          {
+            "q": "Quel est le rayon minimal pour le verre bombé ?",
+            "a": "Le rayon de bombage minimal est de 450 mm. Le verre bombé est disponible en épaisseurs de 4 à 24 mm, de 200 × 300 mm jusqu’à 2400 × 2400 mm, en ESG ou en TVG."
+          }
+        ]
+      },
+      {
+        "id": "manufacturing",
+        "title": "Fabrication",
+        "items": [
+          {
+            "q": "Quels procédés réalisez-vous en interne ?",
+            "a": "Découpe du verre, façonnage des chants, découpe au jet d’eau (Bystronic), usinage CNC sur un centre d’usinage 5 axes, trempe sur deux installations de trempe, impression numérique céramique, verre bombé et laquage du verre – le tout dans notre propre manufacture."
+          },
+          {
+            "q": "Quelles dimensions et épaisseurs pouvez-vous traiter ?",
+            "a": "Découpe : 0,5 à 24 mm, jusqu’à 3210 × 5100 mm. Jet d’eau : jusqu’à 50 mm d’épaisseur, jusqu’à 2000 × 4000 mm. Usinage CNC : 3 à 50 mm, jusqu’à 2000 × 4000 mm. Trempe : 3 à 24 mm, jusqu’à 2400 × 4200 mm. Impression céramique : jusqu’à 2400 × 4000 mm. Verre bombé : 4 à 24 mm, jusqu’à 2400 × 2400 mm. Pour d’autres dimensions, contactez-nous."
+          },
+          {
+            "q": "Quels façonnages de chants sont possibles ?",
+            "a": "Chants abattus, rodés et polis, ainsi que chants en C, demi-ronds (bullnose), à onglet, biseautés et chants durs."
+          }
+        ]
+      }
+    ],
+    "shop": {
+      "title": "Commander du verre en ligne ?",
+      "description": "Les questions sur notre boutique en ligne – configuration, prix, paiement, retrait et livraison – trouvent leur réponse dans la FAQ de la boutique.",
+      "cta": "FAQ de la boutique",
+      "href": "https://shop.kurth-glas.ch/fr/faq"
+    },
+    "contact": {
+      "title": "Une question reste ouverte ?",
+      "description": "Nos spécialistes à Zuchwil et Faoug vous conseillent volontiers personnellement.",
+      "cta": "Réserver un rendez-vous"
     }
   }
 }

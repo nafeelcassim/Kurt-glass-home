@@ -13,14 +13,14 @@ import { fonts, fontHeading } from "@/lib/fonts"
 gsap.registerPlugin(useGSAP, ScrollTrigger)
 
 const services = [
-  { id: "glaszuschnitt", subtitle: "precision", image: "https://images.unsplash.com/photo-1565008447742-97f6f38c985c?w=800&q=80", href: "https://www.kurth-glas.ch/glaszuschnitt-2" },
-  { id: "kantenbearbeitung", subtitle: "finishing", image: "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?w=800&q=80", href: "https://www.kurth-glas.ch/kopie-von-glaszuschnitt" },
-  { id: "wasserstrahlschneiden", subtitle: "bystronic", image: "https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=800&q=80", href: "https://www.kurth-glas.ch/kopie-von-kantenbearbeitung" },
-  { id: "glasbearbeitung", subtitle: "cnc", image: "https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=800&q=80", href: "https://www.kurth-glas.ch/kopie-von-wasserstrahlschneiden" },
-  { id: "keramikdigitaldruck", subtitle: "650°c", image: "https://images.unsplash.com/photo-1513506003901-1e6a229e2d15?w=800&q=80", href: "https://www.kurth-glas.ch/kopie-von-glasbearbeitung" },
-  { id: "vorspannanlage", subtitle: "esg", image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&q=80", href: "https://www.kurth-glas.ch/kopie-von-keramikdigitaldruck" },
-  { id: "bogenglas", subtitle: "arcus", image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80", href: "https://www.kurth-glas.ch/kopie-von-vorspannanlage" },
-  { id: "lackiererei", subtitle: "ral + ncs", image: "https://images.unsplash.com/photo-1561214115-f2f134cc4912?w=800&q=80", href: "https://www.kurth-glas.ch/kopie-von-bogenglas" },
+  { id: "glaszuschnitt", subtitle: "precision", image: "/media/APJ_1412.jpg", position: "object-[85%_50%]", href: "https://www.kurth-glas.ch/glaszuschnitt-2" },
+  { id: "kantenbearbeitung", subtitle: "finishing", image: "/media/APJ_1558.jpg", position: "object-[72%_50%]", href: "https://www.kurth-glas.ch/kopie-von-glaszuschnitt" },
+  { id: "wasserstrahlschneiden", subtitle: "bystronic", image: "/media/APJ_1339.jpg", href: "https://www.kurth-glas.ch/kopie-von-kantenbearbeitung" },
+  { id: "glasbearbeitung", subtitle: "cnc", image: "/media/_DSC0843.jpg", position: "object-[25%_50%]", href: "https://www.kurth-glas.ch/kopie-von-wasserstrahlschneiden" },
+  { id: "keramikdigitaldruck", subtitle: "650°c", image: "/media/APJ_1694.jpg", href: "https://www.kurth-glas.ch/kopie-von-glasbearbeitung" },
+  { id: "vorspannanlage", subtitle: "esg", image: "/media/_DSC0983.jpg", position: "object-[38%_50%]", href: "https://www.kurth-glas.ch/kopie-von-keramikdigitaldruck" },
+  { id: "bogenglas", subtitle: "arcus", image: "/media/web_curved-glass-staircase.jpg", href: "https://www.kurth-glas.ch/kopie-von-vorspannanlage" },
+  { id: "lackiererei", subtitle: "ral + ncs", image: "/media/web_black-glass-kitchen.jpg", position: "object-[15%_50%]", href: "https://www.kurth-glas.ch/kopie-von-bogenglas" },
 ]
 
 export function Services() {
@@ -128,13 +128,8 @@ export function Services() {
                 src={service.image}
                 alt={t(`items.${service.id}`)}
                 fill
-                sizes="(max-width: 768px) 288px, 320px"
-                onError={(event) => {
-                  event.currentTarget.onerror = null
-                  event.currentTarget.srcset = ""
-                  event.currentTarget.src = "https://images.unsplash.com/photo-1565008447742-97f6f38c985c?w=800&q=80"
-                }}
-                className="object-cover transition-transform duration-700 group-hover:scale-110"
+                sizes="(max-width: 768px) 576px, 640px" // 3:2 photo covering a 3:4 card is 2x the card width
+                className={`object-cover transition-transform duration-700 group-hover:scale-110 ${"position" in service ? service.position : ""}`}
               />
               <div className="absolute inset-0 bg-linear-to-t from-black/85 via-black/15 to-transparent" />
               <div className="absolute bottom-0 left-0 right-0 p-6">
