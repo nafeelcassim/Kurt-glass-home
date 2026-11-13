@@ -190,7 +190,7 @@ export function Products() {
           ))}
         </div>
 
-        {/* Additional products link */}
+        {/* Shop product links hidden for now; uncomment to restore.
         <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-6">
           {shopProducts.map((id) => (
             <a
@@ -212,6 +212,7 @@ export function Products() {
             </a>
           ))}
         </div>
+        */}
       </div>
     </section>
   )

@@ -7,46 +7,30 @@ import { useGSAP } from "@gsap/react"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { ChevronLeft, ChevronRight } from "lucide-react"
 import { useTranslations } from "next-intl"
+import { Link } from "@/i18n/navigation"
 import { fonts, fontHeading } from "@/lib/fonts"
 
 // Register both plugins
 gsap.registerPlugin(useGSAP, ScrollTrigger)
 
+// anchor = chapter id on the manufactory page (components/manufactory-page.tsx)
 const services = [
-  { id: "glaszuschnitt", subtitle: "precision", image: "/media/APJ_1412.jpg", position: "object-[85%_50%]", href: "https://www.kurth-glas.ch/glaszuschnitt-2" },
-  { id: "kantenbearbeitung", subtitle: "finishing", image: "/media/APJ_1558.jpg", position: "object-[72%_50%]", href: "https://www.kurth-glas.ch/kopie-von-glaszuschnitt" },
-  { id: "wasserstrahlschneiden", subtitle: "bystronic", image: "/media/APJ_1339.jpg", href: "https://www.kurth-glas.ch/kopie-von-kantenbearbeitung" },
-  { id: "glasbearbeitung", subtitle: "cnc", image: "/media/_DSC0843.jpg", position: "object-[25%_50%]", href: "https://www.kurth-glas.ch/kopie-von-wasserstrahlschneiden" },
-  { id: "keramikdigitaldruck", subtitle: "650°c", image: "/media/APJ_1694.jpg", href: "https://www.kurth-glas.ch/kopie-von-glasbearbeitung" },
-  { id: "vorspannanlage", subtitle: "esg", image: "/media/_DSC0983.jpg", position: "object-[38%_50%]", href: "https://www.kurth-glas.ch/kopie-von-keramikdigitaldruck" },
-  { id: "bogenglas", subtitle: "arcus", image: "/media/web_curved-glass-staircase.jpg", href: "https://www.kurth-glas.ch/kopie-von-vorspannanlage" },
-  { id: "lackiererei", subtitle: "ral + ncs", image: "/media/web_black-glass-kitchen.jpg", position: "object-[15%_50%]", href: "https://www.kurth-glas.ch/kopie-von-bogenglas" },
+  { id: "glaszuschnitt", subtitle: "precision", image: "/media/APJ_1412.jpg", position: "object-[85%_50%]", anchor: "glassCutting" },
+  { id: "kantenbearbeitung", subtitle: "finishing", image: "/media/APJ_1558.jpg", position: "object-[72%_50%]", anchor: "edgeProcessing" },
+  { id: "wasserstrahlschneiden", subtitle: "bystronic", image: "/media/APJ_1339.jpg", anchor: "waterjet" },
+  { id: "glasbearbeitung", subtitle: "cnc", image: "/media/_DSC0843.jpg", position: "object-[25%_50%]", anchor: "cnc" },
+  { id: "keramikdigitaldruck", subtitle: "650°c", image: "/media/APJ_1694.jpg", anchor: "ceramicPrint" },
+  { id: "vorspannanlage", subtitle: "esg", image: "/media/_DSC0983.jpg", position: "object-[38%_50%]", anchor: "tempering" },
+  { id: "bogenglas", subtitle: "arcus", image: "/media/web_curved-glass-staircase.jpg", anchor: "curvedGlass" },
+  { id: "lackiererei", subtitle: "ral + ncs", image: "/media/web_black-glass-kitchen.jpg", position: "object-[15%_50%]", anchor: "painting" },
 ]
 
 export function Services() {
   const t = useTranslations("Services")
   const sectionRef = useRef<HTMLDivElement>(null)
   const carouselRef = useRef<HTMLDivElement>(null)
-  const titleRef = useRef<HTMLHeadingElement>(null)
 
   useGSAP(() => {
-    // Title animation
-    gsap.fromTo(
-      titleRef.current,
-      { y: 80, opacity: 0 },
-      {
-        y: 0,
-        opacity: 1,
-        duration: 1,
-        ease: "power3.out",
-        scrollTrigger: {
-          trigger: sectionRef.current,
-          start: "top 80%",
-          end: "top 50%",
-        },
-      }
-    )
-
     // Cards stagger animation
     const cards = carouselRef.current?.querySelectorAll(".service-card")
     if (cards) {
@@ -80,17 +64,9 @@ export function Services() {
   }
 
   return (
-    <section ref={sectionRef} id="services" className="py-24 md:py-32 overflow-hidden bg-[#141414]">
-      <div className="container mx-auto px-6 mb-12">
-        <div className="flex items-end justify-between">
-          <h2
-            ref={titleRef}
-            className={`${fontHeading.md} font-bold text-foreground`}
-          >
-            {t("heading.line1")}<br />
-            <span className="text-foreground">{t("heading.line2")}</span>
-          </h2>
-
+    <section ref={sectionRef} id="services" className="py-16 md:py-20 overflow-hidden bg-[#141414]">
+      <div className="container mx-auto px-6 mb-8">
+        <div className="flex items-end justify-end">
           <div className="hidden md:flex gap-2">
             <button
               onClick={() => scroll("left")}
@@ -113,14 +89,12 @@ export function Services() {
       {/* Carousel */}
       <div
         ref={carouselRef}
-        className="flex gap-6 px-6 overflow-x-auto horizontal-scroll pb-4"
+        className="container mx-auto flex gap-6 px-6 overflow-x-auto horizontal-scroll pb-4"
       >
         {services.map((service) => (
-          <a
+          <Link
             key={service.id}
-            href={service.href}
-            target="_blank"
-            rel="noreferrer"
+            href={`/manufatory#${service.anchor}`}
             className="service-card shrink-0 w-72 md:w-80 group"
           >
             <div className="relative aspect-3/4 overflow-hidden mb-4">
@@ -141,7 +115,7 @@ export function Services() {
                 </h3>
               </div>
             </div>
-          </a>
+          </Link>
         ))}
       </div>
     </section>
