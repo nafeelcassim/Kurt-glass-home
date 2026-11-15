@@ -58,7 +58,7 @@ const services = [
   {
     id: "bogenglas",
     subtitle: "",
-    image: "/media/web_curved-glass-staircase.jpg",
+    image: "/media/web_bogenglas-staircase.jpg",
     anchor: "curvedGlass",
   },
   {

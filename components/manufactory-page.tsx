@@ -49,7 +49,8 @@ const services = [
   },
   {
     id: "curvedGlass",
-    poster: "/media/web_curved-glass-staircase-2.jpg",
+    video: "/media/bogenglas-process.mp4",
+    poster: "/media/bogenglas-process.jpg",
     specs: ["4 – 24 mm", "200 × 300 mm", "2400 × 2400 mm"],
   },
   {

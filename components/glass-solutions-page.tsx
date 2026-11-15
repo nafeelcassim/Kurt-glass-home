@@ -23,7 +23,7 @@ const catalogues: Record<SolutionType, Array<{ id: string; href: string; image: 
     { id: "mirrors", href: "https://www.kurth-glas.ch/spiegel", image: "/media/web_round-mirror.jpg" },
     { id: "twoWayMirrors", href: "https://www.kurth-glas.ch/spionspiegel", image: "/media/web_two-way-mirror-tv.jpg" },
     { id: "antiReflectiveGlass", href: "https://www.kurth-glas.ch/luxar", image: "/media/web_anti-reflective-vitrine.jpg" },
-    { id: "curvedGlass", href: "https://www.kurth-glas.ch/bogenglas", image: "/media/web_curved-glass-staircase-2.jpg" },
+    { id: "curvedGlass", href: "https://www.kurth-glas.ch/bogenglas", image: "/media/web_bogenglas-staircase.jpg" },
     { id: "glassFloors", href: "https://www.kurth-glas.ch/glasboden", image: "/media/web_glass-stairs.jpg" },
   ],
   exterior: [
