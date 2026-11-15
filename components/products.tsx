@@ -17,11 +17,11 @@ gsap.registerPlugin(useGSAP, ScrollTrigger)
 // Images: reference photos from the client's own sites (kurth-glas.ch, *.glaszentrum.ch), served from
 // /public/media until moved to Vercel storage.
 const brandProducts = [
-  { id: "murale", href: "https://murale.glaszentrum.ch", image: "/media/web_murale-alpine-print-kitchen.jpg" },
-  { id: "imber", href: "https://imber.glaszentrum.ch", image: "/media/web_imber-marble-shower.jpg" },
+  { id: "murale", href: "https://murale.glaszentrum.ch", image: "/media/web_murale-kitchen.jpg" },
+  { id: "imber", href: "https://imber.glaszentrum.ch", image: "/media/web_imber-shower-wide.jpg" },
   { id: "murus", href: "https://murus.glaszentrum.ch", image: "/media/web_murus-printed-meeting-box.jpg" },
   { id: "ventus", href: "https://ventus.glaszentrum.ch", image: "/media/web_entrance-windbreak-black.jpg" },
-  { id: "speculum", href: "https://speculum.glaszentrum.ch", image: "/media/web_bathroom-mirror.jpg" },
+  { id: "speculum", href: "https://speculum.glaszentrum.ch", image: "/media/web_speculum-mirror.jpg" },
 ]
 
 const shopProducts = ["mutabilis", "glasbilder", "spectabilis", "arcus", "luxar", "pavimentum"]
