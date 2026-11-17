@@ -64,8 +64,8 @@ const services = [
   {
     id: "lackiererei",
     subtitle: "",
-    image: "/media/web_black-glass-kitchen.jpg",
-    position: "object-[15%_50%]",
+    image: "/media/web_workshop-painting.jpg",
+    position: "object-[18%_50%]",
     anchor: "painting",
   },
 ];
